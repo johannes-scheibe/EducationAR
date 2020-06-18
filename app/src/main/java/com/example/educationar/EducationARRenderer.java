@@ -1,6 +1,7 @@
 package com.example.educationar;
 
 import org.artoolkitx.arx.arxj.ARController;
+import org.artoolkitx.arx.arxj.ARX_jni;
 import org.artoolkitx.arx.arxj.Trackable;
 import org.artoolkitx.arx.arxj.rendering.ARRenderer;
 import org.artoolkitx.arx.arxj.rendering.shader_impl.Cube;
@@ -12,30 +13,41 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 import android.opengl.GLES20;
 
-public class EducationARRenderer extends ARRenderer {
-    private SimpleShaderProgram shaderProgram;
+import java.util.ArrayList;
+import java.util.List;
 
-    //TODO: I think we should add the trackable class to the library (arxj)
+
+public class EducationARRenderer extends ARRenderer {
+
+    int ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE = 4;
+    int AR_MATRIX_CODE_DETECTION = 2;
+    int ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE = 6;
+    int AR_MATRIX_CODE_5x5_BCH_22_7_7  = 0x505;
+
+    private SimpleShaderProgram shaderProgram;
 
     private static final Trackable trackables[] = new Trackable[]{
             new Trackable("hiro", 80.0f),
             new Trackable("kanji", 80.0f)
-    };
-    private int trackableUIDs[] = new int[trackables.length];
 
-    private Cube cube;
+    };
+
+
+    private List<Cube> cubes = new ArrayList<Cube>();
 
     /**
      * Markers can be configured here.
      */
     @Override
     public boolean configureARScene() {
-        int i = 0;
-        for (Trackable trackable : trackables) {
-            trackableUIDs[i] = ARController.getInstance().addTrackable("single;Data/" + trackable.getName() + ".patt;" + trackable.getWidth());
-            if (trackableUIDs[i] < 0) return false;
-            i++;
+
+        for(int i = 0; i<cubes.size(); i++) {
+            ARController.getInstance().addTrackable("single_barcode;" + i + ";80");
+
         }
+
+        ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
+        ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5_BCH_22_7_7);
         return true;
     }
 
@@ -44,9 +56,11 @@ public class EducationARRenderer extends ARRenderer {
     @Override
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
         this.shaderProgram = new SimpleShaderProgram(new SimpleVertexShader(), new SimpleFragmentShader());
-        cube = new Cube(40.0f, 0.0f, 0.0f, 20.0f);
-        cube.setShaderProgram(shaderProgram);
-        super.onSurfaceCreated(unused, config);
+        for(int i = 0; i<5; i++) {
+            cubes.add(new Cube(40.0f, 0.0f, 0.0f, 20.0f));
+            cubes.get(i).setShaderProgram(shaderProgram);
+            super.onSurfaceCreated(unused, config);
+        }
     }
 
     /**
@@ -61,12 +75,12 @@ public class EducationARRenderer extends ARRenderer {
         GLES20.glFrontFace(GLES20.GL_CCW);
 
         // Look for trackables, and draw on each found one.
-        for (int trackableUID : trackableUIDs) {
+        for (int trackableUID = 0; trackableUID<cubes.size(); trackableUID++) {
             // If the trackable is visible, apply its transformation, and render a cube
             float[] modelViewMatrix = new float[16];
             if (ARController.getInstance().queryTrackableVisibilityAndTransformation(trackableUID, modelViewMatrix)) {
                 float[] projectionMatrix = ARController.getInstance().getProjectionMatrix(10.0f, 10000.0f);
-                cube.draw(projectionMatrix, modelViewMatrix);
+                cubes.get(trackableUID).draw(projectionMatrix, modelViewMatrix);
             }
         }
     }
