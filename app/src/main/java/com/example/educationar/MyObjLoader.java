@@ -55,15 +55,12 @@ public final class MyObjLoader {
             }
 
             indices = new short[faces.size()];
-            logger.log(Level.INFO, "" + faces.size() );
 
             for (int i = 0; i<faces.size(); i++) {
                 String[] parts = faces.get(i).split("/");
                 short value = Short.valueOf(parts[0]).shortValue();
                 indices[i] = (value-=1);
-                logger.log(Level.INFO, "" + i );
             }
-            logger.log(Level.INFO, "" + indices.length );
 
             float[] arr = new float[vertices.size()];
             int i = 0;

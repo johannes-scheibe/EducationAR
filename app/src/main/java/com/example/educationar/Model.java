@@ -81,10 +81,6 @@ public class Model {
         mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
         mColorBuffer = null;
         mIndexBuffer = RenderUtils.buildShortBuffer(objLoader.indices);
-        for(int i = 0; i < objLoader.indices.length; i+=3){
-            logger.log(Level.INFO, String.valueOf("Index = " + i/3 +": "  + objLoader.indices[i]) + String.valueOf(objLoader.indices[i+1]) + String.valueOf(objLoader.indices[i+2]) );
-        }
-        logger.log(Level.INFO, "" + objLoader.indices.length);
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -99,14 +95,6 @@ public class Model {
     public ShortBuffer getmIndexBuffer() {
         return mIndexBuffer;
     }
-
-    private void setArrays(float size, float x, float y, float z) {
-
-
-
-    }
-
-
 
     /*
      * Used to render objects when working with OpenGL ES 2.x

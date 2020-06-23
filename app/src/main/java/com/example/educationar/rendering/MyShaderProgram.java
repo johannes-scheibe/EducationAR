@@ -142,6 +142,7 @@ public class MyShaderProgram extends ShaderProgram {
             //eg. combine vertex 1,2,3 for the first triangle (vertex) and 2,3,4 for the next triangle, ...
             GLES20.glDrawElements(GLES20.GL_TRIANGLES, indexBuffer.limit(), GLES20.GL_UNSIGNED_SHORT, indexBuffer);
         }
+
     }
 
 }
