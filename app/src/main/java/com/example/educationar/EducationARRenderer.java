@@ -5,13 +5,15 @@ import org.artoolkitx.arx.arxj.ARX_jni;
 import org.artoolkitx.arx.arxj.Trackable;
 import org.artoolkitx.arx.arxj.rendering.ARRenderer;
 import org.artoolkitx.arx.arxj.rendering.shader_impl.Cube;
-import org.artoolkitx.arx.arxj.rendering.shader_impl.SimpleFragmentShader;
-import org.artoolkitx.arx.arxj.rendering.shader_impl.SimpleShaderProgram;
-import org.artoolkitx.arx.arxj.rendering.shader_impl.SimpleVertexShader;
+
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 import android.opengl.GLES20;
+
+import com.example.educationar.rendering.MyFragmentShader;
+import com.example.educationar.rendering.MyShaderProgram;
+import com.example.educationar.rendering.MyVertexShader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,7 @@ public class EducationARRenderer extends ARRenderer {
     int ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE = 6;
     int AR_MATRIX_CODE_5x5_BCH_22_7_7  = 0x505;
 
-    private SimpleShaderProgram shaderProgram;
+    private MyShaderProgram shaderProgram;
 
     private static final Trackable trackables[] = new Trackable[]{
             new Trackable("hiro", 80.0f),
@@ -33,7 +35,7 @@ public class EducationARRenderer extends ARRenderer {
     };
 
 
-    private List<Cube> cubes = new ArrayList<Cube>();
+    private List<Model> models = new ArrayList<Model>();
 
     /**
      * Markers can be configured here.
@@ -41,7 +43,7 @@ public class EducationARRenderer extends ARRenderer {
     @Override
     public boolean configureARScene() {
 
-        for(int i = 0; i<cubes.size(); i++) {
+        for(int i = 0; i<models.size(); i++) {
             ARController.getInstance().addTrackable("single_barcode;" + i + ";80");
 
         }
@@ -55,12 +57,26 @@ public class EducationARRenderer extends ARRenderer {
     //As the cube instantiates the shader during setShaderProgram call we need to create the cube here.
     @Override
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
-        this.shaderProgram = new SimpleShaderProgram(new SimpleVertexShader(), new SimpleFragmentShader());
-        for(int i = 0; i<5; i++) {
-            cubes.add(new Cube(40.0f, 0.0f, 0.0f, 20.0f));
-            cubes.get(i).setShaderProgram(shaderProgram);
-            super.onSurfaceCreated(unused, config);
-        }
+        this.shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
+
+        Model ape = new Model(EducationARApplication.getContext(), "Models/monkey/monkey.obj");
+        ape.setShaderProgram(shaderProgram);
+        models.add(ape);
+
+        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube.obj");
+        cube.setShaderProgram(shaderProgram);
+        models.add(cube);
+
+        Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere.obj");
+        sphere.setShaderProgram(shaderProgram);
+        models.add(sphere);
+
+        Model ring = new Model(EducationARApplication.getContext(), "Models/ring/ring.obj");
+        ring.setShaderProgram(shaderProgram);
+        models.add(ring);
+
+        super.onSurfaceCreated(unused, config);
+
     }
 
     /**
@@ -75,12 +91,12 @@ public class EducationARRenderer extends ARRenderer {
         GLES20.glFrontFace(GLES20.GL_CCW);
 
         // Look for trackables, and draw on each found one.
-        for (int trackableUID = 0; trackableUID<cubes.size(); trackableUID++) {
+        for (int trackableUID = 0; trackableUID<models.size(); trackableUID++) {
             // If the trackable is visible, apply its transformation, and render a cube
             float[] modelViewMatrix = new float[16];
             if (ARController.getInstance().queryTrackableVisibilityAndTransformation(trackableUID, modelViewMatrix)) {
                 float[] projectionMatrix = ARController.getInstance().getProjectionMatrix(10.0f, 10000.0f);
-                cubes.get(trackableUID).draw(projectionMatrix, modelViewMatrix);
+                models.get(trackableUID).draw(projectionMatrix, modelViewMatrix);
             }
         }
     }

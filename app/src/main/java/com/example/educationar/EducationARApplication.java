@@ -7,9 +7,9 @@ import org.artoolkitx.arx.arxj.assets.AssetHelper;
 
 public class EducationARApplication extends Application {
 
-    private Context mContext;
+    private static Context mContext;
 
-    public Context getContext() {
+    public static Context getContext() {
         return mContext;
     }
 
@@ -19,7 +19,6 @@ public class EducationARApplication extends Application {
         mContext = getContext();
         this.initializeInstance();
     }
-
     // Here we do one-off initialisation which should apply to all activities
     // in the application.
     protected void initializeInstance() {
@@ -31,4 +30,5 @@ public class EducationARApplication extends Application {
         assetHelper.cacheAssetFolder(this, "Data");
         assetHelper.cacheAssetFolder(this, "cparam_cache");
     }
+
 }

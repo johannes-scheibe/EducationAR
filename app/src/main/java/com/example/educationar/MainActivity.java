@@ -2,6 +2,7 @@ package com.example.educationar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
@@ -11,12 +12,18 @@ import org.artoolkitx.arx.arxj.rendering.ARRenderer;
 
 public class MainActivity extends ARActivity {
 
+    private static Context mContext;
+
+    public static Context getContext() {
+        return mContext;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.initializeInstance();
-        
+
+        this.mContext = getApplicationContext();
     }
 
     /**
@@ -33,17 +40,5 @@ public class MainActivity extends ARActivity {
     @Override
     protected FrameLayout supplyFrameLayout() {
         return (FrameLayout) this.findViewById(R.id.mainFrameLayout);
-    }
-
-    // Here we do one-off initialisation which should apply to all activities
-    // in the application.
-    protected void initializeInstance() {
-
-        // Unpack assets to cache directory so native library can read them.
-        // N.B.: If contents of assets folder changes, be sure to increment the
-        // versionCode integer in the modules build.gradle file.
-        AssetHelper assetHelper = new AssetHelper(getAssets());
-        assetHelper.cacheAssetFolder(this, "Data");
-        assetHelper.cacheAssetFolder(this, "cparam_cache");
     }
 }
