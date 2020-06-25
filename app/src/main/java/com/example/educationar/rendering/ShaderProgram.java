@@ -57,7 +57,7 @@ import java.nio.ShortBuffer;
  * It is important to call {@link #setupShaderUsage()} as first method inside your
  * implementation of the {@link #render(float[])} render()} method.
  * <p/>
- * This abstract class provides the basic implementation for binding shaders
+ * This abstract class provides the basic implementation for binding shaders see {@link #createProgram(int, int)}
  * you can just call this method and do not need to worry about binding shaders.
  * <p/>
  * This class also provides stubs of methodes you might want to override when you create your own Shader Program.
@@ -66,7 +66,7 @@ import java.nio.ShortBuffer;
  * Finally it renders the given geometry.
  */
 @SuppressWarnings("SameParameterValue")
-public abstract class ShaderProgram extends org.artoolkitx.arx.arxj.rendering.ShaderProgram {
+public abstract class ShaderProgram {
 
     /* Size of the position data in elements. */
     protected final int positionDataSize = 3;
@@ -83,10 +83,13 @@ public abstract class ShaderProgram extends org.artoolkitx.arx.arxj.rendering.Sh
     /* How many elements per vertex in bytes for the color*/
     protected final int colorStrideBytes = colorDataSize * mBytesPerFloat;
 
+    protected final int shaderProgramHandle;
+    private float[] projectionMatrix;
+    private float[] modelViewMatrix;
 
     @SuppressWarnings("WeakerAccess")
     public ShaderProgram(OpenGLShader vertexShader, OpenGLShader fragmentShader) {
-        super(vertexShader, fragmentShader);
+        shaderProgramHandle = createProgram(vertexShader.configureShader(), fragmentShader.configureShader());
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -149,5 +152,51 @@ public abstract class ShaderProgram extends org.artoolkitx.arx.arxj.rendering.Sh
     @SuppressWarnings("WeakerAccess")
     public void render(FloatBuffer vertexBuffer, ShortBuffer indexBuffer) {
         render(vertexBuffer, null, indexBuffer);
+    }
+
+    /**
+     * Only render a simple position. In this case the implementation if forwarded to the
+     * render(FloatBuffer, FloatBuffer, ByteBuffer) but you can override this one directly
+     * as shown in {@link SimpleShaderProgram}
+     *
+     * @param position The position to be rendered
+     */
+    public void render(float[] position) {
+        render(RenderUtils.buildFloatBuffer(position), null);
+    }
+
+    public void setProjectionMatrix(float[] projectionMatrix) {
+        this.projectionMatrix = projectionMatrix;
+    }
+
+    public void setModelViewMatrix(float[] modelViewMatrix) {
+        this.modelViewMatrix = modelViewMatrix;
+    }
+
+    /**
+     * Sets some basic settings for shader usage.
+     * Needs to be called as first method from your implementation inside the
+     * renderer() method.
+     */
+    protected void setupShaderUsage() {
+        // Tell OpenGL to use this program when rendering.
+        GLES20.glUseProgram(shaderProgramHandle);
+
+        /* Replaces the functions
+                Apply the artoolkitX projection matrix
+                GLES10.glMatrixMode(GL10.GL_PROJECTION);
+                GLES10.glLoadMatrixf(ARController.getInstance().getProjectionMatrix(), 0);
+                gl.glMatrixMode(GL10.GL_MODELVIEW);
+                gl.glLoadMatrixf(ARController.getInstance().queryTrackableTransformation(markerID), 0);
+           from the Renderer implementation class in the render method
+           */
+
+        if (projectionMatrix != null)
+            GLES20.glUniformMatrix4fv(this.getProjectionMatrixHandle(), 1, false, projectionMatrix, 0);
+        else
+            throw new RuntimeException("You need to set the projection matrix.");
+
+        if (modelViewMatrix != null)
+            GLES20.glUniformMatrix4fv(this.getModelViewMatrixHandle(), 1, false, modelViewMatrix, 0);
     }
 }
