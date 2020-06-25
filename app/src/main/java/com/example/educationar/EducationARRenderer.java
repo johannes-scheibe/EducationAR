@@ -59,31 +59,19 @@ public class EducationARRenderer extends ARRenderer {
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
         this.shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
 
-        float c = 1.0f;
-        float colors[] = {
-                0, 0, 0, c, // 0 black
-                c, 0, 0, c, // 1 red
-                c, c, 0, c, // 2 yellow
-                0, c, 0, c, // 3 green
-                0, 0, c, c, // 4 blue
-                c, 0, c, c, // 5 magenta
-                c, c, c, c, // 6 white
-                0, c, c, c, // 7 cyan
-        };
-
-        Model ape = new Model(EducationARApplication.getContext(), "Models/monkey/monkey.obj", null);
+        Model ape = new Model(EducationARApplication.getContext(), "Models/monkey/monkey.obj");
         ape.setShaderProgram(shaderProgram);
         models.add(ape);
 
-        Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere.obj",null);
+        Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere.obj");
         sphere.setShaderProgram(shaderProgram);
         models.add(sphere);
 
-        Model ring = new Model(EducationARApplication.getContext(), "Models/ring/ring.obj",null);
+        Model ring = new Model(EducationARApplication.getContext(), "Models/ring/ring.obj");
         ring.setShaderProgram(shaderProgram);
         models.add(ring);
 
-        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube.obj", colors);
+        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube.obj");
         cube.setShaderProgram(shaderProgram);
         models.add(cube);
 

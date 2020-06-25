@@ -12,6 +12,8 @@ import org.artoolkitx.arx.arxj.rendering.RenderUtils;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,18 +26,33 @@ public class Model {
 
     private static Logger logger = Logger.getLogger("EducationAR-Model");
 
-    public Model(Context context,  String file, float[] colors) {
+    public Model(Context context,  String file) {
 
         MyObjLoader objLoader = new MyObjLoader( file);
 
+        float c = 1.0f;
+        float colorpalette[] = {
+                0, 0, 0, c, // 0 black
+                c, 0, 0, c, // 1 red
+                c, c, 0, c, // 2 yellow
+                0, c, 0, c, // 3 green
+                0, 0, c, c, // 4 blue
+                c, 0, c, c, // 5 magenta
+                c, c, c, c, // 6 white
+                0, c, c, c, // 7 cyan
+        };
 
-        mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
-        if(colors !=null){
-            mColorBuffer = RenderUtils.buildFloatBuffer(colors);
-        }else{
-            mColorBuffer=null;
+        // Add a random color to each vertex
+        int colorlength = colorpalette.length;
+        float[] colors = new float[objLoader.vertices.length];
+        for(int i = 0; i<colors.length;i++){
+            int rand = ThreadLocalRandom.current().nextInt(0,colorlength);
+            colors[i] = colorpalette[rand];
         }
 
+
+        mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
+        mColorBuffer = RenderUtils.buildFloatBuffer(colors);
         mIndexBuffer = RenderUtils.buildShortBuffer(objLoader.indices);
     }
 
