@@ -43,6 +43,10 @@ public class EducationARRenderer extends ARRenderer {
     @Override
     public boolean configureARScene() {
 
+
+
+
+        // Add the Markers
         for(int i = 0; i<models.size(); i++) {
             ARController.getInstance().addTrackable("single_barcode;" + i + ";80");
 
@@ -86,10 +90,11 @@ public class EducationARRenderer extends ARRenderer {
     public void draw() {
         super.draw();
 
+        // Initialize GL
         GLES20.glEnable(GLES20.GL_CULL_FACE);
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
         GLES20.glFrontFace(GLES20.GL_CCW);
-
+        
         // Look for trackables, and draw on each found one.
         for (int trackableUID = 0; trackableUID<models.size(); trackableUID++) {
             // If the trackable is visible, apply its transformation, and render a cube

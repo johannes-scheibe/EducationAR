@@ -53,7 +53,7 @@ public class Model {
 
         mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
         mColorBuffer = RenderUtils.buildFloatBuffer(colors);
-        mIndexBuffer = RenderUtils.buildShortBuffer(objLoader.indices);
+        mIndexBuffer = RenderUtils.buildShortBuffer(objLoader.vertexIndices);
     }
 
     @SuppressWarnings("WeakerAccess")
