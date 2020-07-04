@@ -2,33 +2,36 @@ package com.example.educationar;
 
 import android.content.Context;
 
-import com.example.educationar.rendering.MyShaderProgram;
 import com.example.educationar.rendering.ShaderProgram;
+import com.example.educationar.utils.ObjLoader;
+import com.example.educationar.utils.TextureLoader;
 
-import org.artoolkitx.arx.arxj.rendering.ARDrawable;
 import org.artoolkitx.arx.arxj.rendering.RenderUtils;
 
 
-import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Model {
+
+    private static Logger logger = Logger.getLogger("EduAR-Model");
+
     private FloatBuffer mVertexBuffer;
     private FloatBuffer mColorBuffer;
+    private FloatBuffer mNormalBuffer;
+    private FloatBuffer mTextureBuffer;
     private ShortBuffer mIndexBuffer;
+
     private ShaderProgram shaderProgram;
 
+    // Load the Texture
+    private int mTextureDataHandle;
 
-    private static Logger logger = Logger.getLogger("EducationAR-Model");
+    public Model(Context context,  String filename) {
 
-    public Model(Context context,  String file) {
-
-        MyObjLoader objLoader = new MyObjLoader( file);
+        ObjLoader objLoader = new ObjLoader(MainActivity.getContext(), filename + ".obj");
 
         float c = 1.0f;
         float colorpalette[] = {
@@ -46,14 +49,18 @@ public class Model {
         int colorlength = colorpalette.length;
         float[] colors = new float[objLoader.vertices.length];
         for(int i = 0; i<colors.length;i++){
-            int rand = ThreadLocalRandom.current().nextInt(0,colorlength);
+            int rand = ThreadLocalRandom.current().nextInt(4,colorlength);
             colors[i] = colorpalette[rand];
         }
 
-
         mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
         mColorBuffer = RenderUtils.buildFloatBuffer(colors);
+        mNormalBuffer = RenderUtils.buildFloatBuffer(colors);
+        mTextureBuffer = RenderUtils.buildFloatBuffer(objLoader.textures);
         mIndexBuffer = RenderUtils.buildShortBuffer(objLoader.vertexIndices);
+
+        mTextureDataHandle = TextureLoader.loadTexture(MainActivity.getContext(),(filename + ".jpg"));
+
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -65,9 +72,18 @@ public class Model {
         return mColorBuffer;
     }
     @SuppressWarnings("WeakerAccess")
+    public FloatBuffer getmNormalBuffer() {
+        return mNormalBuffer;
+    }
+    @SuppressWarnings("WeakerAccess")
+    public FloatBuffer getmTextureBuffer() {
+        return mTextureBuffer;
+    }
+    @SuppressWarnings("WeakerAccess")
     public ShortBuffer getmIndexBuffer() {
         return mIndexBuffer;
     }
+
 
     /*
      * Used to render objects when working with OpenGL ES 2.x
@@ -77,10 +93,12 @@ public class Model {
      */
     public void draw(float[] projectionMatrix, float[] modelViewMatrix) {
 
+
+
         shaderProgram.setProjectionMatrix(projectionMatrix);
         shaderProgram.setModelViewMatrix(modelViewMatrix);
 
-        shaderProgram.render(this.getmVertexBuffer(), this.getmColorBuffer(), this.getmIndexBuffer());
+        shaderProgram.render(this.getmVertexBuffer(), this.getmTextureBuffer(), this.getmNormalBuffer(), this.getmColorBuffer(), mTextureDataHandle, this.getmIndexBuffer());
 
     }
 

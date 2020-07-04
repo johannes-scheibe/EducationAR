@@ -17,9 +17,12 @@ import com.example.educationar.rendering.MyVertexShader;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 public class EducationARRenderer extends ARRenderer {
+
+    private static Logger logger = Logger.getLogger("EduAR-ARRenderer");
 
     int ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE = 4;
     int AR_MATRIX_CODE_DETECTION = 2;
@@ -31,20 +34,39 @@ public class EducationARRenderer extends ARRenderer {
     private static final Trackable trackables[] = new Trackable[]{
             new Trackable("hiro", 80.0f),
             new Trackable("kanji", 80.0f)
-
     };
 
 
     private List<Model> models = new ArrayList<Model>();
+
+
+    //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
+    //As the cube instantiates the shader during setShaderProgram call we need to create the cube here.
+    @Override
+    public void onSurfaceCreated(GL10 unused, EGLConfig config) {
+        this.shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
+
+        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube");
+        cube.setShaderProgram(shaderProgram);
+        models.add(cube);
+
+        Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere");
+        sphere.setShaderProgram(shaderProgram);
+        models.add(sphere);
+
+        Model monkey = new Model(EducationARApplication.getContext(), "Models/monkey/monkey");
+        monkey.setShaderProgram(shaderProgram);
+        models.add(monkey);
+
+        super.onSurfaceCreated(unused, config);
+
+    }
 
     /**
      * Markers can be configured here.
      */
     @Override
     public boolean configureARScene() {
-
-
-
 
         // Add the Markers
         for(int i = 0; i<models.size(); i++) {
@@ -55,32 +77,6 @@ public class EducationARRenderer extends ARRenderer {
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5_BCH_22_7_7);
         return true;
-    }
-
-    //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
-    //As the cube instantiates the shader during setShaderProgram call we need to create the cube here.
-    @Override
-    public void onSurfaceCreated(GL10 unused, EGLConfig config) {
-        this.shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
-
-        Model ape = new Model(EducationARApplication.getContext(), "Models/monkey/monkey.obj");
-        ape.setShaderProgram(shaderProgram);
-        models.add(ape);
-
-        Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere.obj");
-        sphere.setShaderProgram(shaderProgram);
-        models.add(sphere);
-
-        Model ring = new Model(EducationARApplication.getContext(), "Models/ring/ring.obj");
-        ring.setShaderProgram(shaderProgram);
-        models.add(ring);
-
-        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube.obj");
-        cube.setShaderProgram(shaderProgram);
-        models.add(cube);
-
-        super.onSurfaceCreated(unused, config);
-
     }
 
     /**

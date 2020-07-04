@@ -28,7 +28,6 @@ public class EducationARApplication extends Application {
         // versionCode integer in the modules build.gradle file.
         AssetHelper assetHelper = new AssetHelper(getAssets());
         assetHelper.cacheAssetFolder(this, "Data");
-        assetHelper.cacheAssetFolder(this, "cparam_cache");
     }
 
 }

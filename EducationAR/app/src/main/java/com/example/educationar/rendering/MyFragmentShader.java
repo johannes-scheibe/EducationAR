@@ -55,15 +55,22 @@ public class MyFragmentShader implements OpenGLShader {
      * Therefor OpenGL 2.0 uses the gl_FragColor variable
      */
     private String fragmentShader =
-            "precision mediump float;       \n"     // Set the default precision to medium. We don't need as high of a
-                    // precision in the fragment shader.
-                    + "varying vec4 v_Color;          \n"     // This is the color from the vertex shader interpolated across the
-                    // triangle per fragment.
-                    + "void main()                    \n"     // The entry point for our fragment shader.
-                    + "{                              \n"
-                    + "   gl_FragColor = v_Color;     \n"     // Pass the color directly through the pipeline.
-                    + "}                              \n";
+            "precision mediump float; \n"    // Set the default precision to medium. We don't need as high of a precision in the fragment shader.
+                    + "uniform sampler2D u_Texture; \n"     // The input texture.
 
+                    + "varying vec4 v_Color; \n"     // This is the color from the vertex shader interpolated across the triangle per fragment.
+                    + "varying vec2 v_TexCoordinate; \n"     // This is the texture coordinate from the vertex shader interpolated across the triangle per fragment.
+                    + "varying vec3 v_Normal; \n"           // Interpolated normal for this fragment.
+
+                    + "void main() \n"     // The entry point for our fragment shader.
+                    + "{ \n"
+
+                    + "   gl_FragColor = (1.3 * texture2D(u_Texture, v_TexCoordinate)); \n"     // Multiply the color by the diffuse illumination level and texture value to get final output color.
+                    + "} \n";
+
+
+    // Load in the fragment shader.
+    @Override
     public int configureShader() {
 
         int fragmentShaderHandle = GLES20.glCreateShader(GLES20.GL_FRAGMENT_SHADER);

@@ -53,27 +53,37 @@ import org.artoolkitx.arx.arxj.rendering.OpenGLShader;
 public class MyVertexShader implements OpenGLShader {
 
     static final String colorVectorString = "a_Color";
+    static final String textureVectorString = "a_TexCoordinate";
+    static final String normalVectorString = "a_Normal";
 
     private String vertexShader =
-            "uniform mat4 u_MVPMatrix;        \n"     // A constant representing the combined model/view/projection matrix.
+            "uniform mat4 u_MVPMatrix; \n"     // A constant representing the combined model/view/projection matrix.
 
                     + "uniform mat4 " + OpenGLShader.projectionMatrixString + "; \n"        // projection matrix
-                    + "uniform mat4 " + OpenGLShader.modelViewMatrixString + "; \n"        // modelView matrix
+                    + "uniform mat4 " + OpenGLShader.modelViewMatrixString + "; \n"         // modelView matrix
 
-                    + "attribute vec4 " + OpenGLShader.positionVectorString + "; \n"     // Per-vertex position information we will pass in.
-                    + "attribute vec4 " + colorVectorString + "; \n"     // Per-vertex color information we will pass in.
+                    + "attribute vec4 " + OpenGLShader.positionVectorString + "; \n"    // Per-vertex position information we will pass in.
+                    + "attribute vec4 " + colorVectorString + "; \n"                    // Per-vertex color information we will pass in.
+                    + "attribute vec2 " + textureVectorString + "; \n"                  // Per-vertex texture coordinate information we will pass in
+                    + "attribute vec3 " + normalVectorString + "; \n"                   // Per-vertex normal information we will pass in
 
-                    + "varying vec4 v_Color;          \n"     // This will be passed into the fragment shader.
+                    + "varying vec4 v_Color; \n"            // This will be passed into the fragment shader.
+                    + "varying vec2 v_TexCoordinate; \n"    // This will be passed into the fragment shader.
+                    + "varying vec3 v_Normal; \n"           // This will be passed into the fragment shader.
 
-                    + "void main()                    \n"     // The entry point for our vertex shader.
-                    + "{                              \n"
-                    + "   v_Color = " + colorVectorString + "; \n"     // Pass the color through to the fragment shader.
-                    // It will be interpolated across the triangle.
-                    + "   vec4 p = " + OpenGLShader.modelViewMatrixString + " * " + OpenGLShader.positionVectorString + "; \n "     // transform vertex position with modelview matrix
-                    + "   gl_Position = " + OpenGLShader.projectionMatrixString + " \n"     // gl_Position is a special variable used to store the final position.
-                    + "                     * p;              \n"     // Multiply the vertex by the matrix to get the final point in
-                    + "}                              \n";    // normalized screen coordinates.
+                    + "void main() \n"     // The entry point for our vertex shader.
+                    + "{ \n"
+                    + "   v_Color = " + colorVectorString + "; \n"              // Pass the color through to the fragment shader.
+                    + "   v_TexCoordinate = " + textureVectorString + "; \n"    // Pass the color through to the fragment shader.
 
+                    + "   v_Normal = vec3(" + OpenGLShader.modelViewMatrixString + " * vec4("  + normalVectorString + ", 0.0)); \n" // Transform the normal's orientation into eye space.
+
+                    + "   vec4 mvp = " + OpenGLShader.modelViewMatrixString + " * " + OpenGLShader.positionVectorString + "; \n "     // transform vertex position with modelview matrix
+                    // gl_Position is a special variable used to store the final position.
+                    + "   gl_Position = " + OpenGLShader.projectionMatrixString + " * mvp; \n"     // Multiply the vertex by the matrix to get the final point in normalized screen coordinates.
+                    + "} \n";
+
+    // Load in the vertex shader.
     @Override
     public int configureShader() {
         // Load in the vertex shader.

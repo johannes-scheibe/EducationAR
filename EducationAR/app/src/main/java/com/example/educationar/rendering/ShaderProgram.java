@@ -35,47 +35,33 @@
  *  Author(s): Philip Lamb, Thorsten Bux
  *
  */
+
+
 package com.example.educationar.rendering;
 
 import android.opengl.GLES20;
 
 import org.artoolkitx.arx.arxj.rendering.OpenGLShader;
-import org.artoolkitx.arx.arxj.rendering.RenderUtils;
-import org.artoolkitx.arx.arxj.rendering.shader_impl.SimpleShaderProgram;
 
-import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 
-/**
- * Created by Thorsten Bux on 21.01.2016.
- * <p/>
- * The shader program links together the vertex shader and the fragment shader and compiles them.
- * It also is responsible for binding the attributes. Attributes can be used to pass in values to the
- * shader during runtime.
- * <p/>
- * It is important to call {@link #setupShaderUsage()} as first method inside your
- * implementation of the {@link #render(float[])} render()} method.
- * <p/>
- * This abstract class provides the basic implementation for binding shaders see {@link #createProgram(int, int)}
- * you can just call this method and do not need to worry about binding shaders.
- * <p/>
- * This class also provides stubs of methodes you might want to override when you create your own Shader Program.
- * You can see an example Shader Program in {@link SimpleShaderProgram}
- * <p/>
- * Finally it renders the given geometry.
- */
-@SuppressWarnings("SameParameterValue")
 public abstract class ShaderProgram {
 
     /* Size of the position data in elements. */
     protected final int positionDataSize = 3;
 
-    //Size of color data in elements
+    /* Size of the color data in elements. */
     protected final int colorDataSize = 4;
+
+    /* Size of the texture data in elements. */
+    protected final int textureDataSize = 2;
+
+    /* Size of the normal data in elements. */
+    protected final int normalDataSize = 3;
+
     /* How many bytes per float. */
     private final int mBytesPerFloat = Float.SIZE / 8;
-
 
     /* How many elements per vertex in bytes*/
     protected final int positionStrideBytes = positionDataSize * mBytesPerFloat;
@@ -83,14 +69,13 @@ public abstract class ShaderProgram {
     /* How many elements per vertex in bytes for the color*/
     protected final int colorStrideBytes = colorDataSize * mBytesPerFloat;
 
+    /* How many elements per vertex in bytes for the the texture*/
+    protected final int texCoordinateStrideBytes = textureDataSize * mBytesPerFloat;
+
     protected final int shaderProgramHandle;
+
     private float[] projectionMatrix;
     private float[] modelViewMatrix;
-
-    @SuppressWarnings("WeakerAccess")
-    public ShaderProgram(OpenGLShader vertexShader, OpenGLShader fragmentShader) {
-        shaderProgramHandle = createProgram(vertexShader.configureShader(), fragmentShader.configureShader());
-    }
 
     @SuppressWarnings("WeakerAccess")
     public abstract int getProjectionMatrixHandle();
@@ -100,6 +85,11 @@ public abstract class ShaderProgram {
 
     protected abstract void bindAttributes();
 
+    public ShaderProgram(OpenGLShader vertexShader, OpenGLShader fragmentShader) {
+        shaderProgramHandle = createProgram(vertexShader.configureShader(), fragmentShader.configureShader());
+    }
+
+    // Linking a vertex and fragment shader together into a program
     private int createProgram(int vertexShaderHandle, int fragmentShaderHandle) {
         // Create a program object and store the handle to it.
         int programHandle = GLES20.glCreateProgram();
@@ -133,10 +123,6 @@ public abstract class ShaderProgram {
         return programHandle;
     }
 
-    public int getShaderProgramHandle() {
-        return shaderProgramHandle;
-    }
-
     /**
      * Full loaded render function. You should at least override this one.
      * You need to set the projection and/or modelview matrix befor calling a render method.
@@ -145,25 +131,15 @@ public abstract class ShaderProgram {
      * @param colorBuffer  color information
      * @param indexBuffer  index
      */
-    public void render(FloatBuffer vertexBuffer, FloatBuffer colorBuffer, ShortBuffer indexBuffer) {
+    public void render(FloatBuffer vertexBuffer, FloatBuffer textureBuffer, FloatBuffer normalBuffer, FloatBuffer colorBuffer, int textureDataHandle, ShortBuffer indexBuffer) {
         throw new RuntimeException("Please override at least this method.");
     }
 
     @SuppressWarnings("WeakerAccess")
     public void render(FloatBuffer vertexBuffer, ShortBuffer indexBuffer) {
-        render(vertexBuffer, null, indexBuffer);
+        render(vertexBuffer, null, null, null, 0, indexBuffer);
     }
 
-    /**
-     * Only render a simple position. In this case the implementation if forwarded to the
-     * render(FloatBuffer, FloatBuffer, ByteBuffer) but you can override this one directly
-     * as shown in {@link SimpleShaderProgram}
-     *
-     * @param position The position to be rendered
-     */
-    public void render(float[] position) {
-        render(RenderUtils.buildFloatBuffer(position), null);
-    }
 
     public void setProjectionMatrix(float[] projectionMatrix) {
         this.projectionMatrix = projectionMatrix;
@@ -199,4 +175,6 @@ public abstract class ShaderProgram {
         if (modelViewMatrix != null)
             GLES20.glUniformMatrix4fv(this.getModelViewMatrixHandle(), 1, false, modelViewMatrix, 0);
     }
+
+
 }
