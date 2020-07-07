@@ -65,7 +65,7 @@ public class MyFragmentShader implements OpenGLShader {
                     + "void main() \n"     // The entry point for our fragment shader.
                     + "{ \n"
 
-                    + "   gl_FragColor = (1.3 * texture2D(u_Texture, v_TexCoordinate)); \n"     // Multiply the color by the diffuse illumination level and texture value to get final output color.
+                    + "   gl_FragColor = (v_Color * 1.3 * texture2D(u_Texture, v_TexCoordinate)); \n"     // Multiply the color by the diffuse illumination level and texture value to get final output color.
                     + "} \n";
 
 

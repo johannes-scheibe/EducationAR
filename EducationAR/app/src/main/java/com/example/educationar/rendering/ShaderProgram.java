@@ -129,15 +129,14 @@ public abstract class ShaderProgram {
      *
      * @param vertexBuffer position vertex information
      * @param colorBuffer  color information
-     * @param indexBuffer  index
      */
-    public void render(FloatBuffer vertexBuffer, FloatBuffer textureBuffer, FloatBuffer normalBuffer, FloatBuffer colorBuffer, int textureDataHandle, ShortBuffer indexBuffer) {
+    public void render(FloatBuffer vertexBuffer, FloatBuffer textureBuffer, FloatBuffer normalBuffer, FloatBuffer colorBuffer, int textureDataHandle) {
         throw new RuntimeException("Please override at least this method.");
     }
 
     @SuppressWarnings("WeakerAccess")
-    public void render(FloatBuffer vertexBuffer, ShortBuffer indexBuffer) {
-        render(vertexBuffer, null, null, null, 0, indexBuffer);
+    public void render(FloatBuffer vertexBuffer) {
+        render(vertexBuffer, null, null, null, 0);
     }
 
 

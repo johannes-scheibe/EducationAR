@@ -11,14 +11,15 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 import android.opengl.GLES20;
 
-import com.example.educationar.rendering.MyFragmentShader;
-import com.example.educationar.rendering.MyShaderProgram;
-import com.example.educationar.rendering.MyVertexShader;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import com.example.educationar.rendering.MyFragmentShader;
+import com.example.educationar.rendering.MyShaderProgram;
+import com.example.educationar.rendering.MyVertexShader;
 
 public class EducationARRenderer extends ARRenderer {
 
@@ -31,11 +32,6 @@ public class EducationARRenderer extends ARRenderer {
 
     private MyShaderProgram shaderProgram;
 
-    private static final Trackable trackables[] = new Trackable[]{
-            new Trackable("hiro", 80.0f),
-            new Trackable("kanji", 80.0f)
-    };
-
 
     private List<Model> models = new ArrayList<Model>();
 
@@ -46,13 +42,13 @@ public class EducationARRenderer extends ARRenderer {
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
         this.shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
 
-        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube");
-        cube.setShaderProgram(shaderProgram);
-        models.add(cube);
-
         Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere");
         sphere.setShaderProgram(shaderProgram);
         models.add(sphere);
+
+        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube");
+        cube.setShaderProgram(shaderProgram);
+        models.add(cube);
 
         Model monkey = new Model(EducationARApplication.getContext(), "Models/monkey/monkey");
         monkey.setShaderProgram(shaderProgram);

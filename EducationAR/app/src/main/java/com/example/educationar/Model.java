@@ -33,31 +33,12 @@ public class Model {
 
         ObjLoader objLoader = new ObjLoader(MainActivity.getContext(), filename + ".obj");
 
-        float c = 1.0f;
-        float colorpalette[] = {
-                0, 0, 0, c, // 0 black
-                c, 0, 0, c, // 1 red
-                c, c, 0, c, // 2 yellow
-                0, c, 0, c, // 3 green
-                0, 0, c, c, // 4 blue
-                c, 0, c, c, // 5 magenta
-                c, c, c, c, // 6 white
-                0, c, c, c, // 7 cyan
-        };
-
-        // Add a random color to each vertex
-        int colorlength = colorpalette.length;
-        float[] colors = new float[objLoader.vertices.length];
-        for(int i = 0; i<colors.length;i++){
-            int rand = ThreadLocalRandom.current().nextInt(4,colorlength);
-            colors[i] = colorpalette[rand];
-        }
 
         mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
-        mColorBuffer = RenderUtils.buildFloatBuffer(colors);
-        mNormalBuffer = RenderUtils.buildFloatBuffer(colors);
+        mColorBuffer = RenderUtils.buildFloatBuffer(objLoader.colors);
+        mNormalBuffer = RenderUtils.buildFloatBuffer(objLoader.normals);
         mTextureBuffer = RenderUtils.buildFloatBuffer(objLoader.textures);
-        mIndexBuffer = RenderUtils.buildShortBuffer(objLoader.vertexIndices);
+        mIndexBuffer = null;
 
         mTextureDataHandle = TextureLoader.loadTexture(MainActivity.getContext(),(filename + ".jpg"));
 
@@ -93,13 +74,9 @@ public class Model {
      */
     public void draw(float[] projectionMatrix, float[] modelViewMatrix) {
 
-
-
         shaderProgram.setProjectionMatrix(projectionMatrix);
         shaderProgram.setModelViewMatrix(modelViewMatrix);
-
-        shaderProgram.render(this.getmVertexBuffer(), this.getmTextureBuffer(), this.getmNormalBuffer(), this.getmColorBuffer(), mTextureDataHandle, this.getmIndexBuffer());
-
+        shaderProgram.render(this.getmVertexBuffer(), this.getmTextureBuffer(), this.getmNormalBuffer(), this.getmColorBuffer(), mTextureDataHandle);
     }
 
     /*

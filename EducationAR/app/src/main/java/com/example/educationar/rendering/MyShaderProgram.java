@@ -99,17 +99,16 @@ public class MyShaderProgram extends ShaderProgram {
     }
 
     /**
-     * There are several render methods available from the base class. In this case we override the {@link ShaderProgram#render(FloatBuffer, FloatBuffer, FloatBuffer, FloatBuffer, int, ShortBuffer)} one.
+     * There are several render methods available from the base class. In this case we override the {@link ShaderProgram#render(FloatBuffer, FloatBuffer, FloatBuffer, FloatBuffer, int)} one.
      * Although we never use the index ByteBuffer.
      * We pass in the vertex and color information from the  object.
      *
      * @param vertexBuffer Contains the position information as two vertexes. Start and end of the line to draw
      * @param colorBuffer  Contains the color of the line
-     * @param indexBuffer TODO
      */
 
     @Override
-    public void render(FloatBuffer vertexBuffer, FloatBuffer textureBuffer, FloatBuffer normalBuffer, FloatBuffer colorBuffer, int textureDataHandle, ShortBuffer indexBuffer) {
+    public void render(FloatBuffer vertexBuffer, FloatBuffer textureBuffer, FloatBuffer normalBuffer, FloatBuffer colorBuffer, int textureDataHandle) {
         setupShaderUsage();
 
         // Pass in the vertex coordinate information
@@ -151,15 +150,7 @@ public class MyShaderProgram extends ShaderProgram {
             GLES20.glEnableVertexAttribArray(this.getTextureCoordinateHandle());
         }
 
-
-
-        if(indexBuffer != null) {
-            //Finally draw the geometry as triangles
-            //The geometry consists of 36 points (indexBuffer.limit()) each represented by a x,y,z vector
-            //The index buffer tells the renderer how the vector points are combined together.
-            //eg. combine vertex 1,2,3 for the first triangle (vertex) and 2,3,4 for the next triangle, ...
-            GLES20.glDrawElements(GLES20.GL_TRIANGLES, indexBuffer.limit(), GLES20.GL_UNSIGNED_SHORT, indexBuffer);
-        }
+        GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, vertexBuffer.limit());
 
     }
 

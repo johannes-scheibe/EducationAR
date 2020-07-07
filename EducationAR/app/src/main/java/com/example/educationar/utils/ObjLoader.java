@@ -25,12 +25,14 @@ public final class ObjLoader {
     public float vertices[];
     public float normals[];
     public float textures[];
-    public short vertexIndices[];
-    public short textureIndices[];
-    public short normalIndices[];
+    public float colors[];
 
 
     public ObjLoader(Context context, String file) {
+
+        short vertexIndices[];
+        short textureIndices[];
+        short normalIndices[];
 
         int numFaces;
         List<Float> vertices = new ArrayList<Float>();
@@ -65,7 +67,7 @@ public final class ObjLoader {
                     case "vt":
                         // textures
                         textures.add(Float.valueOf(parts[1]).floatValue());
-                        textures.add(Float.valueOf(parts[2]).floatValue());
+                        textures.add(1-Float.valueOf(parts[2]).floatValue());
                         break;
                     case "f":
                         // faces: vertex/texture/normal
@@ -82,6 +84,7 @@ public final class ObjLoader {
             vertexIndices = new short[faces.size()];
             textureIndices = new short[faces.size()];
             normalIndices = new short[faces.size()];
+
             for (int i = 0; i < faces.size(); i++) {
                 String[] parts = faces.get(i).split("/");
                 logger.log(Level.INFO, faces.get(i));
@@ -97,12 +100,14 @@ public final class ObjLoader {
                 normalIndices[i] = (nIndex -= 1);
             }
 
-            // Convert ArrayLists to arrays
+
             int i;
-            float[] vArray = new float[vertices.size()];
+            float[] vArray = new float[vertexIndices.length*3];
             i = 0;
-            for (Float value : vertices) {
-                vArray[i++] = value;
+            for (Short index : vertexIndices) {
+                vArray[i++] = vertices.get(index*3);
+                vArray[i++] = vertices.get(index*3+1);
+                vArray[i++] = vertices.get(index*3+2);
             }
             this.vertices = vArray;
 
@@ -112,7 +117,6 @@ public final class ObjLoader {
                 tArray[i++] = textures.get(index*2);
                 tArray[i++] = textures.get(index*2+1);
             }
-
             this.textures = tArray;
 
             float[] nArray = new float[normalIndices.length*3];
@@ -124,6 +128,15 @@ public final class ObjLoader {
             }
             this.normals = nArray;
 
+
+            colors = new float[faces.size()*4];
+            i =0;
+            while(i<colors.length){
+                colors[i++] = 1.0f;
+                colors[i++] = 1.0f;
+                colors[i++] = 1.0f;
+                colors[i++] = 1.0f;
+            }
 
         } catch (IOException e) {
             logger.log(Level.SEVERE, e.getMessage());
