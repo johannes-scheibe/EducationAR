@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.6)  6 JUL 2020 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.6)  7 JUL 2020 12:02
 entering extended mode
 **./main.tex
 (main.tex
@@ -344,9 +344,17 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen160
 \Gin@req@width=\dimen161
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count199
+\float@exts=\toks24
+\float@box=\box49
+\@float@everytoks=\toks25
+\@floatcapt=\box50
+)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks24
+\@enLab=\toks26
 )
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/todonotes\todonotes.sty
 Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
@@ -359,10 +367,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
-\XKV@toks=\toks25
-\XKV@tempa@toks=\toks26
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
 )
-\XKV@depth=\count199
+\XKV@depth=\count266
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/xcolor\xcolor.sty
@@ -389,7 +397,7 @@ sty
 y
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks27
+\pgfutil@everybye=\toks29
 \pgfutil@tempdima=\dimen162
 \pgfutil@tempdimb=\dimen163
 
@@ -397,7 +405,7 @@ y
 -common-lists.tex))
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box49
+\pgfutil@abb=\box51
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/ms\everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -419,12 +427,12 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks28
-\pgfkeys@temptoks=\toks29
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfkeys
 filtered.code.tex
-\pgfkeys@tmptoks=\toks30
+\pgfkeys@tmptoks=\toks32
 ))
 \pgf@x=\dimen164
 \pgf@y=\dimen165
@@ -438,14 +446,14 @@ filtered.code.tex
 \pgf@yd=\dimen173
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count266
-\c@pgf@countb=\count267
-\c@pgf@countc=\count268
-\c@pgf@countd=\count269
-\t@pgf@toka=\toks31
-\t@pgf@tokb=\toks32
-\t@pgf@tokc=\toks33
-\pgf@sys@id@count=\count270
+\c@pgf@counta=\count267
+\c@pgf@countb=\count268
+\c@pgf@countc=\count269
+\c@pgf@countd=\count270
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count271
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -464,8 +472,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count271
-\pgfsyssoftpath@bigbuffer@items=\count272
+\pgfsyssoftpath@smallbuffer@items=\count272
+\pgfsyssoftpath@bigbuffer@items=\count273
 )
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -484,11 +492,11 @@ code.tex)
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathparse
 r.code.tex
 \pgfmath@dimen=\dimen174
-\pgfmath@count=\count273
-\pgfmath@box=\box50
-\pgfmath@toks=\toks34
-\pgfmath@stack@operand=\toks35
-\pgfmath@stack@operation=\toks36
+\pgfmath@count=\count274
+\pgfmath@box=\box52
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
 )
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex
@@ -510,7 +518,7 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count274
+\c@pgfmathroundto@lastzeros=\count275
 ))
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfint.code.
 tex)
@@ -547,10 +555,10 @@ File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box51
-\pgf@hbox=\box52
-\pgf@layerbox@main=\box53
-\pgf@picture@serial@count=\count275
+\pgfpic=\box53
+\pgf@hbox=\box54
+\pgf@layerbox@main=\box55
+\pgf@picture@serial@count=\count276
 )
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
@@ -585,8 +593,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 eshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen198
-\pgf@sys@shading@range@num=\count276
-\pgf@shadingcount=\count277
+\pgf@sys@shading@range@num=\count277
+\pgf@shadingcount=\count278
 )
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -595,7 +603,7 @@ File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box54
+\pgfexternal@startupbox=\box56
 ))
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -616,7 +624,7 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box55
+\pgfnodeparttextbox=\box57
 )
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -649,8 +657,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 .tex)
 \pgffor@iter=\dimen257
 \pgffor@skip=\dimen258
-\pgffor@stack=\toks37
-\pgffor@toks=\toks38
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 ))
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -659,7 +667,7 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count278
+\pgf@plot@mark@count=\count279
 \pgfplotmarksize=\dimen259
 )
 \tikz@lastx=\dimen260
@@ -670,23 +678,23 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@lastmovetoy=\dimen265
 \tikzleveldistance=\dimen266
 \tikzsiblingdistance=\dimen267
-\tikz@figbox=\box56
-\tikz@figbox@bg=\box57
-\tikz@tempbox=\box58
-\tikz@tempbox@bg=\box59
-\tikztreelevel=\count279
-\tikznumberofchildren=\count280
-\tikznumberofcurrentchild=\count281
-\tikz@fig@count=\count282
+\tikz@figbox=\box58
+\tikz@figbox@bg=\box59
+\tikz@tempbox=\box60
+\tikz@tempbox@bg=\box61
+\tikztreelevel=\count280
+\tikznumberofchildren=\count281
+\tikznumberofcurrentchild=\count282
+\tikz@fig@count=\count283
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count283
-\pgfmatrixcurrentcolumn=\count284
-\pgf@matrix@numberofcolumns=\count285
+\pgfmatrixcurrentrow=\count284
+\pgfmatrixcurrentcolumn=\count285
+\pgf@matrix@numberofcolumns=\count286
 )
-\tikz@expandcount=\count286
+\tikz@expandcount=\count287
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -709,18 +717,18 @@ aryfadings.code.tex
 File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count287
-\calc@Bcount=\count288
+\calc@Acount=\count288
+\calc@Bcount=\count289
 \calc@Adimen=\dimen268
 \calc@Bdimen=\dimen269
 \calc@Askip=\skip69
 \calc@Bskip=\skip70
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count289
+\calc@Ccount=\count290
 \calc@Cskip=\skip71
 )
-\c@@todonotes@numberoftodonotes=\count290
+\c@@todonotes@numberoftodonotes=\count291
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
@@ -765,8 +773,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen270
-\Hy@linkcounter=\count291
-\Hy@pagecounter=\count292
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -778,7 +786,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count293
+\Hy@SavedSpaceFactor=\count294
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -786,7 +794,7 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count294
+\c@Hy@tempcnt=\count295
  (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -802,7 +810,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count295
+\Fld@menulength=\count296
 \Field@Width=\dimen272
 \Fld@charsize=\dimen273
 Package hyperref Info: Hyper figures OFF on input line 6347.
@@ -818,9 +826,9 @@ LaTeX Info: Redefining \pageref on input line 6421.
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/generic/atbegshi\atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count296
-\c@Item=\count297
-\c@Hfootnote=\count298
+\Hy@abspage=\count297
+\c@Item=\count298
+\c@Hfootnote=\count299
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
@@ -830,8 +838,8 @@ File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count299
-\c@bookmark@seq@number=\count300
+\Fld@listcount=\count300
+\c@bookmark@seq@number=\count301
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -849,34 +857,27 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/l3backend\l3backend-pdf
 mode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count301
-\l__pdf_internal_box=\box60
-) (main.aux
-
-LaTeX Warning: Label `sec:Einleitung' multiply defined.
-
-
-LaTeX Warning: Label `sec:Einleitung' multiply defined.
-
-)
+\l__kernel_color_stack_int=\count302
+\l__pdf_internal_box=\box62
+) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -913,23 +914,24 @@ LaTeX Font Info:    ... okay on input line 117.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count302
+\scratchcounter=\count303
 \scratchdimen=\dimen274
-\scratchbox=\box61
-\nofMPsegments=\count303
-\nofMParguments=\count304
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count305
+\scratchbox=\box63
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count306
 \MPscratchDim=\dimen275
-\MPnumerator=\count306
-\makeMPintoPDFobject=\count307
-\everyMPtoPDFconversion=\toks40
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks42
 )
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -941,10 +943,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 Package todonotes Warning: The length marginparwidth is less than 2cm and will 
 most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 117.
+loading the todonotes package. on input line 118.
 
-\AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring OFF on input line 117.
+\AtBeginShipoutBox=\box64
+Package hyperref Info: Link coloring OFF on input line 118.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -955,11 +957,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count308
+\c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 118.
+LaTeX Info: Redefining \pageref on input line 118.
+LaTeX Info: Redefining \nameref on input line 118.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -971,7 +973,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 117.
+(scrbook)           before \begin{document} on input line 118.
 
 (C:\Users\Johannes\AppData\Roaming\MiKTeX\2.9\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
@@ -981,19 +983,19 @@ File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input lin
 e 168.
-\BKM@id=\count309
+\BKM@id=\count310
 ))
 <Abbildungen/uni_ol_logo.png, id=30, 72.27pt x 43.24155pt>
 File: Abbildungen/uni_ol_logo.png Graphic file (type png)
 <use Abbildungen/uni_ol_logo.png>
-Package pdftex.def Info: Abbildungen/uni_ol_logo.png  used on input line 130.
+Package pdftex.def Info: Abbildungen/uni_ol_logo.png  used on input line 131.
 (pdftex.def)             Requested size: 130.08586pt x 77.83469pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131
+LaTeX Font Info:    Trying to load font information for U+msa on input line 132
 .
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131
+LaTeX Font Info:    Trying to load font information for U+msb on input line 132
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
@@ -1002,7 +1004,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Abbildungen/abteilungslogo.jpg, id=31, 313.57831pt x 265.80661pt>
 File: Abbildungen/abteilungslogo.jpg Graphic file (type jpg)
 <use Abbildungen/abteilungslogo.jpg>
-Package pdftex.def Info: Abbildungen/abteilungslogo.jpg  used on input line 134
+Package pdftex.def Info: Abbildungen/abteilungslogo.jpg  used on input line 135
 .
 (pdftex.def)             Requested size: 109.75404pt x 93.03369pt.
  [1
@@ -1011,14 +1013,14 @@ Package pdftex.def Info: Abbildungen/abteilungslogo.jpg  used on input line 134
 
 
 {C:/Users/Johannes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Abbild
-ungen/uni_ol_logo.png> <./Abbildungen/abteilungslogo.jpg>] (main.toc)
+ungen/uni_ol_logo.png> <./Abbildungen/abteilungslogo.jpg>] (main.toc [2
+
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2
-
-
-] [3] (main.lof)
+ [3] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1035,6 +1037,21 @@ ungen/uni_ol_logo.png> <./Abbildungen/abteilungslogo.jpg>] (main.toc)
 
 ]
 chapter without number
+
+Class scrbook Warning: \float@addtolists detected!
+(scrbook)              Implementation of \float@addtolist became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Since Version 3.12 support for deprecated
+(scrbook)              \float@addtolist interface has been
+(scrbook)              restricted to only some of the KOMA-Script
+(scrbook)              features and been removed from others.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@addtolist interface.
+
 ) [6
 
 
@@ -1056,43 +1073,116 @@ chapter 3.
 
 ]
 chapter 4.
-) (Kapitel/Evaluation.tex [4
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+<Abbildungen/Testaufbau.jpeg, id=149, 3661.68pt x 2746.26pt>
+File: Abbildungen/Testaufbau.jpeg Graphic file (type jpg)
+<use Abbildungen/Testaufbau.jpeg>
+Package pdftex.def Info: Abbildungen/Testaufbau.jpeg  used on input line 21.
+(pdftex.def)             Requested size: 298.75264pt x 224.06335pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 27.
+
+Overfull \hbox (6.15714pt too wide) in paragraph at lines 27--27
+\OT1/cmr/m/n/6 ment(Anhang)[]  
+ []
+
+
+Overfull \hbox (6.15714pt too wide) in paragraph at lines 27--27
+\OT1/cmr/m/n/6 ment(Anhang)[]  
+ []
+
+[4
 
 
 ]
+<Abbildungen/Invarianz/Perspektive1.jpg, id=155, 2321.67375pt x 2321.67375pt>
+File: Abbildungen/Invarianz/Perspektive1.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Perspektive1.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Perspektive1.jpg  used on input 
+line 40.
+(pdftex.def)             Requested size: 85.35696pt x 85.34085pt.
+<Abbildungen/Invarianz/Perspektive2.jpg, id=156, 2956.04375pt x 2956.04375pt>
+File: Abbildungen/Invarianz/Perspektive2.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Perspektive2.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Perspektive2.jpg  used on input 
+line 41.
+(pdftex.def)             Requested size: 85.35696pt x 85.33968pt.
+ [5 <./Abbildungen/Testaufbau.jpeg>]
+Overfull \hbox (0.58276pt too wide) in paragraph at lines 45--46
+\OT1/cmr/m/n/12 ku-ment zu- und weg-be-wegt, um ver-schie-de-nen Mar-ker-gr[]o
+en bzw. -aufl[]osungen
+ []
+
+<Abbildungen/Invarianz/Skalierung1.jpg, id=165, 2255.42625pt x 2269.47874pt>
+File: Abbildungen/Invarianz/Skalierung1.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Skalierung1.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Skalierung1.jpg  used on input l
+ine 49.
+(pdftex.def)             Requested size: 85.35696pt x 85.88094pt.
+<Abbildungen/Invarianz/Skalierung2.jpg, id=166, 1896.08376pt x 1896.08376pt>
+File: Abbildungen/Invarianz/Skalierung2.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Skalierung2.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Skalierung2.jpg  used on input l
+ine 50.
+(pdftex.def)             Requested size: 85.35696pt x 85.34901pt.
+<Abbildungen/Invarianz/Rotation1.jpg, id=167, 3336.465pt x 3336.465pt>
+File: Abbildungen/Invarianz/Rotation1.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Rotation1.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Rotation1.jpg  used on input lin
+e 57.
+(pdftex.def)             Requested size: 85.35696pt x 85.32564pt.
+<Abbildungen/Invarianz/Rotation2.jpg, id=168, 1711.1428pt x 1710.39pt>
+File: Abbildungen/Invarianz/Rotation2.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Rotation2.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Rotation2.jpg  used on input lin
+e 58.
+(pdftex.def)             Requested size: 85.35696pt x 85.31572pt.
+<Abbildungen/Invarianz/Belichtung1.jpg, id=169, 2569.34906pt x 2568.59625pt>
+File: Abbildungen/Invarianz/Belichtung1.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Belichtung1.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Belichtung1.jpg  used on input l
+ine 65.
+(pdftex.def)             Requested size: 85.35696pt x 85.3244pt.
+<Abbildungen/Invarianz/Belichtung2.jpg, id=170, 1327.96124pt x 1327.96124pt>
+File: Abbildungen/Invarianz/Belichtung2.jpg Graphic file (type jpg)
+<use Abbildungen/Invarianz/Belichtung2.jpg>
+Package pdftex.def Info: Abbildungen/Invarianz/Belichtung2.jpg  used on input l
+ine 66.
+(pdftex.def)             Requested size: 85.35696pt x 85.34789pt.
+[6 <./Abbildungen/Invarianz/Perspektive1.jpg> <./Abbildungen/Invarianz/Perspekt
+ive2.jpg> <./Abbildungen/Invarianz/Skalierung1.jpg> <./Abbildungen/Invarianz/Sk
+alierung2.jpg> <./Abbildungen/Invarianz/Rotation1.jpg> <./Abbildungen/Invarianz
+/Rotation2.jpg>]
+Overfull \hbox (12.2469pt too wide) in paragraph at lines 70--71
+[]\OT1/cmr/m/n/12 Trackinggeschwindigkeit:[][][] Die-ser Test-fall soll-te die 
+Ge-schwin-dig-keit des Trackings,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+
+ []
+
+) (Kapitel/Evaluation.tex [7 <./Abbildungen/Invarianz/Belichtung1.jpg> <./Abbil
+dungen/Invarianz/Belichtung2.jpg>]
 chapter 5.
-) (Kapitel/Fazit.tex [5
+) (Kapitel/Fazit.tex [8
 
 
 ]
 chapter 6.
-) (Kapitel/Beispielkapitel.tex [6
+) (Kapitel/Beispielkapitel.tex [9
 
 
 ]
 chapter 7.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 3.
-
-Package natbib Warning: Citation `hevner04:design' on page 7 undefined on input
- line 7.
-
-
-Package natbib Warning: Citation `hevner04:design' on page 7 undefined on input
- line 9.
-
-
-Package natbib Warning: Citation `hevner04:design' on page 7 undefined on input
- line 11.
-
-
-Package natbib Warning: Citation `hevner04:design' on page 7 undefined on input
- line 13.
-
-
-Package natbib Warning: Citation `internet00:webquelle' on page 7 undefined on 
-input line 15.
-
 File: Abbildungen/uni_ol_logo.png Graphic file (type png)
 <use Abbildungen/uni_ol_logo.png>
 Package pdftex.def Info: Abbildungen/uni_ol_logo.png  used on input line 27.
@@ -1100,59 +1190,67 @@ Package pdftex.def Info: Abbildungen/uni_ol_logo.png  used on input line 27.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7
+[10
 
 
-]) [8]
-No file main.bbl.
-(Kapitel/Beispielanhang.tex
-chapter A.
-) [9
-
-
-
-
-] (Sonstiges/Erklaerung.tex)
-
-Package natbib Warning: There were undefined citations.
-
-[1
+]) [11] (main.bbl) (Kapitel/Beispielanhang.tex [12
 
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 245.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 245.
+chapter A.
+) [13
+
+
+] (Sonstiges/Erklaerung.tex) [1
+
+
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 245.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 245.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 245.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
  ) 
 Here is how much of TeX's memory you used:
- 24854 strings out of 480756
- 502294 string characters out of 2903752
- 899727 words of memory out of 3000000
- 40345 multiletter control sequences out of 15000+200000
- 540680 words of font info for 54 fonts, out of 3000000 for 9000
+ 25036 strings out of 480756
+ 506365 string characters out of 2903752
+ 905034 words of memory out of 3000000
+ 40486 multiletter control sequences out of 15000+200000
+ 541186 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,19n,90p,10101b,965s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (16 pages, 165666 bytes).
+ 73i,19n,90p,10101b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{table.caption.17} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.15} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.18} has been referenced but does not exist
+, replaced by a fixed one
+
+ <C:\Users\Johannes\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
+\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (20 pages, 9207158 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 396 words of extra memory for PDF output out of 10000 (max. 10000000)
 
