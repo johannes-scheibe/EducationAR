@@ -150,7 +150,10 @@ public class MyShaderProgram extends ShaderProgram {
             GLES20.glEnableVertexAttribArray(this.getTextureCoordinateHandle());
         }
 
-        GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, vertexBuffer.limit());
+        vertexBuffer.position(0);
+
+        int numVertices =  (vertexBuffer.limit()/positionDataSize);
+        GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, numVertices);
 
     }
 

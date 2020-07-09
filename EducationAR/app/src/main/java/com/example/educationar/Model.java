@@ -38,7 +38,7 @@ public class Model {
         mColorBuffer = RenderUtils.buildFloatBuffer(objLoader.colors);
         mNormalBuffer = RenderUtils.buildFloatBuffer(objLoader.normals);
         mTextureBuffer = RenderUtils.buildFloatBuffer(objLoader.textures);
-        mIndexBuffer = null;
+        mNormalBuffer = null;
 
         mTextureDataHandle = TextureLoader.loadTexture(MainActivity.getContext(),(filename + ".jpg"));
 

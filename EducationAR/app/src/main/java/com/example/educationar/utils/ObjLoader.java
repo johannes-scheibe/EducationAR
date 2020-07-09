@@ -87,50 +87,51 @@ public final class ObjLoader {
 
             for (int i = 0; i < faces.size(); i++) {
                 String[] parts = faces.get(i).split("/");
-                logger.log(Level.INFO, faces.get(i));
+
                 // Vertex index
                 short vIndex = Short.valueOf(parts[0]).shortValue();
                 vertexIndices[i] = (vIndex -= 1);
-                logger.log(Level.INFO,""+vIndex);
+
                 // Texture index
                 short tIndex = Short.valueOf(parts[1]).shortValue();
                 textureIndices[i] = (tIndex -= 1);
+
                 // Normal index
                 short nIndex = Short.valueOf(parts[2]).shortValue();
                 normalIndices[i] = (nIndex -= 1);
+
             }
 
 
             int i;
-            float[] vArray = new float[vertexIndices.length*3];
+            this.vertices = new float[vertexIndices.length*3];
             i = 0;
             for (Short index : vertexIndices) {
-                vArray[i++] = vertices.get(index*3);
-                vArray[i++] = vertices.get(index*3+1);
-                vArray[i++] = vertices.get(index*3+2);
+                this.vertices[i++] = vertices.get(index*3);
+                this.vertices[i++] = vertices.get(index*3+1);
+                this.vertices[i++] = vertices.get(index*3+2);
             }
-            this.vertices = vArray;
 
-            float[] tArray = new float[textureIndices.length*2];
+
+            this.textures = new float[textureIndices.length*2];
             i = 0;
             for (Short index : textureIndices) {
-                tArray[i++] = textures.get(index*2);
-                tArray[i++] = textures.get(index*2+1);
+                this.textures[i++] = textures.get(index*2);
+                this.textures[i++] = textures.get(index*2+1);
             }
-            this.textures = tArray;
 
-            float[] nArray = new float[normalIndices.length*3];
+
+            this.normals = new float[normalIndices.length*3];
             i = 0;
             for (Short index : normalIndices) {
-                nArray[i++] = normals.get(index*3);
-                nArray[i++] = normals.get(index*3+1);
-                nArray[i++] = normals.get(index*3+2);
+                this.normals[i++] = normals.get(index*3);
+                this.normals[i++] = normals.get(index*3+1);
+                this.normals[i++] = normals.get(index*3+2);
             }
-            this.normals = nArray;
 
 
             colors = new float[faces.size()*4];
-            i =0;
+            i = 0;
             while(i<colors.length){
                 colors[i++] = 1.0f;
                 colors[i++] = 1.0f;
