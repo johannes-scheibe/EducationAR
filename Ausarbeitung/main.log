@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.6)  7 JUL 2020 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.6)  9 JUL 2020 13:26
 entering extended mode
 **./main.tex
 (main.tex
@@ -1068,17 +1068,24 @@ chapter 2.
 
 ]
 chapter 3.
-) (Kapitel/Entwicklung.tex [3
+) (Kapitel/Konzept.tex [3
 
 
 ]
 chapter 4.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 12.
+[4
+
+
+]) (Kapitel/Implementierung.tex [5]
+chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
-<Abbildungen/Testaufbau.jpeg, id=149, 3661.68pt x 2746.26pt>
+<Abbildungen/Testaufbau.jpeg, id=172, 3661.68pt x 2746.26pt>
 File: Abbildungen/Testaufbau.jpeg Graphic file (type jpg)
 <use Abbildungen/Testaufbau.jpeg>
 Package pdftex.def Info: Abbildungen/Testaufbau.jpeg  used on input line 21.
@@ -1086,8 +1093,6 @@ Package pdftex.def Info: Abbildungen/Testaufbau.jpeg  used on input line 21.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 27.
 
 Overfull \hbox (6.15714pt too wide) in paragraph at lines 27--27
 \OT1/cmr/m/n/6 ment(Anhang)[]  
@@ -1098,65 +1103,65 @@ Overfull \hbox (6.15714pt too wide) in paragraph at lines 27--27
 \OT1/cmr/m/n/6 ment(Anhang)[]  
  []
 
-[4
+[6
 
 
 ]
-<Abbildungen/Invarianz/Perspektive1.jpg, id=155, 2321.67375pt x 2321.67375pt>
+<Abbildungen/Invarianz/Perspektive1.jpg, id=178, 2321.67375pt x 2321.67375pt>
 File: Abbildungen/Invarianz/Perspektive1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Perspektive1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Perspektive1.jpg  used on input 
 line 40.
 (pdftex.def)             Requested size: 85.35696pt x 85.34085pt.
-<Abbildungen/Invarianz/Perspektive2.jpg, id=156, 2956.04375pt x 2956.04375pt>
+<Abbildungen/Invarianz/Perspektive2.jpg, id=179, 2956.04375pt x 2956.04375pt>
 File: Abbildungen/Invarianz/Perspektive2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Perspektive2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Perspektive2.jpg  used on input 
 line 41.
 (pdftex.def)             Requested size: 85.35696pt x 85.33968pt.
- [5 <./Abbildungen/Testaufbau.jpeg>]
+ [7 <./Abbildungen/Testaufbau.jpeg>]
 Overfull \hbox (0.58276pt too wide) in paragraph at lines 45--46
 \OT1/cmr/m/n/12 ku-ment zu- und weg-be-wegt, um ver-schie-de-nen Mar-ker-gr[]o
 en bzw. -aufl[]osungen
  []
 
-<Abbildungen/Invarianz/Skalierung1.jpg, id=165, 2255.42625pt x 2269.47874pt>
+<Abbildungen/Invarianz/Skalierung1.jpg, id=188, 2255.42625pt x 2269.47874pt>
 File: Abbildungen/Invarianz/Skalierung1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Skalierung1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Skalierung1.jpg  used on input l
 ine 49.
 (pdftex.def)             Requested size: 85.35696pt x 85.88094pt.
-<Abbildungen/Invarianz/Skalierung2.jpg, id=166, 1896.08376pt x 1896.08376pt>
+<Abbildungen/Invarianz/Skalierung2.jpg, id=189, 1896.08376pt x 1896.08376pt>
 File: Abbildungen/Invarianz/Skalierung2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Skalierung2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Skalierung2.jpg  used on input l
 ine 50.
 (pdftex.def)             Requested size: 85.35696pt x 85.34901pt.
-<Abbildungen/Invarianz/Rotation1.jpg, id=167, 3336.465pt x 3336.465pt>
+<Abbildungen/Invarianz/Rotation1.jpg, id=190, 3336.465pt x 3336.465pt>
 File: Abbildungen/Invarianz/Rotation1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Rotation1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Rotation1.jpg  used on input lin
 e 57.
 (pdftex.def)             Requested size: 85.35696pt x 85.32564pt.
-<Abbildungen/Invarianz/Rotation2.jpg, id=168, 1711.1428pt x 1710.39pt>
+<Abbildungen/Invarianz/Rotation2.jpg, id=191, 1711.1428pt x 1710.39pt>
 File: Abbildungen/Invarianz/Rotation2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Rotation2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Rotation2.jpg  used on input lin
 e 58.
 (pdftex.def)             Requested size: 85.35696pt x 85.31572pt.
-<Abbildungen/Invarianz/Belichtung1.jpg, id=169, 2569.34906pt x 2568.59625pt>
+<Abbildungen/Invarianz/Belichtung1.jpg, id=192, 2569.34906pt x 2568.59625pt>
 File: Abbildungen/Invarianz/Belichtung1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Belichtung1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Belichtung1.jpg  used on input l
 ine 65.
 (pdftex.def)             Requested size: 85.35696pt x 85.3244pt.
-<Abbildungen/Invarianz/Belichtung2.jpg, id=170, 1327.96124pt x 1327.96124pt>
+<Abbildungen/Invarianz/Belichtung2.jpg, id=193, 1327.96124pt x 1327.96124pt>
 File: Abbildungen/Invarianz/Belichtung2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Belichtung2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Belichtung2.jpg  used on input l
 ine 66.
 (pdftex.def)             Requested size: 85.35696pt x 85.34789pt.
-[6 <./Abbildungen/Invarianz/Perspektive1.jpg> <./Abbildungen/Invarianz/Perspekt
+[8 <./Abbildungen/Invarianz/Perspektive1.jpg> <./Abbildungen/Invarianz/Perspekt
 ive2.jpg> <./Abbildungen/Invarianz/Skalierung1.jpg> <./Abbildungen/Invarianz/Sk
 alierung2.jpg> <./Abbildungen/Invarianz/Rotation1.jpg> <./Abbildungen/Invarianz
 /Rotation2.jpg>]
@@ -1170,30 +1175,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
-) (Kapitel/Evaluation.tex [7 <./Abbildungen/Invarianz/Belichtung1.jpg> <./Abbil
+) (Kapitel/Evaluation.tex [9 <./Abbildungen/Invarianz/Belichtung1.jpg> <./Abbil
 dungen/Invarianz/Belichtung2.jpg>]
-chapter 5.
-) (Kapitel/Fazit.tex [8
-
-
-]
 chapter 6.
-) (Kapitel/Beispielkapitel.tex [9
+) (Kapitel/Fazit.tex [10
 
 
 ]
 chapter 7.
-File: Abbildungen/uni_ol_logo.png Graphic file (type png)
-<use Abbildungen/uni_ol_logo.png>
-Package pdftex.def Info: Abbildungen/uni_ol_logo.png  used on input line 27.
-(pdftex.def)             Requested size: 170.71393pt x 102.14941pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10
+) [11
 
 
-]) [11] (main.bbl) (Kapitel/Beispielanhang.tex [12
+] (main.bbl) (Kapitel/Beispielanhang.tex [12
 
 
 
@@ -1223,21 +1216,21 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
  ) 
 Here is how much of TeX's memory you used:
- 25036 strings out of 480756
- 506365 string characters out of 2903752
+ 25034 strings out of 480756
+ 505984 string characters out of 2903752
  905034 words of memory out of 3000000
- 40486 multiletter control sequences out of 15000+200000
+ 40480 multiletter control sequences out of 15000+200000
  541186 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,19n,90p,10101b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{table.caption.17} has been referenced but does no
+pdfTeX warning (dest): name{subsection.4.3.3} has been referenced but does no
 t exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.15} has been referenced but does not
- exist, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.4.3.2} has been referenced but does not 
+exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{section*.18} has been referenced but does not exist
-, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.4.3.1} has been referenced but does not 
+exist, replaced by a fixed one
 
  <C:\Users\Johannes\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12
@@ -1248,9 +1241,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (20 pages, 9207158 bytes).
+Output written on main.pdf (20 pages, 9210174 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 396 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 76 named destinations out of 1000 (max. 500000)
+ 452 words of extra memory for PDF output out of 10000 (max. 10000000)
 
