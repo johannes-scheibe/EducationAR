@@ -122,6 +122,10 @@ public abstract class ShaderProgram {
         }
         return programHandle;
     }
+    public int getShaderProgramHandle() {
+        return shaderProgramHandle;
+    }
+
 
     /**
      * Full loaded render function. You should at least override this one.

@@ -2,6 +2,7 @@ package com.example.educationar;
 
 import org.artoolkitx.arx.arxj.ARController;
 import org.artoolkitx.arx.arxj.ARX_jni;
+import org.artoolkitx.arx.arxj.FPSCounter;
 import org.artoolkitx.arx.arxj.Trackable;
 import org.artoolkitx.arx.arxj.rendering.ARRenderer;
 import org.artoolkitx.arx.arxj.rendering.shader_impl.Cube;
@@ -15,6 +16,7 @@ import android.opengl.GLES20;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.example.educationar.rendering.MyFragmentShader;
@@ -31,9 +33,11 @@ public class EducationARRenderer extends ARRenderer {
     int AR_MATRIX_CODE_5x5_BCH_22_7_7  = 0x505;
 
     private MyShaderProgram shaderProgram;
+    private FPSCounter fpsCounter;
+    private float maxfps = 0;
 
 
-    private List<Model> models = new ArrayList<Model>();
+    private List<Model> models;
 
 
     //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
@@ -41,18 +45,20 @@ public class EducationARRenderer extends ARRenderer {
     @Override
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
         this.shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
+        this.fpsCounter = new FPSCounter();
+        this.models = new ArrayList<Model>();
 
         Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere");
         sphere.setShaderProgram(shaderProgram);
-        models.add(sphere);
+        this.models.add(sphere);
 
         Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube");
         cube.setShaderProgram(shaderProgram);
-        models.add(cube);
+        this.models.add(cube);
 
         Model monkey = new Model(EducationARApplication.getContext(), "Models/monkey/monkey");
         monkey.setShaderProgram(shaderProgram);
-        models.add(monkey);
+        this.models.add(monkey);
 
         super.onSurfaceCreated(unused, config);
 
@@ -81,6 +87,11 @@ public class EducationARRenderer extends ARRenderer {
     @Override
     public void draw() {
         super.draw();
+        fpsCounter.frame();
+        if(maxfps<fpsCounter.getFPS()){
+            maxfps= fpsCounter.getFPS();
+        }
+        logger.log(Level.INFO, "FPS: " + maxfps);
 
         // Initialize GL
         GLES20.glEnable(GLES20.GL_CULL_FACE);
