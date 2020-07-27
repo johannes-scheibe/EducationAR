@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{5}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -7,19 +7,45 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
 
-\bibitem[{Beispielfirma XY}(2000)]{internet00:webquelle}
-\dinatlabel{{Beispielfirma XY} 2000} \textsc{{Beispielfirma XY}}:
-\newblock \emph{Beispielquelle aus dem Internet}.
-\newblock Webquelle.
-\newblock 2000. --
-\newblock URL \url{www.beispiel.com/quelle}. --
-\newblock letzter Abruf: 1. Januar 1970
+\bibitem[Balzert(2011)]{balzert:softwaretechnik}
+\dinatlabel{Balzert 2011} \textsc{Balzert}, H.:
+\newblock \emph{Lehrbücher der Informatik}. Bd.~1: \emph{Lehrbuch der
+  Softwaretechnik: Entwurf, Implementierung, Installation und Betrieb}.
+\newblock 3.
+\newblock Spektrum Akademischer Verlag, 2011. --
+\newblock ISBN 978-3-8274-1706-0
 
-\bibitem[Hevner u.\,a.(2004)Hevner, March, Park und Ram]{hevner04:design}
-\dinatlabel{Hevner u.\,a. 2004} \textsc{Hevner}, A.~R.~; \textsc{March},
-  S.~T.~; \textsc{Park}, J.~; \textsc{Ram}, S.:
-\newblock Design Science in Information Systems Research.
-\newblock In: \emph{MIS Quarterly}
-\newblock 28 (2004), Nr.~1, S.~75--105
+\bibitem[Böhm und Fuchs(2002)]{boehm:systementwicklung}
+\dinatlabel{Böhm und Fuchs 2002} \textsc{Böhm}, R.~; \textsc{Fuchs}, E.:
+\newblock \emph{Wirtschaftsinformatik}. Bd.~1: \emph{System-Entwicklung in der
+  Wirtschaftsinformatik}.
+\newblock 5.
+\newblock vdf Hochschulverlag, 2002. --
+\newblock ISBN 978-3-7281-2762-4
+
+\bibitem[Nischwitz u.\,a.(2011)Nischwitz, Fischer, Haberäcker und
+  Socher]{nischwitz:bildverarbeitung}
+\dinatlabel{Nischwitz u.\,a. 2011} \textsc{Nischwitz}, A.~; \textsc{Fischer},
+  M.~; \textsc{Haberäcker}, P.~; \textsc{Socher}, G.:
+\newblock \emph{Computergrafik und Bildverarbeitung - Band II:
+  Bildverarbeitung}. Bd.~2.
+\newblock 3.
+\newblock Vieweg+Teubner Verlag, 2011. --
+\newblock ISBN 978-3-8348-1712-9
+
+\bibitem[Robertson und Robertson(2012)]{robertson:requirements-process}
+\dinatlabel{Robertson und Robertson 2012} \textsc{Robertson}, S.~;
+  \textsc{Robertson}, R.:
+\newblock \emph{Mastering the Requirements Process: Getting Requirements
+  Right}. Bd.~1.
+\newblock 3.
+\newblock Pearson Education, 2012. --
+\newblock ISBN 978-0-321-81574-3
+
+\bibitem[Winter(2018)]{winter:srs-anforderungen}
+\dinatlabel{Winter 2018} \textsc{Winter}, Andreas:
+\newblock \emph{SRS Anforderungen}.
+\newblock Vorlesung Softwaretechnik I.
+\newblock 2018
 
 \end{thebibliography}

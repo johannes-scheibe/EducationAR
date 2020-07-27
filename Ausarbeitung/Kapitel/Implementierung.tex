@@ -1,4 +1,4 @@
-\chapter{Entwicklung}\label{chap:Entwicklung}
+\chapter{Entwicklung}\label{chapter:Entwicklung}
 
 \section{Anforderungen}\label{sec:Anforderungen}
 
@@ -30,8 +30,9 @@ Jeder Testfall wurde dabei mit Hilfe der in Android enthaltenen Funktion \glqq B
 
 
 \subsection{Testfälle}\label{sec:Testfälle}
-Die Testfälle wurden von den relevanten Eigenschaften des Feature Trackings abgeleitet und konnten auch auf das Marker Tracking angewendet werden. \todo{Zitieren von der Medieninformatikvorlesung}
-Insgesamt wurden die folgenden vier Testfälle herausgearbeitet:
+Die Testfälle beruhen auf den Eigenschaften des SIFT-Algorithmus, welcher Bildmerkmale extrahiert, die invariant gegenüber Rotation, Translation, Skalierung und partiell invariant gegenüber Helligkeitsveränderungen sind \citep[S. 345]{nischwitz:bildverarbeitung}. Mithilfe des Algorithmus können dieselben Objekte in zwei verschiedenen Aufnahmen wiedererkannt werden.\\
+Da auch beim Marker Tracking ein ähnliches Verfahren angewandt werden muss, sind auch hierbei die genannten Eigenschaften relevant. Deshalb wurden die folgenden Testfälle gewählt, um die Funktionen der Anwendung zu testen:
+
 \begin{itemize}
 \item Perspektivische Invarianz: Dieser Testfall diente dazu das Tracking aus verschiedenen Perspektiven zu testen. Dazu wurde die Kamera auf das Testdokument gerichtet und anschließend der Winkel zum Dokument so verändert das verschiedenen, perspektivische Verzerrungen der Marker erzeugt wurden.
 
@@ -70,7 +71,7 @@ Insgesamt wurden die folgenden vier Testfälle herausgearbeitet:
 \item  Trackinggeschwindigkeit:\todo{Besserer Name} Dieser Testfall sollte die Geschwindigkeit des Trackings, sowie die Robustheit testen. Dazu wurden ein oder mehrere Marker kurzzeitig mit der Hand verdeckt, um zu testen,ob anschließend alle Marker wieder erfolgreich getrackt wurden und wie schnell dieses erfolgte.
 
 \end{itemize}
-Eine weitere, aus dem Feature Tracking bekannte Eigenschaft wäre die Invarianz gegenüber partieller Verdeckung gewesen, diese wurde jedoch nicht getestet, da zu Beginn in den Anforderungen ein vollständig erkannter Marker voraus gesetzt wurde.\\
+
 All diese Testfälle beziehen sich auf das Marker Tracking, während dessen konnten jedoch auch das Rendern des Modells und weitere Features die nicht direkt mit dem Tracking zusammenhängen getestet werden.\\
 
 \subsection{Zusammenfassung}\label{sec:Zusammenfassung}

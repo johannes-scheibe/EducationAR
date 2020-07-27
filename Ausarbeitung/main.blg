@@ -3,51 +3,51 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: dinat.bst
-Reallocating 'name_of_file' (item size: 1) to 28 items.
+Reallocating 'name_of_file' (item size: 1) to 24 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Database file #1: Bibliographie/Bibliographie.bib
-You've used 2 entries,
+Database file #1: Bibliographie/Literatur.bib
+You've used 5 entries,
             3552 wiz_defined-function locations,
-            809 strings with 6265 characters,
-and the built_in function-call counts, 1490 in all, are:
-= -- 182
-> -- 23
-< -- 24
-+ -- 35
-- -- 17
-* -- 150
-:= -- 254
-add.period$ -- 3
-call.type$ -- 2
-change.case$ -- 12
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 38
-empty$ -- 102
-format.name$ -- 27
-if$ -- 288
+            825 strings with 6766 characters,
+and the built_in function-call counts, 3210 in all, are:
+= -- 352
+> -- 50
+< -- 53
++ -- 70
+- -- 30
+* -- 323
+:= -- 542
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 25
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 94
+empty$ -- 272
+format.name$ -- 59
+if$ -- 645
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 24
-num.names$ -- 8
-pop$ -- 13
+missing$ -- 8
+newline$ -- 44
+num.names$ -- 20
+pop$ -- 37
 preamble$ -- 1
-purify$ -- 11
+purify$ -- 25
 quote$ -- 0
-skip$ -- 46
+skip$ -- 104
 stack$ -- 0
-substring$ -- 135
-swap$ -- 9
-text.length$ -- 5
+substring$ -- 250
+swap$ -- 27
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 22
+type$ -- 37
 warning$ -- 0
-while$ -- 17
+while$ -- 35
 width$ -- 0
-write$ -- 33
+write$ -- 67
