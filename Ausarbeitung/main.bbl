@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{11}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -23,6 +23,49 @@
 \newblock vdf Hochschulverlag, 2002. --
 \newblock ISBN 978-3-7281-2762-4
 
+\bibitem[Hedberg u.\,a.(2018)Hedberg, Nouri und
+  Hansen]{hedberg:review-ar-learning}
+\dinatlabel{Hedberg u.\,a. 2018} \textsc{Hedberg}, H.~; \textsc{Nouri}, J.~;
+  \textsc{Hansen}, R.:
+\newblock A Systematic Review of Learning Through Mobile Augmented Reality.
+\newblock In: \emph{International Journal of Interactive Mobile Technolologies}
+\newblock 12 (2018), Nr.~3, S.~75--85. --
+\newblock URL
+  \url{https://www.online-journals.org/index.php/i-jim/article/view/8404}
+
+\bibitem[Kind u.\,a.(2019)Kind, Ferdinand, Jetzke, Richter und
+  Weide]{tab:augmented-reality}
+\dinatlabel{Kind u.\,a. 2019} \textsc{Kind}, H.~; \textsc{Ferdinand}, J.~;
+  \textsc{Jetzke}, T.~; \textsc{Richter}, S.~; \textsc{Weide}, S.:
+\newblock Virtual und Augmented Reality: Status quo, Herausforderungen und
+  zukünftige Entwicklungen
+\newblock / TAB - Büro für Technikfolgen-Abschätzung beim Deutschen
+  Bundestag.
+\newblock 2019.
+\newblock  -- TAB-Arbeitsbericht
+
+\bibitem[Klein(2006)]{klein:visual-tracking}
+\dinatlabel{Klein 2006} \textsc{Klein}, G.:
+\newblock \emph{Visual Tracking for Augmented Reality}, University of
+  Cambridge, Dissertation, 2006
+
+\bibitem[Mehler-Bicher und Steiger(2014)]{mehler-bicher:augmented-reality}
+\dinatlabel{Mehler-Bicher und Steiger 2014} \textsc{Mehler-Bicher}, A.~;
+  \textsc{Steiger}, L.:
+\newblock \emph{Augmented Reality - Theorie und Praxis}. Bd.~1.
+\newblock 2.
+\newblock De Gruyter Oldenbourg, 2014. --
+\newblock ISBN 978-3-11-035385-3
+
+\bibitem[Milgram u.\,a.(1994)Milgram, Takemura, Utsumi und
+  Kishino]{milgram:augmented-reality}
+\dinatlabel{Milgram u.\,a. 1994} \textsc{Milgram}, P.~; \textsc{Takemura}, H.~;
+  \textsc{Utsumi}, A.~; \textsc{Kishino}, F.:
+\newblock Augmented Reality: A class of displays on the reality-virtuality
+  continuum.
+\newblock In: \emph{Telemanipulator and Telepresence Technologies} Bd.~2351,
+  SPIE, 1994, S.~282--292
+
 \bibitem[Nischwitz u.\,a.(2011)Nischwitz, Fischer, Haberäcker und
   Socher]{nischwitz:bildverarbeitung}
 \dinatlabel{Nischwitz u.\,a. 2011} \textsc{Nischwitz}, A.~; \textsc{Fischer},
@@ -32,6 +75,12 @@
 \newblock 3.
 \newblock Vieweg+Teubner Verlag, 2011. --
 \newblock ISBN 978-3-8348-1712-9
+
+\bibitem[Owen u.\,a.(2002)Owen, Xiao und Middlin]{owen:fiducial-marker}
+\dinatlabel{Owen u.\,a. 2002} \textsc{Owen}, C.~; \textsc{Xiao}, F.~;
+  \textsc{Middlin}, P.:
+\newblock What is the best fiducial?, 2002, S.~8 pp.. --
+\newblock ISBN 0-7803-7680-3
 
 \bibitem[Robertson und Robertson(2012)]{robertson:requirements-process}
 \dinatlabel{Robertson und Robertson 2012} \textsc{Robertson}, S.~;

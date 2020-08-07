@@ -2,11 +2,70 @@
 Dieses Kapitel behandelt die Grundlagen, die für die Realisierung des Prototyps notwendig sind. Dabei werden Methoden und Eigenschaften der Augmented Reality erläutert, sowie ein Überblick über OpenGL gegeben.
 
 \section{Augmented Reality}\label{AR}
-Augmented Reality  beschreibt das Einbinden und Visualisieren digitaler, computergenerierte Objekte in der realen Welt. Dabei wird meist  eine möglichst realistische Darstellung dieser Objekte angestrebt.\\
-In der Literatur AR oftmals als eine Vereinigung oder Überlagerung der realen Welt mit virtuellen Einblendungen beschrieben \citep{}.
+In der Literatur lassen sich für den Begriff der Augmented Reality (AR, deutsch: \glqq angereicherte Realität\grqq ) viele unterschiedliche Definitionen finden, die meisten stützen sich dabei auf das von \citet{milgram:augmented-reality} definierte Reality-Virtuality (RV) Kontinuum, welches in Abbildung \ref{fig:RV-Kontinnum} dargestellt ist.\\
+Um dieses zu verstehen muss zunächst der Bergriff der Virtual Reality (VR, deutsch: \glqq virtuelle Realität\grqq ) definiert werden. Nach \citet[S.1]{klein:visual-tracking} beschreibt die VR eine völlig künstliche, computergenerierte Welt, in die der Nutzer eintauchen kann. \\
+Milgrams Definition fasst nun die Virtual Reality und die reale Welt als zwei, sich gegenüberliegende Enden eines Kontinuums auf. Dabei ist die reale Welt an die physikalischen Gesetze gebunden, während die virtuelle Welt diese überschreiten und sich von ihnen lösen kann \citep[S. 283]{milgram:augmented-reality}. Nach dem RV Kontinuum bewegt sich die Augmented Reality zwischen beiden Welten und stellt ein Kombination beider dar.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{Abbildungen/Milgram-RV-Continuum.jpeg}
+\caption[RV Kontinuum]{Das Reality-Virtuality (RV) Kontinuum. (Quelle: \citet[S. 283]{milgram:augmented-reality})}
+\label{fig:RV-Kontinnum}
+\end{figure}
+Eine weitere Definition, die sich auch mit der von Milgram vereinbaren lässt, beschreibt die Augmented Reality als eine computergestützte Erweiterung der wahrnehmbaren Realität um virtuelle Objekte \citep[S. 9]{tab:augmented-reality}. 
+Auf dieser Grundlage kann man Augmented Reality als das Einbinden und Visualisieren digitaler, computergenerierte Objekte in der realen Welt auffassen.\\
+Oftmals wird dabei das Ziel verfolgt eine möglichst realistische Illusion für den Nutzer zu schaffen.\\
+
+\subsection{Einsatzbereiche}
+Die erste Assoziation, die die meisten mit dem Begriff Augmented Reality verbinden ist vermutlich der Unterhaltungsbereich. Große Firmen wie zum Beispiel Snapchat nutzen die Technologie um kleine Gimmicks für ihre Nutzer bereitzustellen (siehe Abbildung \ref{fig:snapchat-ar})
+Die meisten Personen, die den Begriff Augmented Reality hören, werden vermutlich an ein lustiges Gimmick zur Unterhaltung denken. Doch auch neben dem Bereich der Unterhaltung wird AR an vielen weiteren Stellen eingesetzt.\\
+Beispielhaft zu nennen wären hier der Bereich der Produktion, in welchem AR unter Anderem als Hilfsmittel zum Prototyping \citep[S. 44]{tab:augmented-reality} genutzt werden kann, oder der Bereich der Medizin. Im letzteren können mittels AR Therapiemaßnahmen für psychische Erkrankungen oder Assistenzsysteme zur Diagnose und Operation entwickelt werden \citep[S. 52, 54]{tab:augmented-reality}.\\
+Der Einsatzbereich in dessen Rahmen sich diese Arbeit bewegt ist jedoch der Bereich der Bildung.\\
+Hier bietet Augmented Reality die Möglichkeit eines neuen Informationsmediums, welches vor allem zur Betrachtung dreidimensionaler Objekte genutzt werden kann. Dieses ermöglicht ein verbessertes, räumliches Verständnis des Lerninhaltes. 
+Laut einer systematischen Analyse der Universität Stockholm, in welchem basierend auf der Anzahl der wissenschaftlichen Veröffentlichungen Schlüsse für das Lernen mit AR gezogen wurden, sind vor allem die Naturwissenschaften relevant für den Einsatz von AR  \citep[S. 81]{hedberg:review-ar-learning}. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{Abbildungen/Snapchat-AR.jpg}
+\caption[Snapchat AR]{AR Gimmick aus der Anwendung Snapchat. (Quelle: Screenshot aus der Anwendung Snapchat, 01.08.2020)}
+\label{fig:snapchat-ar}
+\end{figure}
+
+\subsection{Technische Grundlagen}
+Zur Umsetzung der Augmented Reality ist eine Umgebungserfassung und -analyse des Systems mit Hilfe einer Tracking Software (auch Tracker genannt) notwendig. Auf Grundlage dieser können dann im Anschluss computergenerierte virtuelle Objekte in die Umgebung eingefügt werden. \\
+Zur Analyse der Systemumgebung können verschiedene Eingabesysteme genutzt werden, mit deren Hilfe die Eigenschaften der Umgebung und der in ihr vorhandenen Objekte wahrgenommen werden können \citep[S. 22]{tab:augmented-reality}. Zu diesen Eigenschaften zählen neben statischen, wie der Größen und Position, auch dynamische Eigenschaften, welche die Veränderung der statischen Attribute einzelner Objekte umfassen \todo{Umformulieren, wegen Zitat}. Beispielhafte Technologien, die zur Erfassung genutzt werden können, wären Kamerasysteme, Laser, Infrarot oder sonstige Sensoren \citep[S. 22]{tab:augmented-reality}.
+Neben der Umgebungserfassung ist auch die Verfolgung einzelner, in der Umgebung enthaltender Objekte notwendiger Bestandteil der Tracking Software, um die dynamischen Eigenschaften der realen Umgebung auf die virtuellen Objekte zu übertragen.\\
+Eine wichtige Rolle beim Tracking spielt die Genauigkeit, mit der die Eigenschaften der Umgebung wahrgenommen werden, sie bestimmt wie akkurat virtuelle Objekte in die reale Umgebung eingefügt werden können und wie realistisch die Illusion erscheint \citep[S. 2]{klein:visual-tracking}. \\
+
+\subsubsection{Trackingverfahren}
+Grundsätzlich kann bei der Tracking Software zwischen zwei Verfahren unterschieden werden, dem nicht visuellen und dem visuellen Tracking \citep[S. 26]{mehler-bicher:augmented-reality}. Während bei letzterem auf Daten von zum Beispiel einer Kamera zurückgegriffen wird, beruht das nichtvisuelle Tracking auf Sensoren, die direkten Zugriff auf die Eigenschaften der Umgebung, wie der Position, liefern. \\
+Bei dem für diese Arbeit relevantem visuellen Tracking, müssen die Eigenschaften der Umgebung aus dem Kamerabild abgeleitet und verarbeitet werden. Dazu werden in der Regel nach \citet[S. 26]{mehler-bicher:augmented-reality} zwei Schritte benötigt:
+\begin{enumerate}
+\item Die Initialisierung, bei welcher nach einem bestimmten Muster im Kamerabild gesucht wird. Dieses kann dabei im Vorfeld definiert sein oder aus dem Kamerabild abgeleitet werden.
+\item Die Verfolgung bzw. Antizipation der möglichen Bewegung, bei welcher das gefundene Muster in den einzelnen, aufeinanderfolgenden Videoframes verfolgt wird und eine Prognose der zukünftigen Position des Muster berechnet wird, um den Rechenaufwand zu verkleinern.
+\end{enumerate}
+Des Weiteren kann beim Visuellen Tracking zwischen Marker Based Feature Tracking und Natural Feature Tracking unterschieden werden. 
+
+\paragraph{Marker Based Feature Tracking} verwendet feste, im Vorfeld definierte Muster, die in der Umgebung platziert werden. Diese Muster werden als Marker bezeichnet. Meistens handelt es sich dabei um schwarze Quadrate, in deren Mitte eine ID als ein Muster aus schwarzen und weißen Vierecken codiert ist. Ein beispielhafter Marker ist in Abbildung \ref{fig:barcode-marker} zusehen.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.2\textwidth]{Abbildungen/BarcodeMarker3x3-10.png}
+\caption[Barcode Marker]{Ein Barcode Marker mit der ID 10. (Quelle: Generiert mit dem  Maker Generator https://au.gmented.com/app/marker/marker.php)}
+\label{fig:barcode-marker}
+\end{figure}\todo{link ins Literaturverzeichnis?}
+Die Marker sind dabei optisch so angepasst, dass sie sehr einfach von einem Tracker erfasst werden können, um die Erkennungsgeschwindigkeit und somit die Performanz des gesamten Systems zu optimieren \citep[S. 28]{mehler-bicher:augmented-reality}.\\
+\citeauthor{owen:fiducial-marker} stellen dazu folgende Anforderungen an einen optimalen Marker:
+\begin{itemize}
+\item Ein idealer Marker sollte die eindeutige Bestimmung seiner Position und Orientierung im Verhältnis zur Kamera unterstützen.
+\item Der Marker sollte alle Ausrichtungen unterstützen.
+\item Der Marker sollte Teil einer Reihe an Markern sein, die sich eindeutig von einander unterscheiden lassen.
+\item Ein Marker muss einfach lokalisierbar und identifizierbar sein.
+\item Die Marker müssen über einen weiten Aufnahmebereich funktionieren
+\end{itemize}
+(Nach \citet[S. 2]{owen:fiducial-marker})\\
+Durch diese Eigenschaften ist die Erkennung von einem Marker relativ simpel und funktioniert im Allgemeinen in drei Schritten:
 
 
- 
-\subsection{Marker}
+
+\paragraph{Natural Feature Tracking}
 
 \section{OpenGL}\label{OpenGL}
