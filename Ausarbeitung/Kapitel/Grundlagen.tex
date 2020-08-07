@@ -34,7 +34,7 @@ Laut einer systematischen Analyse der Universität Stockholm, in welchem basiere
 Zur Umsetzung der Augmented Reality ist eine Umgebungserfassung und -analyse des Systems mit Hilfe einer Tracking Software (auch Tracker genannt) notwendig. Auf Grundlage dieser können dann im Anschluss computergenerierte virtuelle Objekte in die Umgebung eingefügt werden. \\
 Zur Analyse der Systemumgebung können verschiedene Eingabesysteme genutzt werden, mit deren Hilfe die Eigenschaften der Umgebung und der in ihr vorhandenen Objekte wahrgenommen werden können \citep[S. 22]{tab:augmented-reality}. Zu diesen Eigenschaften zählen neben statischen, wie der Größen und Position, auch dynamische Eigenschaften, welche die Veränderung der statischen Attribute einzelner Objekte umfassen \todo{Umformulieren, wegen Zitat}. Beispielhafte Technologien, die zur Erfassung genutzt werden können, wären Kamerasysteme, Laser, Infrarot oder sonstige Sensoren \citep[S. 22]{tab:augmented-reality}.
 Neben der Umgebungserfassung ist auch die Verfolgung einzelner, in der Umgebung enthaltender Objekte notwendiger Bestandteil der Tracking Software, um die dynamischen Eigenschaften der realen Umgebung auf die virtuellen Objekte zu übertragen.\\
-Eine wichtige Rolle beim Tracking spielt die Genauigkeit, mit der die Eigenschaften der Umgebung wahrgenommen werden, sie bestimmt wie akkurat virtuelle Objekte in die reale Umgebung eingefügt werden können und wie realistisch die Illusion erscheint \citep[S. 2]{klein:visual-tracking}. \\
+Eine wichtige Rolle beim Tracking spielt die Genauigkeit, mit der die Eigenschaften der Umgebung wahrgenommen werden, sie bestimmt wie akkurat virtuelle Objekte in die reale Umgebung eingefügt werden können und wie realistisch die Illusion erscheint \citep[S. 2]{klein:visual-tracking}.
 
 \subsubsection{Trackingverfahren}
 Grundsätzlich kann bei der Tracking Software zwischen zwei Verfahren unterschieden werden, dem nicht visuellen und dem visuellen Tracking \citep[S. 26]{mehler-bicher:augmented-reality}. Während bei letzterem auf Daten von zum Beispiel einer Kamera zurückgegriffen wird, beruht das nichtvisuelle Tracking auf Sensoren, die direkten Zugriff auf die Eigenschaften der Umgebung, wie der Position, liefern. \\
@@ -46,12 +46,6 @@ Bei dem für diese Arbeit relevantem visuellen Tracking, müssen die Eigenschaft
 Des Weiteren kann beim Visuellen Tracking zwischen Marker Based Feature Tracking und Natural Feature Tracking unterschieden werden. 
 
 \paragraph{Marker Based Feature Tracking} verwendet feste, im Vorfeld definierte Muster, die in der Umgebung platziert werden. Diese Muster werden als Marker bezeichnet. Meistens handelt es sich dabei um schwarze Quadrate, in deren Mitte eine ID als ein Muster aus schwarzen und weißen Vierecken codiert ist. Ein beispielhafter Marker ist in Abbildung \ref{fig:barcode-marker} zusehen.
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.2\textwidth]{Abbildungen/BarcodeMarker3x3-10.png}
-\caption[Barcode Marker]{Ein Barcode Marker mit der ID 10. (Quelle: Generiert mit dem  Maker Generator https://au.gmented.com/app/marker/marker.php)}
-\label{fig:barcode-marker}
-\end{figure}\todo{link ins Literaturverzeichnis?}
 Die Marker sind dabei optisch so angepasst, dass sie sehr einfach von einem Tracker erfasst werden können, um die Erkennungsgeschwindigkeit und somit die Performanz des gesamten Systems zu optimieren \citep[S. 28]{mehler-bicher:augmented-reality}.\\
 \citeauthor{owen:fiducial-marker} stellen dazu folgende Anforderungen an einen optimalen Marker:
 \begin{itemize}
@@ -63,9 +57,28 @@ Die Marker sind dabei optisch so angepasst, dass sie sehr einfach von einem Trac
 \end{itemize}
 (Nach \citet[S. 2]{owen:fiducial-marker})\\
 Durch diese Eigenschaften ist die Erkennung von einem Marker relativ simpel und funktioniert im Allgemeinen in drei Schritten:
+\begin{enumerate}
+\item Zunächst werden müssen die Kanten aus dem Bild extrahiert werden, um mit deren Hilfe alle Vierecke aus dem Bild zu filtern.
+\item Dann kann mittels kann mittels Template Matching oder ähnlichen Verfahren der Marker erkannt werden und die ID, falls vorhanden, dekodiert werden.
+\item Im letzten Schritt muss dann noch die Position, Größe und Orientierung des Markers berechnet werden.
+\end{enumerate}
+(In Anlehnung an \citet{cukovic:marker-vs-natural})
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.2\textwidth]{Abbildungen/BarcodeMarker3x3-10.png}
+\caption[Barcode Marker]{Ein Barcode Marker für ARToolKit mit der ID 10. (Quelle: Generiert mit dem  Maker Generator https://au.gmented.com/app/marker/marker.php)}
+\label{fig:barcode-marker}
+\end{figure}\todo{link ins Literaturverzeichnis?}
 
 
+\paragraph{Natural Feature Tracking} greift hingegen auf sogenannte Keypoints zurück, die natürlich im Bild enthalten sind. Keypoints beschreiben dabei markante Bildpunkte, die sich durch zum Beispiel starke Helligkeitsveränderungen in der direkten Nachbarschaft auszeichnen, wie es unter anderem bei Kanten oder Ecken der Fall ist. Zur Extraktion dieser Keypoints gibt es verschiedene Verfahren wie den SIFT-Algorithmus,  welcher die Grundlage für viele weitere aktuelle Verfahren bildet und Merkmale extrahiert, die invariant gegenüber der Rotation, Translation, Skalierung und partiell invariant gegenüber Helligkeitsveränderungen sind\citep[S. 345]{nischwitz:bildverarbeitung}. Diese Invarianzen sind dabei auch für den Bereich der Augmented Reality sehr wichtig, da die virtuellen Objekte auch bei einer sich verändernden Umgebung korrekt eingebunden werden sollen.\\
+Bei diesem Verfahren müssen in einem ersten Schritt zunächst die Keypoints für den Bildbereich, in dem das Objekt platziert werden soll, extrahiert und gespeichert werden. Diese Bildpunkte können dann mit Hilfe von Matchingverfahren in den folgenden Frames gefunden werden. Bei einer Übereinstimmung muss dann folglich noch die Position, Größe und Orientierung des Bildbereiches berechnet werden. \\
+\\
+Eine Verallgemeinerung des gesamten Tracking Prozesses kann dabei wie folgt beschrieben werden:\\
+Nachdem das System einen Frame von der Kamera bekommt wird dieser meist vorverarbeitet, um die wichtigsten Informationen zu extrahieren und den Tracking Prozess zu beschleunigen \citep[S. 5]{cukovic:marker-vs-natural}. Eine Möglichkeit ist dabei das Bild in ein Graustufenbild umzuwandeln. Dadurch lassen sich Helligkeitsveränderungen leichter detektieren und die Anzahl der Farbkanäle wird von drei oder mehr auf einen reduziert, wodurch die Geschwindigkeit der Tracking Algorithmen deutlich erhöht werden kann.\\
+Nach der Vorverarbeitung kann dann mittels Natural Feature Tracking oder Marker BAsed Feature Tracking die Position, Größe und Orientierung der gesuchten Fläche, beziehungsweise des Markers ermittelt werden und das virtuelle Objekt entsprechend transformiert werden.
 
-\paragraph{Natural Feature Tracking}
+
 
 \section{OpenGL}\label{OpenGL}

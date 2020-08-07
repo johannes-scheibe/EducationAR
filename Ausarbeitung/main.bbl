@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -90,6 +90,14 @@
 \newblock 3.
 \newblock Pearson Education, 2012. --
 \newblock ISBN 978-0-321-81574-3
+
+\bibitem[Ćuković u.\,a.(2015)Ćuković, Gattullo, Pankratz, Devedzic,
+  Carrabba und Baizid]{cukovic:marker-vs-natural}
+\dinatlabel{Ćuković u.\,a. 2015} \textsc{Ćuković}, S.~; \textsc{Gattullo},
+  M.~; \textsc{Pankratz}, F.~; \textsc{Devedzic}, G.~; \textsc{Carrabba}, E.~;
+  \textsc{Baizid}, K.:
+\newblock Marker Based vs. Natural Feature Tracking Augmented Reality
+  Visualization of the 3D Foot Phantom, 2015
 
 \bibitem[Winter(2018)]{winter:srs-anforderungen}
 \dinatlabel{Winter 2018} \textsc{Winter}, Andreas:
