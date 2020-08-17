@@ -14,31 +14,38 @@
 \contentsline {paragraph}{\nonumberline Marker Based Feature Tracking}{5}{section*.10}%
 \contentsline {paragraph}{\nonumberline Natural Feature Tracking}{5}{section*.13}%
 \contentsline {section}{\numberline {2.2}OpenGL}{6}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Verwandte Arbeiten}{7}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Vision}{8}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Mögliche Anwendungsfälle}{8}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline Der Professor}{8}{section*.14}%
-\contentsline {subsubsection}{\nonumberline Die Studierenden}{9}{section*.16}%
-\contentsline {section}{\numberline {4.2}Der Prototyp}{9}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{9}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{10}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{10}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{11}{subsection.4.3.3}%
-\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{12}{section*.18}%
-\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{12}{section*.19}%
-\contentsline {chapter}{\numberline {5}Entwurf}{14}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Entwicklung}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Anforderungen}{15}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Konzeptentwurf}{15}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Implementierung}{15}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Tests}{15}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Testdurchführung}{15}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Testfälle}{16}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Zusammenfassung}{18}{subsection.6.4.3}%
-\contentsline {chapter}{\numberline {7}Evaluation}{19}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Fazit}{20}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Fazit}{20}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{20}{section.8.2}%
-\contentsline {chapter}{Literaturverzeichnis}{21}{section*.28}%
-\contentsline {chapter}{\numberline {A}Beispielanhang}{23}{appendix.A}%
+\contentsline {section}{\numberline {2.3}Android Entwicklung}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Architektur}{7}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Grundlegende Konzepte}{8}{subsection.2.3.2}%
+\contentsline {subsubsection}{\nonumberline Activities}{8}{section*.15}%
+\contentsline {subsubsection}{\nonumberline Services}{8}{section*.17}%
+\contentsline {subsubsection}{\nonumberline Content Providers}{9}{section*.18}%
+\contentsline {subsubsection}{\nonumberline Intents}{9}{section*.19}%
+\contentsline {chapter}{\numberline {3}Verwandte Arbeiten}{10}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vision}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Mögliche Anwendungsfälle}{11}{subsection.4.1.1}%
+\contentsline {subsubsection}{\nonumberline Der Professor}{11}{section*.20}%
+\contentsline {subsubsection}{\nonumberline Die Studierenden}{12}{section*.22}%
+\contentsline {section}{\numberline {4.2}Der Prototyp}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{12}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{13}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{13}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{14}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{15}{section*.24}%
+\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{15}{section*.25}%
+\contentsline {chapter}{\numberline {5}Entwurf}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Entwicklung}{18}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Anforderungen}{18}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Konzeptentwurf}{18}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Implementierung}{18}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Tests}{18}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Testdurchführung}{18}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Testfälle}{19}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Zusammenfassung}{21}{subsection.6.4.3}%
+\contentsline {chapter}{\numberline {7}Evaluation}{22}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Fazit}{23}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Fazit}{23}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{23}{section.8.2}%
+\contentsline {chapter}{Literaturverzeichnis}{24}{section*.34}%
+\contentsline {chapter}{\numberline {A}Beispielanhang}{26}{appendix.A}%

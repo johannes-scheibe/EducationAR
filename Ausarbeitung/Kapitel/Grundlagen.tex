@@ -7,7 +7,7 @@ Um dieses zu verstehen muss zunächst der Bergriff der Virtual Reality (VR, deut
 Milgrams Definition fasst nun die Virtual Reality und die reale Welt als zwei, sich gegenüberliegende Enden eines Kontinuums auf. Dabei ist die reale Welt an die physikalischen Gesetze gebunden, während die virtuelle Welt diese überschreiten und sich von ihnen lösen kann \citep[S. 283]{milgram:augmented-reality}. Nach dem RV Kontinuum bewegt sich die Augmented Reality zwischen beiden Welten und stellt ein Kombination beider dar.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{Abbildungen/Milgram-RV-Continuum.jpeg}
+\includegraphics[width=0.8\textwidth]{Abbildungen/milgram-rv-continuum.jpeg}
 \caption[RV Kontinuum]{Das Reality-Virtuality (RV) Kontinuum. (Quelle: \citet[S. 283]{milgram:augmented-reality})}
 \label{fig:RV-Kontinnum}
 \end{figure}
@@ -25,7 +25,7 @@ Laut einer systematischen Analyse der Universität Stockholm, in welchem basiere
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.5\textwidth]{Abbildungen/Snapchat-AR.jpg}
+\includegraphics[width=0.5\textwidth]{Abbildungen/snapchat-ar.jpg}
 \caption[Snapchat AR]{AR Gimmick aus der Anwendung Snapchat. (Quelle: Screenshot aus der Anwendung Snapchat, 01.08.2020)}
 \label{fig:snapchat-ar}
 \end{figure}
@@ -72,7 +72,7 @@ Durch diese Eigenschaften ist die Erkennung von einem Marker relativ simpel und 
 \end{figure}\todo{link ins Literaturverzeichnis?}
 
 
-\paragraph{Natural Feature Tracking} greift hingegen auf sogenannte Keypoints zurück, die natürlich im Bild enthalten sind. Keypoints beschreiben dabei markante Bildpunkte, die sich durch zum Beispiel starke Helligkeitsveränderungen in der direkten Nachbarschaft auszeichnen, wie es unter anderem bei Kanten oder Ecken der Fall ist. Zur Extraktion dieser Keypoints gibt es verschiedene Verfahren wie den SIFT-Algorithmus,  welcher die Grundlage für viele weitere aktuelle Verfahren bildet und Merkmale extrahiert, die invariant gegenüber der Rotation, Translation, Skalierung und partiell invariant gegenüber Helligkeitsveränderungen sind\citep[S. 345]{nischwitz:bildverarbeitung}. Diese Invarianzen sind dabei auch für den Bereich der Augmented Reality sehr wichtig, da die virtuellen Objekte auch bei einer sich verändernden Umgebung korrekt eingebunden werden sollen.\\
+\paragraph{Natural Feature Tracking} greift hingegen auf sogenannte Keypoints zurück, die natürlich im Bild enthalten sind. Keypoints beschreiben dabei markante Bildpunkte, die sich durch zum Beispiel starke Helligkeitsveränderungen in der direkten Nachbarschaft auszeichnen, wie es unter anderem bei Kanten oder Ecken der Fall ist. Zur Extraktion dieser Keypoints gibt es verschiedene Verfahren wie den SIFT-Algorithmus (Scale-Invariant-Feature-Tracking),  welcher die Grundlage für viele weitere aktuelle Verfahren bildet und Merkmale extrahiert, die invariant gegenüber der Rotation, Translation, Skalierung und partiell invariant gegenüber Helligkeitsveränderungen sind\citep[S. 345]{nischwitz:bildverarbeitung}. Diese Invarianzen sind dabei auch für den Bereich der Augmented Reality sehr wichtig, da die virtuellen Objekte auch bei einer sich verändernden Umgebung korrekt eingebunden werden sollen.\\
 Bei diesem Verfahren müssen in einem ersten Schritt zunächst die Keypoints für den Bildbereich, in dem das Objekt platziert werden soll, extrahiert und gespeichert werden. Diese Bildpunkte können dann mit Hilfe von Matchingverfahren in den folgenden Frames gefunden werden. Bei einer Übereinstimmung muss dann folglich noch die Position, Größe und Orientierung des Bildbereiches berechnet werden. \\
 \\
 Eine Verallgemeinerung des gesamten Tracking Prozesses kann dabei wie folgt beschrieben werden:\\
@@ -82,3 +82,44 @@ Nach der Vorverarbeitung kann dann mittels Natural Feature Tracking oder Marker 
 
 
 \section{OpenGL}\label{OpenGL}
+OpenGl stellt die industriell meistgenutzte Programmierschnittselle (API) zur Entwicklung von 2D und 3D Anwendungen dar \citep{khronos:opengl-overview}.
+
+\section{Android Entwicklung}
+Android ist ein Open Source Software Plattform, die vor allem bei Smartphones und anderen mobilen Geräten zum Einsatz kommt und ein Produkt der von Google gegründeten Open Handset Alliance ist \citep[S. 4]{gargenta:learning-android}. Bekannt ist vor allem das Betriebssystem Android, das auf vielen GEräten ihren Einstaz findet.\\
+Als Programmiersprache zur Entwicklung von Android Anwendungen stehen Kotlin, Java und C++ zur Verfügung \citet{android:fundamentals}.
+
+\subsection{Architektur}
+Abbildung \ref{fig:android-stack} zeigt eine Übersicht der Software Architektur von Android. 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{Abbildungen/android-stack.png}
+\caption[Android Architektur]{Die Android Architektur. (Quelle: \citet{android:architecture})}
+\label{fig:android-stack}
+\end{figure}\\
+Die Grundlage eines Android Systems bildet dabei der Linux-Kernel, der es Android unter anderem erlaubt auf die Sicherheitsfunktionen des Kernels zuzugreifen \citep{android:architecture}. \\
+Die Hardware Abstraktionschicht (HAL) stellt dem übergeordneten Java-API-Framework Standardschnittstellen zur Verfügung, über die eine Anwendung auf die Hardwarefunktionen des Gerätes zugreifen kann \citep{android:architecture}.
+Übergeordnet finden sich die Laufzeitumgebung Android Runtime (ART) und nativen Bibliotheken auf. Bei letzteren handelt es sich um Biblioptheken, welche in C und C++ geschrieben sind \citep{android:architecture} und dem Entwickler unterschiedliche Funktionen zur Verfügung stellen. Die in C oder C++ geschriebenen Bibliotheken sind vor allem aus Geschwindigkeitsaspekten relevant. \\
+Die Entwicklung von Android Anwendungen erfolgt dabei über das Java-API-Framework, welches dem Entwickler ein Grundgerüst sowie alle wichtigen Funktionen und Anwendungsbausteine die Für die Entwicklung relevant sind zur Verfügung stellt \citep{android:architecture}.\
+Die oberste Schicht stellen die System Anwendungen dar, bei welchen es sich um Standard-Anwendungen handelt, die Android dem Nutzer zur Verfügung stellt.
+
+\subsection{Grundlegende Konzepte}
+Alle Android Anwendungen basieren auf den selben Komponenten und Konzepten, die im folgenden einmal grundlegend betrachtet werden. Diese Komponenten sind als Klassen in Android verankert und können mittels Vererbung in Projekte eingebunden und angepasst werden 
+
+\subsubsection{Activities}
+Activities (deutsch: \glqq Aktivitäten\grqq ) stellen die Grundlage jeder Android Anwendung dar und werden durch die Klasse Activity implementiert. Dabei erzeugt jede Activity ein Fenster der Anwendung und ersetzt gleichzeitig die aus der Programmierung mit unter anderem Java bekannte main() Methode \citep{android:activities}. Anstelle einer main() Methode werden verschiedene callback Methoden aufgerufen, die einen bestimmten Zustand im Lebenszyklus einer Activity repräsentieren \citep{android:activities}. Der gesamte Lebenszyklus einer solchen Activity wird in in Abbildung \ref{fig:activity-lifecycle} dargestellt. 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{Abbildungen/activity-lifecycle.png}
+\caption[Lebenszyklus einer Aktivität]{Der Lebenszyklus einer Aktivität. (Quelle: \citet{android:activity-lifecycle})}
+\label{fig:activity-lifecycle}
+\end{figure}\\
+
+\subsubsection{Services}
+Ein Service (deutsch: \glqq Dienstleistung\grqq ) ist eine Komponente die im Hintergrund läuft und dazu konzipiert wurde langfristige Operationen auszuführen \citep{android:fundamentals}. Services können dabei unabhängig jeglicher Aktivitäten im Hintergrund laufen, auch wenn die Anwendung geschlossen wurde \citep{murphy:beginning-android}.
+
+\subsubsection{Content Providers}
+Content Providers (deutsch: \glqq Inhaltsanbieter\grqq ) stellen ein Abstraktionslevel für Daten dar, auf die aus mehreren Anwendungen zugegriffen wird\citep{murphy:beginning-android}. Mit ihrer Hilfe ist es möglich eigene Daten anderen Anwendungen zur Verfügung zustellen \citep{murphy:beginning-android}. \\
+Dabei wird das Ziel verfolgt das Zusammenspiel zwischen verschiedenen Anwendungen zu verbessern, und den Datenaustausch zwischen ihnen zu verbessern.
+
+\subsubsection{Intents}
+Bei einem Intent (deutsch: \glqq Absicht\grqq ) handelt es sich um eine asynchrone Systemnachricht, die dazu genutzt werden kann bestimmte Komponenten oder bestimmte Komponentenarten zu aktivieren \citep{android:fundamentals}.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{18}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -6,6 +6,40 @@
 \makeatother
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[{Android}({\natexlab{a}})]{android:fundamentals}
+\dinatlabel{{Android} {\natexlab{a}}} \textsc{{Android}}:
+\newblock \emph{Application Fundamentals}.
+\newblock Webquelle. --
+\newblock URL
+  \url{https://developer.android.com/guide/components/fundamentals?authuser=1}.
+  --
+\newblock letzer Abruf: 16.08.2020
+
+\bibitem[{Android}({\natexlab{b}})]{android:activities}
+\dinatlabel{{Android} {\natexlab{b}}} \textsc{{Android}}:
+\newblock \emph{Introduction to Activities}.
+\newblock Webquelle. --
+\newblock URL
+  \url{https://developer.android.com/guide/components/activities/intro-activities}.
+  --
+\newblock letzer Abruf: 16.08.2020
+
+\bibitem[{Android}({\natexlab{c}})]{android:architecture}
+\dinatlabel{{Android} {\natexlab{c}}} \textsc{{Android}}:
+\newblock \emph{Platform Architecture}.
+\newblock Webquelle. --
+\newblock URL \url{https://developer.android.com/guide/platform}. --
+\newblock letzer Abruf: 16.08.2020
+
+\bibitem[{Android}({\natexlab{d}})]{android:activity-lifecycle}
+\dinatlabel{{Android} {\natexlab{d}}} \textsc{{Android}}:
+\newblock \emph{Understand the Activity Lifecycle}.
+\newblock Webquelle. --
+\newblock URL
+  \url{https://developer.android.com/guide/components/activities/activity-lifecycle}.
+  --
+\newblock letzer Abruf: 16.08.2020
 
 \bibitem[Balzert(2011)]{balzert:softwaretechnik}
 \dinatlabel{Balzert 2011} \textsc{Balzert}, H.:
@@ -23,6 +57,14 @@
 \newblock vdf Hochschulverlag, 2002. --
 \newblock ISBN 978-3-7281-2762-4
 
+\bibitem[Gargenta(2011)]{gargenta:learning-android}
+\dinatlabel{Gargenta 2011} \textsc{Gargenta}, M.:
+\newblock \emph{Learning Android - Building Applications for the Android
+  Market}.
+\newblock 1.
+\newblock O'Reilly, 2011. --
+\newblock ISBN 978-1-449-39050-1
+
 \bibitem[Hedberg u.\,a.(2018)Hedberg, Nouri und
   Hansen]{hedberg:review-ar-learning}
 \dinatlabel{Hedberg u.\,a. 2018} \textsc{Hedberg}, H.~; \textsc{Nouri}, J.~;
@@ -32,6 +74,13 @@
 \newblock 12 (2018), Nr.~3, S.~75--85. --
 \newblock URL
   \url{https://www.online-journals.org/index.php/i-jim/article/view/8404}
+
+\bibitem[{Khronos Group}()]{khronos:opengl-overview}
+\dinatlabel{{Khronos Group} } \textsc{{Khronos Group}}:
+\newblock \emph{OpenGL Overview}.
+\newblock Webquelle. --
+\newblock URL \url{https://www.opengl.org/about/}. --
+\newblock letzer Abruf: 09.08.2020
 
 \bibitem[Kind u.\,a.(2019)Kind, Ferdinand, Jetzke, Richter und
   Weide]{tab:augmented-reality}
