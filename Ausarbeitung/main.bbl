@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{24}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -57,6 +57,13 @@
 \newblock vdf Hochschulverlag, 2002. --
 \newblock ISBN 978-3-7281-2762-4
 
+\bibitem[{de Vries, J.}()]{vries:learn-opengl-triangle}
+\dinatlabel{{de Vries, J.} } \textsc{{de Vries, J.}}:
+\newblock \emph{Learn OpenGL - Hello Trinagle}.
+\newblock Webquelle. --
+\newblock URL \url{https://learnopengl.com/Getting-started/Hello-Triangle}. --
+\newblock letzer Abruf: 20.08.2020
+
 \bibitem[Gargenta(2011)]{gargenta:learning-android}
 \dinatlabel{Gargenta 2011} \textsc{Gargenta}, M.:
 \newblock \emph{Learning Android - Building Applications for the Android
@@ -75,12 +82,34 @@
 \newblock URL
   \url{https://www.online-journals.org/index.php/i-jim/article/view/8404}
 
-\bibitem[{Khronos Group}()]{khronos:opengl-overview}
-\dinatlabel{{Khronos Group} } \textsc{{Khronos Group}}:
+\bibitem[{Khronos Group}({\natexlab{a}})]{khronos:geometry-shader}
+\dinatlabel{{Khronos Group} {\natexlab{a}}} \textsc{{Khronos Group}}:
+\newblock \emph{Geometry Shader}.
+\newblock Webquelle. --
+\newblock URL \url{https://www.khronos.org/opengl/wiki/Geometry_Shader}. --
+\newblock letzer Abruf: 02.09.2020
+
+\bibitem[{Khronos Group}({\natexlab{b}})]{khronos:opengl-overview}
+\dinatlabel{{Khronos Group} {\natexlab{b}}} \textsc{{Khronos Group}}:
 \newblock \emph{OpenGL Overview}.
 \newblock Webquelle. --
 \newblock URL \url{https://www.opengl.org/about/}. --
 \newblock letzer Abruf: 09.08.2020
+
+\bibitem[{Khronos Group}({\natexlab{c}})]{khronos:rendering-pipeline}
+\dinatlabel{{Khronos Group} {\natexlab{c}}} \textsc{{Khronos Group}}:
+\newblock \emph{Rendering Pipeline Overview}.
+\newblock Webquelle. --
+\newblock URL
+  \url{https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview}. --
+\newblock letzer Abruf: 20.08.2020
+
+\bibitem[{Khronos Group}({\natexlab{d}})]{khronos:tessellation}
+\dinatlabel{{Khronos Group} {\natexlab{d}}} \textsc{{Khronos Group}}:
+\newblock \emph{Tessellation}.
+\newblock Webquelle. --
+\newblock URL \url{https://www.khronos.org/opengl/wiki/Tessellation}. --
+\newblock letzer Abruf: 02.09.2020
 
 \bibitem[Kind u.\,a.(2019)Kind, Ferdinand, Jetzke, Richter und
   Weide]{tab:augmented-reality}
@@ -115,6 +144,14 @@
 \newblock In: \emph{Telemanipulator and Telepresence Technologies} Bd.~2351,
   SPIE, 1994, S.~282--292
 
+\bibitem[Murphy(2009)]{murphy:beginning-android}
+\dinatlabel{Murphy 2009} \textsc{Murphy}, M.~L.:
+\newblock \emph{Beginning Android - Master Android from first principles and
+  begin the journey toward your own successful Android applications!}
+\newblock 1.
+\newblock Apress, 2009. --
+\newblock ISBN 978-1-4302-2420-4
+
 \bibitem[Nischwitz u.\,a.(2011)Nischwitz, Fischer, Haberäcker und
   Socher]{nischwitz:bildverarbeitung}
 \dinatlabel{Nischwitz u.\,a. 2011} \textsc{Nischwitz}, A.~; \textsc{Fischer},
@@ -139,6 +176,15 @@
 \newblock 3.
 \newblock Pearson Education, 2012. --
 \newblock ISBN 978-0-321-81574-3
+
+\bibitem[Shreiner u.\,a.(2006)Shreiner, Woo, Neider und Davis]{shreiner:opengl}
+\dinatlabel{Shreiner u.\,a. 2006} \textsc{Shreiner}, D.~; \textsc{Woo}, M.~;
+  \textsc{Neider}, J.~; \textsc{Davis}, T.:
+\newblock \emph{OpenGL programming guide - the official guide to learning
+  OpenGL, version 2}.
+\newblock 5.
+\newblock Addison-Wesley, 2006. --
+\newblock ISBN 0-321-33573-2
 
 \bibitem[Ćuković u.\,a.(2015)Ćuković, Gattullo, Pankratz, Devedzic,
   Carrabba und Baizid]{cukovic:marker-vs-natural}
