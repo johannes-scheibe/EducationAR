@@ -35,11 +35,12 @@
  *  Author(s): Thorsten Bux
  *
  */
-package com.example.educationar.rendering;
+package com.example.educationar.shader_impl;
 
 import android.opengl.GLES20;
 
-import org.artoolkitx.arx.arxj.rendering.OpenGLShader;
+import com.example.educationar.artoolkitx.rendering.OpenGLShader;
+
 
 /**
  * Created by Thorsten Bux on 21.01.2016.

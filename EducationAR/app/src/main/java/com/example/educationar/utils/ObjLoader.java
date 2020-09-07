@@ -1,20 +1,12 @@
 package com.example.educationar.utils;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.opengl.GLES20;
-import android.opengl.GLUtils;
-import android.util.Log;
-
-import com.example.educationar.MainActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -55,7 +47,7 @@ public final class ObjLoader {
                     case "v":
                         // vertices
                         vertices.add(Float.valueOf(parts[1]).floatValue()); // Opengl x-Coordinate = Blender x-Coordinate
-                        vertices.add(-Float.valueOf(parts[3]).floatValue()); //Opengl y-Coordinate = - Blender z-Coordinate
+                        vertices.add(-Float.valueOf(parts[3]).floatValue()); // Opengl y-Coordinate = - Blender z-Coordinate
                         vertices.add(Float.valueOf(parts[2]).floatValue()); // Opengl z-Coordinate = Blender y-Coordinate
                         break;
                     case "vn":

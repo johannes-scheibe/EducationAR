@@ -1,11 +1,6 @@
 package com.example.educationar;
 
-import org.artoolkitx.arx.arxj.ARController;
-import org.artoolkitx.arx.arxj.ARX_jni;
-import org.artoolkitx.arx.arxj.FPSCounter;
-import org.artoolkitx.arx.arxj.Trackable;
-import org.artoolkitx.arx.arxj.rendering.ARRenderer;
-import org.artoolkitx.arx.arxj.rendering.shader_impl.Cube;
+
 
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -13,15 +8,26 @@ import javax.microedition.khronos.opengles.GL10;
 import android.opengl.GLES20;
 
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.example.educationar.rendering.MyFragmentShader;
-import com.example.educationar.rendering.MyShaderProgram;
-import com.example.educationar.rendering.MyVertexShader;
+import com.example.educationar.artoolkitx.FPSCounter;
+import com.example.educationar.artoolkitx.rendering.ARRenderer;
+import com.example.educationar.shader_impl.MyFragmentShader;
+import com.example.educationar.shader_impl.MyShaderProgram;
+import com.example.educationar.shader_impl.MyVertexShader;
+
+import org.artoolkitx.arx.arxj.ARController;
+import org.artoolkitx.arx.arxj.ARX_jni;
 
 public class EducationARRenderer extends ARRenderer {
 
@@ -39,6 +45,8 @@ public class EducationARRenderer extends ARRenderer {
 
     private List<Model> models;
 
+    private Map<Integer, Model> trackables;
+
 
     //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
     //As the cube instantiates the shader during setShaderProgram call we need to create the cube here.
@@ -48,15 +56,15 @@ public class EducationARRenderer extends ARRenderer {
         this.fpsCounter = new FPSCounter();
         this.models = new ArrayList<Model>();
 
-        Model sphere = new Model(EducationARApplication.getContext(), "Models/sphere/sphere");
+        Model sphere = new Model(MainActivity.getContext(), "Models/sphere/sphere");
         sphere.setShaderProgram(shaderProgram);
         this.models.add(sphere);
 
-        Model cube = new Model(EducationARApplication.getContext(), "Models/cube/cube");
+        Model cube = new Model(MainActivity.getContext(), "Models/cube/cube");
         cube.setShaderProgram(shaderProgram);
         this.models.add(cube);
 
-        Model monkey = new Model(EducationARApplication.getContext(), "Models/monkey/monkey");
+        Model monkey = new Model(MainActivity.getContext(), "Models/monkey/monkey");
         monkey.setShaderProgram(shaderProgram);
         this.models.add(monkey);
 
@@ -70,12 +78,12 @@ public class EducationARRenderer extends ARRenderer {
     @Override
     public boolean configureARScene() {
 
+        trackables = new HashMap<Integer, Model>();
+
         // Add the Markers
         for(int i = 0; i<models.size(); i++) {
-            ARController.getInstance().addTrackable("single_barcode;" + i + ";80");
-
+            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + i + ";80"), models.get(i));
         }
-
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5_BCH_22_7_7);
         return true;
@@ -99,12 +107,12 @@ public class EducationARRenderer extends ARRenderer {
         GLES20.glFrontFace(GLES20.GL_CCW);
         
         // Look for trackables, and draw on each found one.
-        for (int trackableUID = 0; trackableUID<models.size(); trackableUID++) {
-            // If the trackable is visible, apply its transformation, and render a cube
+        for (int trackableUID : trackables.keySet()) {
+            // If the trackable is visible, apply its transformation, and render the object
             float[] modelViewMatrix = new float[16];
             if (ARController.getInstance().queryTrackableVisibilityAndTransformation(trackableUID, modelViewMatrix)) {
                 float[] projectionMatrix = ARController.getInstance().getProjectionMatrix(10.0f, 10000.0f);
-                models.get(trackableUID).draw(projectionMatrix, modelViewMatrix);
+                trackables.get(trackableUID).draw(projectionMatrix, modelViewMatrix);
             }
         }
     }

@@ -3,7 +3,7 @@ package com.example.educationar;
 import android.app.Application;
 import android.content.Context;
 
-import org.artoolkitx.arx.arxj.assets.AssetHelper;
+import com.example.educationar.artoolkitx.assets.AssetHelper;
 
 public class EducationARApplication extends Application {
 

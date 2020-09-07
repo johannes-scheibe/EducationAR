@@ -2,16 +2,13 @@ package com.example.educationar;
 
 import android.content.Context;
 
-import com.example.educationar.rendering.ShaderProgram;
+import com.example.educationar.artoolkitx.rendering.RenderUtils;
+import com.example.educationar.artoolkitx.rendering.ShaderProgram;
 import com.example.educationar.utils.ObjLoader;
 import com.example.educationar.utils.TextureLoader;
 
-import org.artoolkitx.arx.arxj.rendering.RenderUtils;
-
-
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Logger;
 
 public class Model {

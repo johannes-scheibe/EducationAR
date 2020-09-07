@@ -35,16 +35,15 @@
  *  Author(s): Thorsten Bux
  *
  */
-package com.example.educationar.rendering;
+package com.example.educationar.shader_impl;
 
 import android.opengl.GLES20;
 
-import org.artoolkitx.arx.arxj.rendering.OpenGLShader;
 
+import com.example.educationar.artoolkitx.rendering.OpenGLShader;
+import com.example.educationar.artoolkitx.rendering.ShaderProgram;
 
-import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
-import java.nio.ShortBuffer;
 
 /**
  * The shader program links together the vertex shader and the fragment shader and compiles them.
@@ -154,7 +153,6 @@ public class MyShaderProgram extends ShaderProgram {
 
         int numVertices =  (vertexBuffer.limit()/positionDataSize);
         GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, numVertices);
-
     }
 
 }

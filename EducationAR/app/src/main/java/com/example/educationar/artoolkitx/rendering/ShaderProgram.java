@@ -37,11 +37,12 @@
  */
 
 
-package com.example.educationar.rendering;
+package com.example.educationar.artoolkitx.rendering;
 
 import android.opengl.GLES20;
 
-import org.artoolkitx.arx.arxj.rendering.OpenGLShader;
+
+import com.example.educationar.artoolkitx.rendering.OpenGLShader;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
@@ -143,6 +144,15 @@ public abstract class ShaderProgram {
         render(vertexBuffer, null, null, null, 0);
     }
 
+    /**
+     * Only render a simple position. In this case the implementation if forwarded to the
+     * {@link #render(FloatBuffer)}
+     *
+     * @param position The position to be rendered
+     */
+    public void render(float[] position) {
+        render(RenderUtils.buildFloatBuffer(position));
+    }
 
     public void setProjectionMatrix(float[] projectionMatrix) {
         this.projectionMatrix = projectionMatrix;
