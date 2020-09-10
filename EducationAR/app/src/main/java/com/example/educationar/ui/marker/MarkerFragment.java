@@ -38,7 +38,6 @@ public class MarkerFragment extends Fragment {
         generateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ;
                 String temp = idInput.getText().toString();
                 if(!temp.equals("")){
                     int id = Integer.parseInt(temp);
