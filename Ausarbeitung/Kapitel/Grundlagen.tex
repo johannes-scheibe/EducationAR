@@ -30,13 +30,16 @@ Laut einer systematischen Analyse der Universität Stockholm, in welchem basiere
 \label{fig:snapchat-ar}
 \end{figure}
 
+\subsection{Interfaces}
+\subsubsection{Head-Mounted-Displays}\label{sec:HMD}
+
 \subsection{Technische Grundlagen}
 Zur Umsetzung der Augmented Reality ist eine Umgebungserfassung und -analyse des Systems mit Hilfe einer Tracking Software (auch Tracker genannt) notwendig. Auf Grundlage dieser können dann im Anschluss computergenerierte virtuelle Objekte in die Umgebung eingefügt werden. \\
 Zur Analyse der Systemumgebung können verschiedene Eingabesysteme genutzt werden, mit deren Hilfe die Eigenschaften der Umgebung und der in ihr vorhandenen Objekte wahrgenommen werden können \citep[S. 22]{tab:augmented-reality}. Zu diesen Eigenschaften zählen neben statischen, wie der Größen und Position, auch dynamische Eigenschaften, welche die Veränderung der statischen Attribute einzelner Objekte umfassen \todo{Umformulieren, wegen Zitat}. Beispielhafte Technologien, die zur Erfassung genutzt werden können, wären Kamerasysteme, Laser, Infrarot oder sonstige Sensoren \citep[S. 22]{tab:augmented-reality}.
 Neben der Umgebungserfassung ist auch die Verfolgung einzelner, in der Umgebung enthaltender Objekte notwendiger Bestandteil der Tracking Software, um die dynamischen Eigenschaften der realen Umgebung auf die virtuellen Objekte zu übertragen.\\
 Eine wichtige Rolle beim Tracking spielt die Genauigkeit, mit der die Eigenschaften der Umgebung wahrgenommen werden, sie bestimmt wie akkurat virtuelle Objekte in die reale Umgebung eingefügt werden können und wie realistisch die Illusion erscheint \citep[S. 2]{klein:visual-tracking}.
 
-\subsubsection{Trackingverfahren}
+\subsubsection{Trackingverfahren}\label{sec:Trackingverfahren}
 Grundsätzlich kann bei der Tracking Software zwischen zwei Verfahren unterschieden werden, dem nicht visuellen und dem visuellen Tracking \citep[S. 26]{mehler-bicher:augmented-reality}. Während bei letzterem auf Daten von zum Beispiel einer Kamera zurückgegriffen wird, beruht das nichtvisuelle Tracking auf Sensoren, die direkten Zugriff auf die Eigenschaften der Umgebung, wie der Position, liefern. \\
 Bei dem für diese Arbeit relevantem visuellen Tracking, müssen die Eigenschaften der Umgebung aus dem Kamerabild abgeleitet und verarbeitet werden. Dazu werden in der Regel nach \citet[S. 26]{mehler-bicher:augmented-reality} zwei Schritte benötigt:
 \begin{enumerate}
@@ -153,7 +156,7 @@ Der nächste Schritt ist das \textbf{Primitive Assembly} bei welchem aus der Rei
 Während der \textbf{Rasterization} werden dann die Grundelemente in eine Pixeldarstellung für den entsprechenden Bildschirm umgewandelt \citep{vries:learn-opengl-triangle}.\\
 Der \textbf{Fragment Shader} ordnet dann jedem Pixel eine Farbe zu, in deren Berechnung meist Werte wie Schatten, Licht und dessen Farbe einfließen \citep{vries:learn-opengl-triangle}.
 Zu letzt werden dann noch eine Reihe an \textbf{Per-Sample Operations} durchgeführt, welche Tests beschreiben die testen, ob ein Pixelwert aktualisiert werden muss oder nicht \citep{khronos:rendering-pipeline}.
-
+\subsection{OpenGL ES}
 
 
 
