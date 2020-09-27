@@ -19,7 +19,6 @@ public class Model {
     private FloatBuffer mColorBuffer;
     private FloatBuffer mNormalBuffer;
     private FloatBuffer mTextureBuffer;
-    private ShortBuffer mIndexBuffer;
 
     private ShaderProgram shaderProgram;
 
@@ -35,7 +34,6 @@ public class Model {
         mColorBuffer = RenderUtils.buildFloatBuffer(objLoader.colors);
         mNormalBuffer = RenderUtils.buildFloatBuffer(objLoader.normals);
         mTextureBuffer = RenderUtils.buildFloatBuffer(objLoader.textures);
-        mNormalBuffer = null;
 
         mTextureDataHandle = TextureLoader.loadTexture(MainActivity.getContext(),(filename + ".jpg"));
 
@@ -57,11 +55,6 @@ public class Model {
     public FloatBuffer getmTextureBuffer() {
         return mTextureBuffer;
     }
-    @SuppressWarnings("WeakerAccess")
-    public ShortBuffer getmIndexBuffer() {
-        return mIndexBuffer;
-    }
-
 
     /*
      * Used to render objects when working with OpenGL ES 2.x

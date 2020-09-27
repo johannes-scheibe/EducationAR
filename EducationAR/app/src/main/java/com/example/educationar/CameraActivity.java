@@ -6,6 +6,7 @@ import android.widget.FrameLayout;
 
 import com.example.educationar.artoolkitx.ARActivity;
 import com.example.educationar.artoolkitx.rendering.ARRenderer;
+import com.example.educationar.ui.camera.EducationARRenderer;
 
 public class CameraActivity extends ARActivity {
 

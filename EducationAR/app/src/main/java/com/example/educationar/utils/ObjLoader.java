@@ -22,9 +22,9 @@ public final class ObjLoader {
 
     public ObjLoader(Context context, String file) {
 
-        short vertexIndices[];
-        short textureIndices[];
-        short normalIndices[];
+        int vertexIndices[];
+        int textureIndices[];
+        int normalIndices[];
 
         int numFaces;
         List<Float> vertices = new ArrayList<Float>();
@@ -73,23 +73,23 @@ public final class ObjLoader {
 
 
             // Create indices
-            vertexIndices = new short[faces.size()];
-            textureIndices = new short[faces.size()];
-            normalIndices = new short[faces.size()];
+            vertexIndices = new int[faces.size()];
+            textureIndices = new int[faces.size()];
+            normalIndices = new int[faces.size()];
 
             for (int i = 0; i < faces.size(); i++) {
                 String[] parts = faces.get(i).split("/");
 
                 // Vertex index
-                short vIndex = Short.valueOf(parts[0]).shortValue();
+                int vIndex = Integer.valueOf(parts[0]).intValue();
                 vertexIndices[i] = (vIndex -= 1);
 
                 // Texture index
-                short tIndex = Short.valueOf(parts[1]).shortValue();
+                int tIndex = Integer.valueOf(parts[1]).intValue();
                 textureIndices[i] = (tIndex -= 1);
 
                 // Normal index
-                short nIndex = Short.valueOf(parts[2]).shortValue();
+                int nIndex = Integer.valueOf(parts[2]).intValue();
                 normalIndices[i] = (nIndex -= 1);
 
             }
@@ -98,7 +98,7 @@ public final class ObjLoader {
             int i;
             this.vertices = new float[vertexIndices.length*3];
             i = 0;
-            for (Short index : vertexIndices) {
+            for (int index : vertexIndices) {
                 this.vertices[i++] = vertices.get(index*3);
                 this.vertices[i++] = vertices.get(index*3+1);
                 this.vertices[i++] = vertices.get(index*3+2);
@@ -107,7 +107,7 @@ public final class ObjLoader {
 
             this.textures = new float[textureIndices.length*2];
             i = 0;
-            for (Short index : textureIndices) {
+            for (int index : textureIndices) {
                 this.textures[i++] = textures.get(index*2);
                 this.textures[i++] = textures.get(index*2+1);
             }
@@ -115,7 +115,7 @@ public final class ObjLoader {
 
             this.normals = new float[normalIndices.length*3];
             i = 0;
-            for (Short index : normalIndices) {
+            for (int index : normalIndices) {
                 this.normals[i++] = normals.get(index*3);
                 this.normals[i++] = normals.get(index*3+1);
                 this.normals[i++] = normals.get(index*3+2);
@@ -132,7 +132,8 @@ public final class ObjLoader {
             }
 
         } catch (IOException e) {
-            logger.log(Level.SEVERE, e.getMessage());
+            logger.log(Level.SEVERE, e.getMessage() + ": ");
+            e.printStackTrace();
         } finally {
             if (reader != null) {
                 try {

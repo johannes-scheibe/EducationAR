@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.educationar.ui.notifications.NotificationsFragment"
+        android:name="com.example.educationar.ui.notifications.UploadFragment"
         android:label="@string/title_add_marker"
         tools:layout="@layout/fragment_add_model" />
 </navigation>

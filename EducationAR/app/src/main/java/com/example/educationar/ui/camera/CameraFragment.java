@@ -10,7 +10,6 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.educationar.EducationARRenderer;
 import com.example.educationar.R;
 import com.example.educationar.artoolkitx.ARFragment;
 import com.example.educationar.artoolkitx.rendering.ARRenderer;

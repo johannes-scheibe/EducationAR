@@ -1,4 +1,4 @@
-package com.example.educationar;
+package com.example.educationar.ui.camera;
 
 
 
@@ -20,6 +20,8 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.example.educationar.MainActivity;
+import com.example.educationar.Model;
 import com.example.educationar.artoolkitx.FPSCounter;
 import com.example.educationar.artoolkitx.rendering.ARRenderer;
 import com.example.educationar.shader_impl.MyFragmentShader;
@@ -56,6 +58,8 @@ public class EducationARRenderer extends ARRenderer {
         this.fpsCounter = new FPSCounter();
         this.models = new ArrayList<Model>();
 
+
+
         Model sphere = new Model(MainActivity.getContext(), "Models/sphere/sphere");
         sphere.setShaderProgram(shaderProgram);
         this.models.add(sphere);
@@ -67,6 +71,7 @@ public class EducationARRenderer extends ARRenderer {
         Model monkey = new Model(MainActivity.getContext(), "Models/monkey/monkey");
         monkey.setShaderProgram(shaderProgram);
         this.models.add(monkey);
+
 
         super.onSurfaceCreated(unused, config);
 
