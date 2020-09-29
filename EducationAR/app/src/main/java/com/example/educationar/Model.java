@@ -7,6 +7,7 @@ import com.example.educationar.artoolkitx.rendering.ShaderProgram;
 import com.example.educationar.utils.ObjLoader;
 import com.example.educationar.utils.TextureLoader;
 
+import java.io.File;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 import java.util.logging.Logger;
@@ -25,9 +26,9 @@ public class Model {
     // Load the Texture
     private int mTextureDataHandle;
 
-    public Model(Context context,  String filename) {
+    public Model(Context context, File modelFile, File textureFile) {
 
-        ObjLoader objLoader = new ObjLoader(MainActivity.getContext(), filename + ".obj");
+        ObjLoader objLoader = new ObjLoader(context, modelFile);
 
 
         mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
@@ -35,7 +36,7 @@ public class Model {
         mNormalBuffer = RenderUtils.buildFloatBuffer(objLoader.normals);
         mTextureBuffer = RenderUtils.buildFloatBuffer(objLoader.textures);
 
-        mTextureDataHandle = TextureLoader.loadTexture(MainActivity.getContext(),(filename + ".jpg"));
+        mTextureDataHandle = TextureLoader.loadTexture(context, textureFile);
 
     }
 

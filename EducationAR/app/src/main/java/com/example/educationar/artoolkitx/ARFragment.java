@@ -334,7 +334,7 @@ public abstract class ARFragment extends Fragment implements View.OnClickListene
                 .setNeutralButton(android.R.string.ok,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_marker);
+                                Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_administration);
                             }
                         })
                 .show();

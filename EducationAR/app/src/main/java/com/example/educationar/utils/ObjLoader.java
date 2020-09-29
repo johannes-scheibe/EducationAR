@@ -3,6 +3,7 @@ package com.example.educationar.utils;
 import android.content.Context;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public final class ObjLoader {
     public float colors[];
 
 
-    public ObjLoader(Context context, String file) {
+    public ObjLoader(Context context, File file) {
 
         int vertexIndices[];
         int textureIndices[];
@@ -36,7 +37,7 @@ public final class ObjLoader {
         BufferedReader reader = null;
 
         try {
-            InputStreamReader in = new InputStreamReader(context.getAssets().open(file));
+            InputStreamReader in = new InputStreamReader(context.openFileInput(file.getName()));
             reader = new BufferedReader(in);
 
             // read file until EOF

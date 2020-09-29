@@ -28,8 +28,8 @@ public class MarkerGenerator {
             }
         }
 
-        bitmap = Bitmap.createScaledBitmap(bitmap, 226, 226, false);
-        return addBorder(bitmap,0.3);
+        bitmap = Bitmap.createScaledBitmap(bitmap, 180, 180, false);
+        return addBorder(bitmap,0.5);
     }
 
     public static Bitmap addBorder(Bitmap bmp, double borderSize){

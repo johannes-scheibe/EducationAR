@@ -1,23 +1,27 @@
-package com.example.educationar.ui.notifications;
+package com.example.educationar.ui.upload;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.OpenableColumns;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import androidx.navigation.Navigation;
 
 import com.example.educationar.MainActivity;
+import com.example.educationar.R;
 import com.example.educationar.utils.FileManager;
-import com.example.educationar.utils.MarkerGenerator;
+import com.example.educationar.utils.ModelManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,12 +31,10 @@ public class UploadViewModel extends ViewModel {
 
     private static Logger logger = Logger.getLogger("EduAR-UploadFragment");
 
-    private MutableLiveData<Uri> modelUri;
-    private MutableLiveData<Uri> textureUri;
+    private MutableLiveData<Uri> modelUri, textureUri;
 
     private MutableLiveData<String> modelName;
 
-    private MutableLiveData<Bitmap> marker;
     private MutableLiveData<Integer> markerID;
 
     private MutableLiveData<List<Integer>> errorCodes;
@@ -47,32 +49,39 @@ public class UploadViewModel extends ViewModel {
         modelUri = new MutableLiveData<>();
         textureUri = new MutableLiveData<>();
         modelName = new MutableLiveData<>();
-        marker = new MutableLiveData<>();
         markerID = new MutableLiveData<>();
 
         errorCodes = new MutableLiveData<>();
         errorCodes.setValue(new ArrayList<Integer>());
-        int n = 10000;
-        Random generator = new Random();
-        markerID.setValue(generator.nextInt(n));
+        markerID.setValue(ModelManager.getNextID(mContext));
     }
 
-    public void addModel(){
+    public void addModel(View v){
         if(requiredDataAvailable()){
-            Random r = new Random();
-            int id = r.nextInt(4000);
-            Bitmap bm = MarkerGenerator.generateMarker(id, 5);
-            marker.setValue(bm);
 
-            try {
-                FileManager.transferToInternalStorage(mContext, modelUri.getValue(), "random12323");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            final String modelFileName = modelName.getValue();
+            final String textureFileName = modelName.getValue() + "-texture";
+            new Thread(new Runnable() {
+
+                @Override
+                public void run() {
+                    try {
+                        FileManager.transferToInternalStorage(mContext, modelUri.getValue(), modelFileName);
+                        FileManager.transferToInternalStorage(mContext, textureUri.getValue(), textureFileName);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }).start();
+
+            ModelManager.addModel(markerID.getValue(), modelFileName);
+
+            Bundle bundle = new Bundle();
+            bundle.putString("name", modelName.getValue());
+            bundle.putInt("id", markerID.getValue());
+            Navigation.findNavController(v).navigate(R.id.action_upload_to_confiramation, bundle);
         }
-    }
-    public void saveMarker(Uri uri){
-        FileManager.saveBitmap(mContext, uri, marker.getValue());
     }
 
     private boolean requiredDataAvailable(){
@@ -105,6 +114,13 @@ public class UploadViewModel extends ViewModel {
         List err = errorCodes.getValue();
         addIfNotContains(err, ERROR_ID_MODEL);
         errorCodes.setValue(err);
+
+        CharSequence text = "Falscher Dateityp!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(mContext, text, duration);
+        toast.show();
+
 
         return false;
     }
@@ -151,9 +167,6 @@ public class UploadViewModel extends ViewModel {
         modelName.setValue(name);
     }
 
-    public LiveData<Bitmap> getMarker(){
-        return marker;
-    }
 
     public LiveData<Integer> getMarkerID(){
         return markerID;
@@ -170,6 +183,7 @@ public class UploadViewModel extends ViewModel {
     public LiveData<String> getName(){
         return modelName;
     }
+
     public LiveData<List<Integer>> getErrorCodes(){
         return errorCodes;
     }

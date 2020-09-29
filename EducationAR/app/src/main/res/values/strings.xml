@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">EducationAR</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">AR</string>
+    <string name="title_administration">Verwaltung</string>
+    <string name="title_upload">Hinzufügen</string>
     <string name="title_marker">Generator</string>
-    <string name="title_add_marker">Hinzufügen</string>
+    <string name="title_confirmation">Marker speichern</string>
 
     <string name="menuItem_settings">Settings</string>
 
@@ -26,6 +28,7 @@
         <item>0</item>
     </string-array>
 
-    <string name="configText">Open settings</string>
-    <string name="insert_id">Enter a marker id</string>
+    <string name="configText">Einstellungen öffnen</string>
+    <string name="insert_id">Marker ID eingeben</string>
+
 </resources>

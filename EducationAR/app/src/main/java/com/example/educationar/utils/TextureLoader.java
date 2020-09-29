@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,7 +15,7 @@ public class TextureLoader {
 
     private static Logger logger = Logger.getLogger("EduAR-TextureLoader");
 
-    public static int loadTexture(final Context context, final String file)
+    public static int loadTexture(final Context context, final File file)
     {
         final int[] textureHandle = new int[1];
 
@@ -27,7 +28,7 @@ public class TextureLoader {
             }
 
             // Read in the resource
-            final Bitmap bitmap = BitmapFactory.decodeStream(context.getAssets().open(file));
+            final Bitmap bitmap = BitmapFactory.decodeStream(context.openFileInput(file.getName()));
             logger.log(Level.INFO, "" + file);
 
             // Bind to the texture in OpenGL

@@ -14,7 +14,7 @@ import com.example.educationar.R;
 import com.example.educationar.artoolkitx.ARFragment;
 import com.example.educationar.artoolkitx.rendering.ARRenderer;
 
-public class CameraFragment extends ARFragment {
+public class ARCameraFragment extends ARFragment {
 
     private CameraViewModel cameraViewModel;
     private static Context mContext;
@@ -36,6 +36,7 @@ public class CameraFragment extends ARFragment {
 
         return root;
     }
+
 
     /**
      *  Passes the renderer used to create the ar content to artoolkitX

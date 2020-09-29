@@ -101,6 +101,9 @@ public class CameraEventListenerImpl implements CameraEventListener {
 
     @Override
     public void cameraStreamStopped() {
-        ARController.getInstance().stopAndFinal();
+        if(ARController.getInstance().isRunning())
+            ARController.getInstance().stopAndFinal();
+
+
     }
 }

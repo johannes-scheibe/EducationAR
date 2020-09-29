@@ -5,18 +5,14 @@ package com.example.educationar.ui.camera;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import android.content.Context;
 import android.opengl.GLES20;
 
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import java.util.ArrayList;
-import java.util.Collection;
+import java.io.File;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,6 +23,7 @@ import com.example.educationar.artoolkitx.rendering.ARRenderer;
 import com.example.educationar.shader_impl.MyFragmentShader;
 import com.example.educationar.shader_impl.MyShaderProgram;
 import com.example.educationar.shader_impl.MyVertexShader;
+import com.example.educationar.utils.ModelManager;
 
 import org.artoolkitx.arx.arxj.ARController;
 import org.artoolkitx.arx.arxj.ARX_jni;
@@ -35,20 +32,22 @@ public class EducationARRenderer extends ARRenderer {
 
     private static Logger logger = Logger.getLogger("EduAR-ARRenderer");
 
+    private Context mContext;
+
     int ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE = 4;
     int AR_MATRIX_CODE_DETECTION = 2;
     int ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE = 6;
     int AR_MATRIX_CODE_5x5_BCH_22_7_7  = 0x505;
+    int AR_MATRIX_CODE_5x5 = 0x05;
 
     private MyShaderProgram shaderProgram;
     private FPSCounter fpsCounter;
     private float maxfps = 0;
 
 
-    private List<Model> models;
 
+    private Map<Integer, Model> models;
     private Map<Integer, Model> trackables;
-
 
     //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
     //As the cube instantiates the shader during setShaderProgram call we need to create the cube here.
@@ -56,21 +55,23 @@ public class EducationARRenderer extends ARRenderer {
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
         this.shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
         this.fpsCounter = new FPSCounter();
-        this.models = new ArrayList<Model>();
 
+        models = new HashMap<Integer, Model>();
+        trackables = new HashMap<Integer, Model>();
 
+        mContext = MainActivity.getContext();
 
-        Model sphere = new Model(MainActivity.getContext(), "Models/sphere/sphere");
-        sphere.setShaderProgram(shaderProgram);
-        this.models.add(sphere);
+        File dir = mContext.getFilesDir();
 
-        Model cube = new Model(MainActivity.getContext(), "Models/cube/cube");
-        cube.setShaderProgram(shaderProgram);
-        this.models.add(cube);
+        Map<String,?> models = ModelManager.getAllModels();
+        for(Map.Entry<String,?> entry : models.entrySet()){
+            File modelFile = new File(dir, entry.getValue().toString());
+            File textureFile = new File(dir, entry.getValue().toString()+"-texture");
+            Model model = new Model(mContext, modelFile, textureFile);
+            model.setShaderProgram(shaderProgram);
+            this.models.put(Integer.parseInt(entry.getKey().trim()), model);
+        }
 
-        Model monkey = new Model(MainActivity.getContext(), "Models/monkey/monkey");
-        monkey.setShaderProgram(shaderProgram);
-        this.models.add(monkey);
 
 
         super.onSurfaceCreated(unused, config);
@@ -83,14 +84,15 @@ public class EducationARRenderer extends ARRenderer {
     @Override
     public boolean configureARScene() {
 
-        trackables = new HashMap<Integer, Model>();
+
 
         // Add the Markers
-        for(int i = 0; i<models.size(); i++) {
-            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + i + ";80"), models.get(i));
+
+        for(Map.Entry<Integer, Model> entry : models.entrySet()){
+            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + entry.getKey() + ";80"), entry.getValue());
         }
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
-        ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5_BCH_22_7_7);
+        ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5);
         return true;
     }
 

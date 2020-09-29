@@ -1,10 +1,8 @@
-package com.example.educationar.ui.notifications;
+package com.example.educationar.ui.upload;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
@@ -38,13 +37,9 @@ public class UploadFragment extends Fragment {
     private EditText nameInput;
     private TextView modelPath;
     private TextView texturePath;
-    private ImageView markerView;
-    private Button saveButton;
 
-    private static final int ASK_PERMISSION = 0;
     private static final int PICK_MODEL = 1;
     private static final int PICK_TEXTURE = 2;
-    private static final int SAVE_MARKER = 3;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -52,15 +47,11 @@ public class UploadFragment extends Fragment {
         uploadViewModel =
                 ViewModelProviders.of(this).get(UploadViewModel.class);
 
-        View root = inflater.inflate(R.layout.fragment_add_model, container, false);
+        View root = inflater.inflate(R.layout.fragment_upload, container, false);
 
         nameInput = root.findViewById(R.id.nameInput);
         modelPath = root.findViewById(R.id.modelPath);
         texturePath = root.findViewById(R.id.texturePath);
-        markerView = root.findViewById(R.id.markerPreview);
-        saveButton = root.findViewById(R.id.saveButton);
-
-        saveButton.setVisibility(View.INVISIBLE);
 
         // Observer
         uploadViewModel.getModelUri().observe(getViewLifecycleOwner(), new Observer<Uri>() {
@@ -75,13 +66,7 @@ public class UploadFragment extends Fragment {
                 texturePath.setText(s.getPath());
             }
         });
-        uploadViewModel.getMarker().observe(getViewLifecycleOwner(), new Observer<Bitmap>() {
-            @Override
-            public void onChanged(@Nullable Bitmap bm) {
-                markerView.setImageBitmap(bm);
-                saveButton.setVisibility(View.VISIBLE);
-            }
-        });
+
         uploadViewModel.getErrorCodes().observe(getViewLifecycleOwner(), new Observer<List<Integer>>() {
             @Override
             public void onChanged(@Nullable List<Integer> list) {
@@ -149,25 +134,8 @@ public class UploadFragment extends Fragment {
         addModel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadViewModel.addModel();
+                uploadViewModel.addModel(v);
 
-            }
-        });
-
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            if (ActivityCompat.checkSelfPermission(getContext(),android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                //Log.v(TAG,"Permission is granted");
-                Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
-                intent.addCategory(Intent.CATEGORY_OPENABLE);
-                intent.setType("image/jpeg");
-                String fname = uploadViewModel.getName().getValue();
-                intent.putExtra(Intent.EXTRA_TITLE, fname);
-                startActivityForResult(intent, SAVE_MARKER);
-            }else {
-                getActivity().requestPermissions(new String[] { Manifest.permission.WRITE_EXTERNAL_STORAGE }, ASK_PERMISSION);
-            }
             }
         });
 
@@ -177,6 +145,7 @@ public class UploadFragment extends Fragment {
         nameInput.setText(name);
         return root;
     }
+
 
     // Call Back method  to get the Message form other Activity
     @Override
@@ -201,12 +170,7 @@ public class UploadFragment extends Fragment {
                 uploadViewModel.setTexture(uri);
             }
         }
-        if(requestCode== SAVE_MARKER && resultCode == Activity.RESULT_OK) {
-            uploadViewModel.saveMarker(data.getData());
-        }
     }
-
-
 
 }
 

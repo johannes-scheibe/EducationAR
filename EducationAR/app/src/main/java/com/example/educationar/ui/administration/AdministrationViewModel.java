@@ -1,18 +1,14 @@
-package com.example.educationar.ui.marker;
-
-import android.graphics.Bitmap;
+package com.example.educationar.ui.administration;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.educationar.utils.MarkerGenerator;
-
-public class MarkerViewModel extends ViewModel {
+public class AdministrationViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public MarkerViewModel() {
+    public AdministrationViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is dashboard fragment");
     }

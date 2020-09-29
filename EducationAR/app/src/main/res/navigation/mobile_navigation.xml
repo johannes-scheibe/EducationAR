@@ -3,13 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_administration">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.educationar.ui.camera.CameraFragment"
+        android:id="@+id/navigation_camera"
+        android:name="com.example.educationar.ui.camera.ARCameraFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_administration"
+        android:name="com.example.educationar.ui.administration.AdministrationFragment"
+        android:label="@string/title_administration"
+        tools:layout="@layout/fragment_administration" >
+        <action
+            android:id="@+id/action_administration_to_upload"
+            app:destination="@id/navigation_upload"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_reload_administration"
+            app:destination="@id/navigation_administration" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_upload"
+        android:name="com.example.educationar.ui.upload.UploadFragment"
+        android:label="@string/title_upload"
+        tools:layout="@layout/fragment_upload" >
+        <action
+            android:id="@+id/action_upload_to_confiramation"
+            app:destination="@id/navigation_confirmation"
+            app:popUpTo="@id/navigation_confirmation" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_marker"
@@ -18,8 +43,12 @@
         tools:layout="@layout/fragment_marker" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.educationar.ui.notifications.UploadFragment"
-        android:label="@string/title_add_marker"
-        tools:layout="@layout/fragment_add_model" />
+        android:id="@+id/navigation_confirmation"
+        android:name="com.example.educationar.ui.confirmation.ConfirmationFragment"
+        android:label="@string/title_confirmation"
+        tools:layout="@layout/fragment_marker" >
+        <action
+            android:id="@+id/action_confirmation_to_administration"
+            app:destination="@id/navigation_administration" />
+    </fragment>
 </navigation>

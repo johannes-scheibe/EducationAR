@@ -43,9 +43,13 @@ import android.opengl.GLSurfaceView;
 import android.util.Log;
 
 
+import androidx.navigation.Navigation;
+
+import com.example.educationar.artoolkitx.ARActivity;
 import com.example.educationar.shader_impl.MyFragmentShader;
 import com.example.educationar.shader_impl.MyShaderProgram;
 import com.example.educationar.shader_impl.MyVertexShader;
+import com.example.educationar.ui.camera.ARCameraFragment;
 
 import org.artoolkitx.arx.arxj.ARController;
 import org.artoolkitx.arx.arxj.ARX_jni;
@@ -55,7 +59,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 /**
  * Base renderer which should be subclassed in the main application and provided
- * to the ARActivity using its {@link ARActivity#supplyRenderer() supplyRenderer} method.
+ * to the ARActivity using its supplyRenderer method.
  * <p/>
  * Subclasses should override {@link #configureARScene() configureARScene}, which will be called by
  * the Activity when AR initialisation is complete. The Renderer can use this method
@@ -116,7 +120,6 @@ public abstract class ARRenderer implements GLSurfaceView.Renderer {
                 } else {
                     Log.i(TAG, "Viewport {" + viewport[0] + ", " + viewport[1] + ", " + viewport[2] + ", " + viewport[3] + "}.");
                 }
-
                 firstRun = false;
             }
             GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
@@ -124,6 +127,8 @@ public abstract class ARRenderer implements GLSurfaceView.Renderer {
                 Log.e(TAG, "Error during call of displayFrame.");
             }
             draw();
+
+
         }
     }
 
