@@ -4,69 +4,70 @@
 \contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vi}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Ziele der Arbeit}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{1}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Grundlagen}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Augmented Reality}{2}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Einsatzbereiche}{3}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Interfaces}{4}{subsection.2.1.2}%
-\contentsline {subsubsection}{\nonumberline Head-Mounted-Displays}{4}{section*.8}%
-\contentsline {subsection}{\numberline {2.1.3}Technische Grundlagen}{4}{subsection.2.1.3}%
-\contentsline {subsubsection}{\nonumberline Trackingverfahren}{4}{section*.10}%
-\contentsline {paragraph}{\nonumberline Marker Based Feature Tracking}{5}{section*.11}%
-\contentsline {paragraph}{\nonumberline Natural Feature Tracking}{6}{section*.14}%
-\contentsline {section}{\numberline {2.2}Android Entwicklung}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Architektur}{7}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Grundlegende Konzepte}{8}{subsection.2.2.2}%
-\contentsline {subsubsection}{\nonumberline Activities}{8}{section*.16}%
-\contentsline {subsubsection}{\nonumberline Services}{8}{section*.18}%
-\contentsline {subsubsection}{\nonumberline Content Providers}{9}{section*.19}%
-\contentsline {subsubsection}{\nonumberline Intents}{9}{section*.20}%
-\contentsline {subsection}{\numberline {2.2.3}Fragments}{9}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}OpenGL}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Grundlagen von OpenGL}{10}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Rendering-Pipeline}{10}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}OpenGL ES}{12}{subsection.2.3.3}%
-\contentsline {chapter}{\numberline {3}Verwandte Arbeiten}{13}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{14}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Vision}{14}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Mögliche Anwendungsfälle}{14}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline Der Professor}{14}{section*.25}%
-\contentsline {subsubsection}{\nonumberline Die Studierenden}{15}{section*.27}%
-\contentsline {section}{\numberline {4.2}Der Prototyp}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{15}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{16}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{16}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{17}{subsection.4.3.3}%
-\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{18}{section*.29}%
-\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{18}{section*.30}%
-\contentsline {chapter}{\numberline {5}Entwurf}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Anwendungsart}{20}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Betriebssystem}{20}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Entwicklungsumgebung}{21}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Trackingverfahren}{21}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Tracking Bibliothek}{21}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Rendering}{22}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Modellformat}{22}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Userinterface}{22}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Datenspeicherung}{23}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Implementierung}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Laden der Modelldateien}{24}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}ObjLoader}{24}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}TextureLoader}{25}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Model}{25}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Augmented Reality}{26}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}CameraFragment}{26}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{26}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Markergenerierung}{26}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}MarkerGenerator}{27}{subsection.6.3.1}%
-\contentsline {chapter}{\numberline {7}Evaluation}{28}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Tests}{28}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Testdurchführung}{28}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Testfälle}{29}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Zusammenfassung}{31}{subsection.7.1.3}%
-\contentsline {chapter}{\numberline {8}Fazit}{32}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Fazit}{32}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{32}{section.8.2}%
-\contentsline {chapter}{Literaturverzeichnis}{33}{section*.43}%
-\contentsline {chapter}{\numberline {A}Beispielanhang}{36}{appendix.A}%
+\contentsline {section}{\numberline {1.2}Zielsetzung der Arbeit}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Vorgehensweise}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{2}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Augmented Reality}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Einsatzbereiche}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Interfaces}{5}{subsection.2.1.2}%
+\contentsline {subsubsection}{\nonumberline Head-Mounted-Displays}{5}{section*.8}%
+\contentsline {subsection}{\numberline {2.1.3}Technische Grundlagen}{5}{subsection.2.1.3}%
+\contentsline {subsubsection}{\nonumberline Trackingverfahren}{5}{section*.10}%
+\contentsline {paragraph}{\nonumberline Marker Based Feature Tracking}{6}{section*.11}%
+\contentsline {paragraph}{\nonumberline Natural Feature Tracking}{7}{section*.14}%
+\contentsline {section}{\numberline {2.2}Android Entwicklung}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Architektur}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Grundlegende Konzepte}{9}{subsection.2.2.2}%
+\contentsline {subsubsection}{\nonumberline Activities}{9}{section*.16}%
+\contentsline {subsubsection}{\nonumberline Services}{9}{section*.18}%
+\contentsline {subsubsection}{\nonumberline Content Providers}{10}{section*.19}%
+\contentsline {subsubsection}{\nonumberline Intents}{10}{section*.20}%
+\contentsline {subsection}{\numberline {2.2.3}Fragments}{10}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}OpenGL}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Grundlagen von OpenGL}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Rendering-Pipeline}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}OpenGL ES}{13}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Verwandte Arbeiten}{14}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vision}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Mögliche Anwendungsfälle}{15}{subsection.4.1.1}%
+\contentsline {subsubsection}{\nonumberline Der Professor}{15}{section*.25}%
+\contentsline {subsubsection}{\nonumberline Die Studierenden}{16}{section*.27}%
+\contentsline {section}{\numberline {4.2}Der Prototyp}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{16}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{17}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{17}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{18}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{19}{section*.29}%
+\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{19}{section*.30}%
+\contentsline {chapter}{\numberline {5}Entwurf}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Anwendungsart}{21}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Betriebssystem}{21}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Entwicklungsumgebung}{22}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Trackingverfahren}{22}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Tracking Bibliothek}{22}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Rendering}{23}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Modellformat}{23}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Userinterface}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Datenspeicherung}{24}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Implementierung}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Laden der Modelldateien}{25}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}ObjLoader}{25}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}TextureLoader}{26}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Model}{26}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Augmented Reality}{27}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}CameraFragment}{27}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{27}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Markergenerierung}{27}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}MarkerGenerator}{28}{subsection.6.3.1}%
+\contentsline {chapter}{\numberline {7}Evaluation}{29}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Tests}{29}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Testdurchführung}{29}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Testfälle}{30}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Zusammenfassung}{32}{subsection.7.1.3}%
+\contentsline {chapter}{\numberline {8}Fazit}{33}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Fazit}{33}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{33}{section.8.2}%
+\contentsline {chapter}{Literaturverzeichnis}{34}{section*.43}%
+\contentsline {chapter}{\numberline {A}Beispielanhang}{37}{appendix.A}%
