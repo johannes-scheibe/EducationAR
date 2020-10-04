@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{25}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -56,6 +56,13 @@
 \newblock 5.
 \newblock vdf Hochschulverlag, 2002. --
 \newblock ISBN 978-3-7281-2762-4
+
+\bibitem[Billinghurst(2002)]{billinghurst:ar-in-education}
+\dinatlabel{Billinghurst 2002} \textsc{Billinghurst}, Mark:
+\newblock AugmentedReality in Education
+\newblock / New Horizons for Learning.
+\newblock 2002.
+\newblock  -- Forschungsbericht
 
 \bibitem[{de Vries, J.}()]{vries:learn-opengl-triangle}
 \dinatlabel{{de Vries, J.} } \textsc{{de Vries, J.}}:

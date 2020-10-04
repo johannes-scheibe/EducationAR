@@ -1,7 +1,7 @@
 \babel@toc {ngerman}{}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{iv}{chapter*.3}%
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{v}{chapter*.4}%
-\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vi}{chapter*.5}%
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{v}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{vi}{chapter*.4}%
+\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Zielsetzung der Arbeit}{2}{section.1.2}%
@@ -29,45 +29,56 @@
 \contentsline {subsection}{\numberline {2.3.2}Rendering-Pipeline}{11}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}OpenGL ES}{13}{subsection.2.3.3}%
 \contentsline {chapter}{\numberline {3}Verwandte Arbeiten}{14}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Vision}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Mögliche Anwendungsfälle}{15}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline Der Professor}{15}{section*.25}%
-\contentsline {subsubsection}{\nonumberline Die Studierenden}{16}{section*.27}%
-\contentsline {section}{\numberline {4.2}Der Prototyp}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{16}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{17}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{18}{subsection.4.3.3}%
-\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{19}{section*.29}%
-\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{19}{section*.30}%
-\contentsline {chapter}{\numberline {5}Entwurf}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Anwendungsart}{21}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Betriebssystem}{21}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Entwicklungsumgebung}{22}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Trackingverfahren}{22}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Tracking Bibliothek}{22}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Rendering}{23}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Modellformat}{23}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Userinterface}{23}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Datenspeicherung}{24}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Implementierung}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Laden der Modelldateien}{25}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}ObjLoader}{25}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}TextureLoader}{26}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Model}{26}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Augmented Reality}{27}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}CameraFragment}{27}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{27}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Markergenerierung}{27}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}MarkerGenerator}{28}{subsection.6.3.1}%
-\contentsline {chapter}{\numberline {7}Evaluation}{29}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Tests}{29}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Testdurchführung}{29}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Testfälle}{30}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Zusammenfassung}{32}{subsection.7.1.3}%
-\contentsline {chapter}{\numberline {8}Fazit}{33}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Fazit}{33}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{33}{section.8.2}%
-\contentsline {chapter}{Literaturverzeichnis}{34}{section*.43}%
-\contentsline {chapter}{\numberline {A}Beispielanhang}{37}{appendix.A}%
+\contentsline {section}{\numberline {3.1}A Systematic Review of Learning through Mobile Augmented Reality}{14}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Ergebnisse}{14}{subsection.3.1.1}%
+\contentsline {subsubsection}{\nonumberline Bildungsniveau}{14}{section*.25}%
+\contentsline {subsubsection}{\nonumberline Mobiles Endgerät}{14}{section*.26}%
+\contentsline {subsubsection}{\nonumberline Unterrichtsfach}{15}{section*.27}%
+\contentsline {subsubsection}{\nonumberline Lernerfolge}{15}{section*.28}%
+\contentsline {subsubsection}{\nonumberline Pädagogische Methoden}{15}{section*.29}%
+\contentsline {section}{\numberline {3.2}Augmented Reality in Education}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Nahtlose Interaktion}{15}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Greifbare Schnittstelle}{16}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Übergangsschnittstelle}{16}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vision}{17}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Mögliche Anwendungsfälle}{17}{subsection.4.1.1}%
+\contentsline {subsubsection}{\nonumberline Der Professor}{17}{section*.30}%
+\contentsline {subsubsection}{\nonumberline Die Studierenden}{18}{section*.32}%
+\contentsline {section}{\numberline {4.2}Der Prototyp}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{19}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{19}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{20}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{21}{section*.34}%
+\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{21}{section*.35}%
+\contentsline {chapter}{\numberline {5}Entwurf}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Anwendungsart}{23}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Betriebssystem}{23}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Entwicklungsumgebung}{24}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Trackingverfahren}{24}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Tracking Bibliothek}{24}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Rendering}{25}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Modellformat}{25}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Userinterface}{25}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Datenspeicherung}{26}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Implementierung}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Laden der Modelldateien}{27}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}ObjLoader}{27}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}TextureLoader}{28}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Model}{28}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Augmented Reality}{29}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}CameraFragment}{29}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{29}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Markergenerierung}{29}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}MarkerGenerator}{30}{subsection.6.3.1}%
+\contentsline {chapter}{\numberline {7}Evaluation}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Tests}{31}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Testdurchführung}{31}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Testfälle}{32}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Zusammenfassung}{34}{subsection.7.1.3}%
+\contentsline {chapter}{\numberline {8}Fazit}{35}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Fazit}{35}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{35}{section.8.2}%
+\contentsline {chapter}{Literaturverzeichnis}{36}{section*.48}%
+\contentsline {chapter}{\numberline {A}Beispielanhang}{39}{appendix.A}%

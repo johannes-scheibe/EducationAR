@@ -103,10 +103,8 @@ public class EducationARRenderer extends ARRenderer {
     public void draw() {
         super.draw();
         fpsCounter.frame();
-        if(maxfps<fpsCounter.getFPS()){
-            maxfps= fpsCounter.getFPS();
-        }
-        logger.log(Level.INFO, "FPS: " + maxfps);
+
+        logger.log(Level.INFO, "FPS: " + fpsCounter.getFPS());
 
         // Initialize GL
         GLES20.glEnable(GLES20.GL_CULL_FACE);
