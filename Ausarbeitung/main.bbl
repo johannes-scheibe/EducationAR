@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{29}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -58,11 +58,27 @@
 \newblock ISBN 978-3-7281-2762-4
 
 \bibitem[Billinghurst(2002)]{billinghurst:ar-in-education}
-\dinatlabel{Billinghurst 2002} \textsc{Billinghurst}, Mark:
+\dinatlabel{Billinghurst 2002} \textsc{Billinghurst}, M.:
 \newblock AugmentedReality in Education
 \newblock / New Horizons for Learning.
 \newblock 2002.
 \newblock  -- Forschungsbericht
+
+\bibitem[Buchner(2017)]{buchner:ar-geschichtsunterricht}
+\dinatlabel{Buchner 2017} \textsc{Buchner}, J.:
+\newblock Offener Geschichtsunterricht mit Augmented Reality.
+\newblock In: \emph{Medienimpulse}
+\newblock 55(1) (2017). --
+\newblock URL
+  \url{https://journals.univie.ac.at/index.php/mp/article/view/mi1061}
+
+\bibitem[Damberger(2016)]{damberger:ar-bildungsenhancement}
+\dinatlabel{Damberger 2016} \textsc{Damberger}, T.:
+\newblock Augmented Reality als Bildungsenhancement?
+\newblock In: \emph{Medienimpulse}
+\newblock 54 (2016), Nr.~1. --
+\newblock URL
+  \url{https://journals.univie.ac.at/index.php/mp/article/view/1532}
 
 \bibitem[{de Vries, J.}()]{vries:learn-opengl-triangle}
 \dinatlabel{{de Vries, J.} } \textsc{{de Vries, J.}}:
@@ -71,6 +87,17 @@
 \newblock URL \url{https://learnopengl.com/Getting-started/Hello-Triangle}. --
 \newblock letzer Abruf: 20.08.2020
 
+\bibitem[Dey u.\,a.(2018)Dey, Billinghurst, Lindeman und
+  Swan]{dey:review-of-ar-studies}
+\dinatlabel{Dey u.\,a. 2018} \textsc{Dey}, A.m~; \textsc{Billinghurst}, M.~;
+  \textsc{Lindeman}, R.~W.~; \textsc{Swan}, J.~E.:
+\newblock A Systematic Review of 10 Years of Augmented Reality Usability
+  Studies: 2005 to 2014.
+\newblock In: \emph{Frontiers in Robotics and AI}
+\newblock 5 (2018), S.~30. --
+\newblock URL
+  \url{https://www.frontiersin.org/article/10.3389/frobt.2018.00037}
+
 \bibitem[Gargenta(2011)]{gargenta:learning-android}
 \dinatlabel{Gargenta 2011} \textsc{Gargenta}, M.:
 \newblock \emph{Learning Android - Building Applications for the Android
@@ -78,6 +105,14 @@
 \newblock 1.
 \newblock O'Reilly, 2011. --
 \newblock ISBN 978-1-449-39050-1
+
+\bibitem[Geroimenko(2020)]{geroimenko:ar-in-education}
+\dinatlabel{Geroimenko 2020} \textsc{Geroimenko}, V.:
+\newblock \emph{Augmented Reality in Education : A New Technology for Teaching
+  and Learning}.
+\newblock 1.
+\newblock Springer, 2020. --
+\newblock ISBN 9783030421564
 
 \bibitem[Hedberg u.\,a.(2018)Hedberg, Nouri und
   Hansen]{hedberg:review-ar-learning}
