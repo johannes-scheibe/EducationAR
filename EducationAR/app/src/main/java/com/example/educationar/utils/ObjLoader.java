@@ -72,7 +72,6 @@ public final class ObjLoader {
                 }
             }
 
-
             // Create indices
             vertexIndices = new int[faces.size()];
             textureIndices = new int[faces.size()];
@@ -81,20 +80,23 @@ public final class ObjLoader {
             for (int i = 0; i < faces.size(); i++) {
                 String[] parts = faces.get(i).split("/");
 
-                // Vertex index
-                int vIndex = Integer.valueOf(parts[0]).intValue();
-                vertexIndices[i] = (vIndex -= 1);
+                try{
+                    // Vertex index
+                    int vIndex = Integer.valueOf(parts[0]).intValue();
+                    vertexIndices[i] = (vIndex -= 1);
 
-                // Texture index
-                int tIndex = Integer.valueOf(parts[1]).intValue();
-                textureIndices[i] = (tIndex -= 1);
+                    // Texture index
+                    int tIndex = Integer.valueOf(parts[1]).intValue();
+                    textureIndices[i] = (tIndex -= 1);
 
-                // Normal index
-                int nIndex = Integer.valueOf(parts[2]).intValue();
-                normalIndices[i] = (nIndex -= 1);
+                    // Normal index
+                    int nIndex = Integer.valueOf(parts[2]).intValue();
+                    normalIndices[i] = (nIndex -= 1);
+                } catch(NumberFormatException ex){
+                    ex.printStackTrace();
+                }
 
             }
-
 
             int i;
             this.vertices = new float[vertexIndices.length*3];

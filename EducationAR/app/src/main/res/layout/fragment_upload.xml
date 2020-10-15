@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="160dp"
-        android:text="Textur (.jpg)"
+        android:text="Textur (Bild)"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintStart_toStartOf="parent"

@@ -32,54 +32,6 @@ public class FileManager {
 
     private static Logger logger = Logger.getLogger("EduAR-FileManager");
 
-    public static void copyFileOrDirectory(String srcDir, String dstDir) {
-
-        try {
-            File src = new File(srcDir);
-            File dst = new File(dstDir, src.getName());
-
-            if (src.isDirectory()) {
-
-                String files[] = src.list();
-                int filesLength = files.length;
-                for (int i = 0; i < filesLength; i++) {
-                    String src1 = (new File(src, files[i]).getPath());
-                    String dst1 = dst.getPath();
-                    copyFileOrDirectory(src1, dst1);
-                }
-            } else {
-                copyFile(src, dst);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void copyFile(File sourceFile, File destFile) throws IOException {
-        if (!destFile.getParentFile().exists())
-            destFile.getParentFile().mkdirs();
-
-        if (!destFile.exists()) {
-            destFile.createNewFile();
-        }
-
-        FileChannel source = null;
-        FileChannel destination = null;
-
-        try {
-            source = new FileInputStream(sourceFile).getChannel();
-            destination = new FileOutputStream(destFile).getChannel();
-            destination.transferFrom(source, 0, source.size());
-        } finally {
-            if (source != null) {
-                source.close();
-            }
-            if (destination != null) {
-                destination.close();
-            }
-        }
-    }
-
     public static void saveBitmap(Context context, Uri uri, Bitmap bitmap){
         OutputStream outputStream;
         try {
@@ -111,15 +63,6 @@ public class FileManager {
             e.printStackTrace();
         }
 
-    }
-    public static void loadFromInternalStorage(Context context, String fname){
-        File file = new File(context.getFilesDir(), fname);
-        if(file.exists()){
-            Bitmap myBitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-
-            //markerView.setImageBitmap(myBitmap);
-
-        }
     }
 
     // Print content of Internal Storage

@@ -29,7 +29,12 @@ public class TextureLoader {
 
             // Read in the resource
             final Bitmap bitmap = BitmapFactory.decodeStream(context.openFileInput(file.getName()));
-            logger.log(Level.INFO, "" + file);
+
+            if(bitmap==null){
+                logger.log(Level.WARNING, file + " is null.");
+                return textureHandle[0];
+            }
+
 
             // Bind to the texture in OpenGL
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureHandle[0]);

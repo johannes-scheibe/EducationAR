@@ -1,4 +1,4 @@
-package com.example.educationar;
+package com.example.educationar.utils;
 
 import android.content.Context;
 

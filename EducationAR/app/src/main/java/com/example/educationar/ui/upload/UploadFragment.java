@@ -125,7 +125,7 @@ public class UploadFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
-                intent.setType("image/jpeg");
+                intent.setType("image/*");
                 startActivityForResult(intent, PICK_TEXTURE);
             }
         });
@@ -147,11 +147,10 @@ public class UploadFragment extends Fragment {
     }
 
 
-    // Call Back method  to get the Message form other Activity
+    // Call Back method
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-
         // check if the request code is same as what is passed
         if(requestCode==PICK_MODEL && resultCode == Activity.RESULT_OK)
         {

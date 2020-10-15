@@ -196,7 +196,7 @@ public abstract class ARFragment extends Fragment implements View.OnClickListene
             mGlView.setRenderer(renderer);
         }
 
-        mGlView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY); // Only render when we have a frame (must call requestRender()).
+        mGlView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY); // Only render when we have a frame (must call requestRender()).
         mGlView.addOnLayoutChangeListener(new LayoutChangeListenerImpl(getActivity(), mCameraAccessHandler));
 
 

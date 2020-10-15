@@ -17,7 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.example.educationar.MainActivity;
-import com.example.educationar.Model;
+import com.example.educationar.utils.Model;
 import com.example.educationar.artoolkitx.FPSCounter;
 import com.example.educationar.artoolkitx.rendering.ARRenderer;
 import com.example.educationar.shader_impl.MyFragmentShader;
@@ -89,7 +89,7 @@ public class EducationARRenderer extends ARRenderer {
         // Add the Markers
 
         for(Map.Entry<Integer, Model> entry : models.entrySet()){
-            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + entry.getKey() + ";80"), entry.getValue());
+            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + entry.getKey() + ";40"), entry.getValue());
         }
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5);

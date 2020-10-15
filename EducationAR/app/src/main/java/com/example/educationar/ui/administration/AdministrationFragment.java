@@ -79,8 +79,6 @@ public class AdministrationFragment extends Fragment {
         container.setPadding(15,5,15,5);
         container.setGravity(Gravity.CENTER_HORIZONTAL);
 
-        ArrayList<View> children = new ArrayList<>();
-
         Switch sw = new Switch(mContext);
         sw.setLayoutParams(new ViewGroup.LayoutParams((int) (width*0.15), ViewGroup.LayoutParams.MATCH_PARENT));
         sw.setTextOn("start");
