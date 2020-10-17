@@ -47,7 +47,7 @@ public class EducationARRenderer extends ARRenderer {
 
 
     private Map<Integer, Model> models;
-    private Map<Integer, Model> trackables;
+    private Map<Integer, Integer> trackables;
 
     //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
     //As the cube instantiates the shader during setShaderProgram call we need to create the cube here.
@@ -57,7 +57,8 @@ public class EducationARRenderer extends ARRenderer {
         this.fpsCounter = new FPSCounter();
 
         models = new HashMap<Integer, Model>();
-        trackables = new HashMap<Integer, Model>();
+
+        trackables = new HashMap<Integer, Integer>();
 
         mContext = MainActivity.getContext();
 
@@ -83,13 +84,18 @@ public class EducationARRenderer extends ARRenderer {
      */
     @Override
     public boolean configureARScene() {
+        /* Code used for testing the MarkerGenerator class
+        trackables.put(ARController.getInstance().addTrackable("single_barcode;0;40"), 0);
+        trackables.put(ARController.getInstance().addTrackable("single_barcode;4194303;40"), 4194303);
+        trackables.put(ARController.getInstance().addTrackable("single_barcode;428368;40"), 428638);
+        trackables.put(ARController.getInstance().addTrackable("single_barcode;3604631;40"), 3604631);
+        trackables.put(ARController.getInstance().addTrackable("single_barcode;1547643;40"), 1547643);
+        */
 
+        //Add the Markers
 
-
-        // Add the Markers
-
-        for(Map.Entry<Integer, Model> entry : models.entrySet()){
-            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + entry.getKey() + ";40"), entry.getValue());
+        for(Integer key : models.keySet()){
+            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + key + ";40"), key);
         }
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5);
@@ -104,20 +110,23 @@ public class EducationARRenderer extends ARRenderer {
         super.draw();
         fpsCounter.frame();
 
-        logger.log(Level.INFO, "FPS: " + fpsCounter.getFPS());
+        //logger.log(Level.INFO, "FPS: " + fpsCounter.getFPS());
 
         // Initialize GL
         GLES20.glEnable(GLES20.GL_CULL_FACE);
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
         GLES20.glFrontFace(GLES20.GL_CCW);
-        
+
+        float[] modelViewMatrix = new float[16];
+
         // Look for trackables, and draw on each found one.
         for (int trackableUID : trackables.keySet()) {
             // If the trackable is visible, apply its transformation, and render the object
-            float[] modelViewMatrix = new float[16];
             if (ARController.getInstance().queryTrackableVisibilityAndTransformation(trackableUID, modelViewMatrix)) {
                 float[] projectionMatrix = ARController.getInstance().getProjectionMatrix(10.0f, 10000.0f);
-                trackables.get(trackableUID).draw(projectionMatrix, modelViewMatrix);
+                int id = trackables.get(trackableUID);
+                models.get(id).draw(projectionMatrix, modelViewMatrix);
+                logger.log(Level.INFO, "Marker with ID: " + id + " tracked.");
             }
         }
     }
