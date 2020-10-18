@@ -8,7 +8,11 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.content.Context;
 import android.opengl.GLES20;
+import android.widget.TextView;
 
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import java.io.File;
 import java.util.HashMap;
@@ -42,9 +46,9 @@ public class EducationARRenderer extends ARRenderer {
 
     private MyShaderProgram shaderProgram;
     private FPSCounter fpsCounter;
-    private float maxfps = 0;
+    private MutableLiveData<Float> fps = new MutableLiveData<>();
 
-
+    private TextView fpsLabel;
 
     private Map<Integer, Model> models;
     private Map<Integer, Integer> trackables;
@@ -84,6 +88,7 @@ public class EducationARRenderer extends ARRenderer {
      */
     @Override
     public boolean configureARScene() {
+
         /* Code used for testing the MarkerGenerator class
         trackables.put(ARController.getInstance().addTrackable("single_barcode;0;40"), 0);
         trackables.put(ARController.getInstance().addTrackable("single_barcode;4194303;40"), 4194303);
@@ -109,8 +114,8 @@ public class EducationARRenderer extends ARRenderer {
     public void draw() {
         super.draw();
         fpsCounter.frame();
+        fps.postValue(fpsCounter.getFPS());
 
-        //logger.log(Level.INFO, "FPS: " + fpsCounter.getFPS());
 
         // Initialize GL
         GLES20.glEnable(GLES20.GL_CULL_FACE);
@@ -129,5 +134,9 @@ public class EducationARRenderer extends ARRenderer {
                 logger.log(Level.INFO, "Marker with ID: " + id + " tracked.");
             }
         }
+    }
+
+    public LiveData<Float> getFps(){
+        return fps;
     }
 }

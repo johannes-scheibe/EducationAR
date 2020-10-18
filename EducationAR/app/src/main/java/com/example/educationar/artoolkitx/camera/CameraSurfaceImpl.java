@@ -14,6 +14,7 @@ import android.media.Image;
 import android.media.ImageReader;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.util.Range;
 import android.util.Size;
 import android.view.Surface;
 import android.widget.Toast;
@@ -240,6 +241,11 @@ class CameraSurfaceImpl implements CameraSurface {
         try {
             mCaptureRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
             List<Surface> surfaces = new ArrayList<>();
+
+            Range<Integer> fps = new Range<>(30,60);
+
+            mCaptureRequestBuilder.set(CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE, fps);
+
 
             Surface surfaceInstance;
             surfaceInstance = mImageReader.getSurface();

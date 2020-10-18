@@ -57,6 +57,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -113,6 +114,9 @@ public abstract class ARFragment extends Fragment implements View.OnClickListene
     private CameraAccessHandler mCameraAccessHandler;
     private ImageButton mConfigButton;
     private GLSurfaceView mGlView;
+
+
+    private TextView fpsView;
 
     @SuppressWarnings("unused")
     public Context getAppContext() {
@@ -215,6 +219,8 @@ public abstract class ARFragment extends Fragment implements View.OnClickListene
         //Load settings button
         View settingsButtonLayout = this.getLayoutInflater().inflate(R.layout.settings, mainLayout, false);
         mConfigButton = settingsButtonLayout.findViewById(R.id.button_config);
+        fpsView = settingsButtonLayout.findViewById(R.id.fpsLabel);
+
         mainLayout.addView(settingsButtonLayout);
         mConfigButton.setOnClickListener(this);
     }
@@ -326,6 +332,9 @@ public abstract class ARFragment extends Fragment implements View.OnClickListene
         return renderer;
     }
 
+    public TextView getFpsView() {
+        return fpsView;
+    }
     private void notifyFinish(String errorMessage) {
         new AlertDialog.Builder(getContext())
                 .setMessage(errorMessage)
