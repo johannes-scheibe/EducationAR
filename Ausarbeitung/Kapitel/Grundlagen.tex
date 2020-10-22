@@ -30,14 +30,19 @@ Laut einer systematischen Analyse der Universität Stockholm, in welchem basiere
 \label{fig:snapchat-ar}
 \end{figure}
 
-\subsection{Interfaces}
-\subsubsection{Head-Mounted-Displays}\label{sec:HMD}
-
 \subsection{Technische Grundlagen}
 Zur Umsetzung der Augmented Reality ist eine Umgebungserfassung und -analyse des Systems mit Hilfe einer Tracking Software (auch Tracker genannt) notwendig. Auf Grundlage dieser können dann im Anschluss computergenerierte virtuelle Objekte in die Umgebung eingefügt werden. \\
 Zur Analyse der Systemumgebung können verschiedene Eingabesysteme genutzt werden, mit deren Hilfe die Eigenschaften der Umgebung und der in ihr vorhandenen Objekte wahrgenommen werden können \citep[S. 22]{tab:augmented-reality}. Zu diesen Eigenschaften zählen neben statischen, wie der Größen und Position, auch dynamische Eigenschaften, welche die Veränderung der statischen Attribute einzelner Objekte umfassen \todo{Umformulieren, wegen Zitat}. Beispielhafte Technologien, die zur Erfassung genutzt werden können, wären Kamerasysteme, Laser, Infrarot oder sonstige Sensoren \citep[S. 22]{tab:augmented-reality}.
 Neben der Umgebungserfassung ist auch die Verfolgung einzelner, in der Umgebung enthaltender Objekte notwendiger Bestandteil der Tracking Software, um die dynamischen Eigenschaften der realen Umgebung auf die virtuellen Objekte zu übertragen.\\
 Eine wichtige Rolle beim Tracking spielt die Genauigkeit, mit der die Eigenschaften der Umgebung wahrgenommen werden, sie bestimmt wie akkurat virtuelle Objekte in die reale Umgebung eingefügt werden können und wie realistisch die Illusion erscheint \citep[S. 2]{klein:visual-tracking}.
+
+\subsubsection{Ausgabegeräte}
+Grundsätzlich kann bei der Umsetzung von Augmented Reality eine Kategorisierung der Technologie durch die Art der Endgeräte vorgenommen werden. Dabei stehen vor allem die folgenden zwei Varianten zur Verfügung:
+\begin{itemize}
+\item[HMDs:] Ein Head-Mounted-Display (HMD, deutsch: \glqq am Kopf befestigter Bildschirm\grqq) beschreibt eine Technologie, bei der die Sensorik, sowie das Ausgabegerät am Kopf des Nutzers befestigt wird \citep[S. 44]{mehler-bicher:augmented-reality}. Populare Umsetzungen dieser Technologie stellen spezielle Brillen dar, wie zum Beispiel die Google Glasses.
+\item[HHDs:] Zu der Kategorie Hand-Hold-Display (HHD, deutsch: \glqq Handhalteanzeige\grqq) gehören Technologien, die durch den Nutzer in der Hand gehalten werden. DAzu gehören beispielsweise auch Smartphones auf denen AR-Anwendungen laufen.
+\end{itemize}
+Alternativ können die Sensoren und das Ausgabegerät auch fest in einem stationären Gerät montiert sein \citep[S. 27]{mehler-bicher:augmented-reality} oder Mischtechniken eingesetzt werden.
 
 \subsubsection{Trackingverfahren}\label{sec:Trackingverfahren}
 Grundsätzlich kann bei der Tracking Software zwischen zwei Verfahren unterschieden werden, dem nicht visuellen und dem visuellen Tracking \citep[S. 26]{mehler-bicher:augmented-reality}. Während bei letzterem auf Daten von zum Beispiel einer Kamera zurückgegriffen wird, beruht das nichtvisuelle Tracking auf Sensoren, die direkten Zugriff auf die Eigenschaften der Umgebung, wie der Position, liefern. \\
@@ -80,7 +85,7 @@ Bei diesem Verfahren müssen in einem ersten Schritt zunächst die Keypoints fü
 \\
 Eine Verallgemeinerung des gesamten Tracking Prozesses kann dabei wie folgt beschrieben werden:\\
 Nachdem das System einen Frame von der Kamera bekommt wird dieser meist vorverarbeitet, um die wichtigsten Informationen zu extrahieren und den Tracking Prozess zu beschleunigen \citep[S. 5]{cukovic:marker-vs-natural}. Eine Möglichkeit ist dabei das Bild in ein Graustufenbild umzuwandeln. Dadurch lassen sich Helligkeitsveränderungen leichter detektieren und die Anzahl der Farbkanäle wird von drei oder mehr auf einen reduziert, wodurch die Geschwindigkeit der Tracking Algorithmen deutlich erhöht werden kann.\\
-Nach der Vorverarbeitung kann dann mittels Natural Feature Tracking oder Marker BAsed Feature Tracking die Position, Größe und Orientierung der gesuchten Fläche, beziehungsweise des Markers ermittelt werden und das virtuelle Objekt entsprechend transformiert werden.
+Nach der Vorverarbeitung kann dann mittels Natural Feature Tracking oder Marker Based Feature Tracking die Position, Größe und Orientierung der gesuchten Fläche, beziehungsweise des Markers ermittelt werden und das virtuelle Objekt entsprechend transformiert werden.
 
 \section{Android Entwicklung}
 Android ist ein Open Source Software Plattform, die vor allem bei Smartphones und anderen mobilen Geräten zum Einsatz kommt und ein Produkt der von Google gegründeten Open Handset Alliance ist \citep[S. 4]{gargenta:learning-android}. Bekannt ist vor allem das Betriebssystem Android, das auf vielen GEräten ihren Einstaz findet.\\
@@ -122,8 +127,8 @@ Dabei wird das Ziel verfolgt das Zusammenspiel zwischen verschiedenen Anwendunge
 \subsubsection{Intents}
 Bei einem Intent (deutsch: \glqq Absicht\grqq ) handelt es sich um eine asynchrone Systemnachricht, die dazu genutzt werden kann bestimmte Komponenten oder bestimmte Komponentenarten zu aktivieren \citep{android:fundamentals}.
 
-\subsection{Fragments}
-\todo{schreiben}
+\subsubsection{Fragments}
+Fragments (deutsch: \glqq Fragmente\grqq) stellen einzelne Teile des User Interfaces (deutsch: \glqq Benutzeroberfläche\grqq) einer Activity dar \citep{android:fragments}. Sie können in die bestehende Oberfäche der Activity eingefügt werden und durch andere Fragments ausgetauscht werden.
 
 \section{OpenGL}\label{OpenGL}
 OpenGl stellt die industriell meistgenutzte Programmierschnittselle (API) zur Entwicklung von 2D und 3D Anwendungen dar \citep{khronos:opengl-overview}. Mit Hilfe des Interfaces lassen sich komplexe dreidimensionale Objekte darstellen.
@@ -158,7 +163,9 @@ Der nächste Schritt ist das \textbf{Primitive Assembly} bei welchem aus der Rei
 Während der \textbf{Rasterization} werden dann die Grundelemente in eine Pixeldarstellung für den entsprechenden Bildschirm umgewandelt \citep{vries:learn-opengl-triangle}.\\
 Der \textbf{Fragment Shader} ordnet dann jedem Pixel eine Farbe zu, in deren Berechnung meist Werte wie Schatten, Licht und dessen Farbe einfließen \citep{vries:learn-opengl-triangle}.
 Zu letzt werden dann noch eine Reihe an \textbf{Per-Sample Operations} durchgeführt, welche Tests beschreiben die testen, ob ein Pixelwert aktualisiert werden muss oder nicht \citep{khronos:rendering-pipeline}.
+
 \subsection{OpenGL ES}
+OpenGL ES ist eine OpenGL Version speziell für eingebettete Systeme \citep{android:opengl}. Sie erlaubt es bei der Android Programmierung auf die OpenGL Funktionalitäten zuzugreifen.
 
 
 

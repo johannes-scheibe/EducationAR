@@ -1,27 +1,25 @@
-\chapter{Anforderungsanalyse}\label{chapter:Anforderungsanalyse}
-In diesem Kapitel werden die Anforderungen an die Anwendung und den zu entwickelnden Prototypen erhoben. Dazu werden verschiedene Anwendungsfälle herbeigezogen und daraus Anforderungen abgeleitet.
+\chapter{Anforderungsanalyse}\label{chapter:anforderungsanalyse}
+In diesem Kapitel werden die Anforderungen an die Anwendung und den zu entwickelnden Prototypen erhoben. Dazu wird zunächst auf Grundlage der Literatur ein Anwendungsfall erstellt und für diesen dann eine Anforderungsanalyse durchgeführt.
+
 
 \section{Vision}
-Die Hauptzielgruppe der Anwendung ist der Bildungsbereich. Sie soll Schülern, Studieren und auch Professoren die Möglichkeit bieten mit Hilfe von Augmented Reality das Lernen sowie Lehren zu bereichern. \\
-Das Grundprinzip ist dabei folgendes: Die App soll dem Anwender die Möglichkeit geben 3D-Modelle hochzuladen, für die dann ein einzigartiger Marker generiert wird. Dieser kann dann ausgedruckt oder anderweitig angezeigt werden. Mit Hilfe der Kamera lässt sich dann das entsprechende 3D-Modell im Augmented Reality Bereich darstellen.
-
-\subsection{Mögliche Anwendungsfälle}
-Im folgenden werden mögliche Anwendungsfälle für zwei verschiedene Personas definiert.
-
-\subsubsection{Der Professor}
-Das Anwendungsszenario, welches für einen Professor oder Lehrer denkbar wäre, orientiert sich an der bereits existierenden Webseite Socrative,\todo{ref socrative} welche bereits im Universitätsalltag häufig eingesetzt wird und Lehrenden die Möglichkeit gibt Umfragen zu erstellen, die von Studierenden über einen Raumcode beantwortet werden können. \\
-Ein solches Raumsystem wäre auch für die AR Anwendung denkbar.
-Mit Hilfe der Anwendung könnte dann ein Professor einen Raum erstellen, in welchem er verschiedene 3D-Modelle speichern könnte, die Marker könnten im Anschluss dann Online zur Verfügung gestellt, über Ausdrucke vervielfältigt oder in die Präsentation eingebunden werden.\\
-Die Studierenden können dann über einen Zugangscode dem Raum beitreten und dann mit Hilfe der Kamera die  entsprechenden Modelle des Raumes, in dem sie sich aktuell befinden, anzeigen lassen.
-
-\subsubsection{Die Studierenden}\label{sec:Anwendungsfall:Studierender}
-Den Studierenden soll neben der Möglichkeit öffentlichen Räumen beizutreten auch die Möglichkeit gegeben werden selbst Modelle hochzuladen und die entsprechenden Marker zum Beispiel auf Lernzettel zu drucken. Dazu könnte jeder einen privaten Raum besitzen. Die Modelle die der Anwender hier hochlädt, wären dann nur lokal gespeichert und nicht öffentlich über einen Code oder Ähnlichem zugänglich. 
+Die Anwendung hat den Bildungsbereich und das Lernen mit Hilfe von Augmented Reality als Zielgruppe. In der Arbeit von \citeauthor{diegmann:benefits-ar} werden dazu verschiedene Anwendungsarten definiert (vergleiche \ref{sec:diegmann-benefits-ar}). Diese stellt zudem auch das entdeckungsbasierte Lernen als die Einsatzmöglichkeit mit den meisten Vorteilen für das AR-gestützte Lernen heraus. In diese Kategorie fällt auch die in Abschnitt \ref{sec:atlas-humananatomie} vorgestellte Anwendung \glqq Atlas der Humananatomie 2020\grqq. \\
+Die Anwendungen soll in der Art der Wissensvermittlung auf den selben, bereits im praktischen Einsatz getesteten Grundlagen beruhen. Sie soll Lernende unterstützen, indem sie ihnen dreidimensionale Modelle anzeigt. \\
+Jedoch soll das Konzept von Anwendungen, wie \glqq Atlas der Humananatomie 2020\grqq dabei wie folgt erweitert werden:\\
+Zum einem soll die Anwendung so aufgebaut werden, dass sie vom Nutzer speziell an die eigenen Bedürfnisse angepasst werden kann. Dazu soll die Anwendung kein festes Set an Modellen zur Verfügung stellen, sondern die Modelle können vom Nutzer hochgeladen werden. \\
+Der zweite Punkt ist, dass anstelle des meistens verwendeten Matural Feature Tracking ein Markerbasiertes Tracking verwendet werden soll. So das die Modelle speziellen Dokumenten, Textpassagen oder Lerninhalten mit Hilfe der Marker zugeordnet werden können. Diese Marker könnten dann schnell und einfach mit der Kamera getrackt werden.\\
+Außerdem ist es die Vision, das dieses Markerbasierte Tracking in einem großen Kontext genutzt werden kann. \\
+Dazu wäre eine Umsetzung angelehnt an die Webseite Socrative.com denkbar. Diese Webseite bietet Professoren die Möglichkeit Umfragen über einen Raumcode mit den Studierenden zu teilen. \\
+Ein ähnliches System könnte auch zum Teilen der Modelle genutzt werden, sodass der Professor die Marker verknüpft mit den entsprechenden Modellen in eine Präsentation zusammen mit einem Raumcode einfügen kann und der Studierende dann, sobald er den Raumcode eingegeben hat, die Modelle in seinem Kamerabild sieht, wenn der entsprechende Marker getrackt wurde.\\
+Ein solcher Einsatz von Augmented Reality bietet die Möglichkeit eindimensionale Vorlesungen oder Unterrichtseinheiten um eine interaktive Komponente zu erweitern und sollte viele der in der Literatur erwähnten positiven Auswirkungen, wie 
+eine Verbesserung der  Motivation, der Aufmerksamkeit des Verständnisses der Lerninhalte übertragen können (vergleiche Kapitel \ref{sec:diegmann-benefits-ar}). Auch Faktoren wie die von \citeauthor{billinghurst:ar-in-education} beschriebene Verbesserung der Kommunikation während der Interaktion mit digitalen Lernmethoden, wird unterstützt (vergleiche \ref{sec:billinghurst-ar-education}).
 
 \section{Der Prototyp}
-Der zu entwickelnde Prototyp fokussiert sich dabei auf die Umsetzung der Augmented Reality und das Erstellen der zu trackenden Marker. Die Modelle, die hochladen werden, werden dabei lediglich lokal gespeichert. \\
-Dadurch handelt es sich bei dem Prototyp um die Umsetzung des \glqq privaten Raumes\grqq . Er bietet dem Anwender nicht die Möglichkeit die Modelle zuteilen.\\ 
-Eine ansonsten notwendige Datenspeicherung auf einem Server, das Implementieren eines Raumsystems mit Zugangscode und weitere Funktionen fallen dadurch bei diesem ersten Prototyp weg.
-
+Im Rahmen der der Arbeit wurde dabei das folgende Konzept für einen vertikalen Prototypen entwickelt. \\
+Dieser soll die Funktionalität des Verarbeitens eigener Modelle sowie das Tracken von selbst erstellten Markern testen.
+Dazu soll der Fokus die Umsetzung der Augmented Reality und das Erstellen der zu trackenden Marker gelegt werden und die hoch geladenen Modelle sollen lediglich lokal gespeichert werden. \\
+Dadurch handelt es sich bei dem Prototyp um die Umsetzung eines \glqq privaten Raumes\grqq . Er bietet dem Anwender nicht die Möglichkeit die Modelle zuteilen.\\ 
+Eine ansonsten notwendige Datenspeicherung auf einem Server, das Implementieren eines Raumsystems mit Zugangscode und weitere Funktionen zum Teilen von Daten fallen dadurch weg.
 
 \section{Anforderungsanalyse}\label{sec:Anforderungsanalyse}
 Im folgenden wird eine Anforderungsanalyse für den zu entwickelnden Prototyp durchgeführt.
@@ -52,7 +50,7 @@ Da der Prototyp auf einem mobilen Endgerät genutzt wird, variiert die Umgebung 
 
 
 \subsection{Anwendungsfälle des Prototyps}
-Ein beispielhaftes Anwendungsszenario des Prototypen, das sich aus dem Anwendungsfall des Studierenden ableitet (siehe Abschnitt \ref{sec:Anwendungsfall:Studierender}), ist die mit dem Prototyp generierten Marker auf einem Lernzettel einzufügen und ein vorlesungsrelevantes Modell zu verlinken. Dazu wird das Modell in dem Prototyp hochgeladen und der generierte Marker in ein Dokument eingefügt. Im Anschluss kann dann das Dokument mit der Kamera gefilmt werden, um sich das 3D-Modell anzeigen zu lassen.\\
+Ein Anwendungsszenario des Prototypen ist die mit dem Prototyp generierten Marker auf einem auf einem begleitenden Unterrichtsdokument einzufügen und ein oder mehrere relevante Modelle zu verlinken. Dazu werden die Modelle in dem Prototyp hochgeladen und lokal auf dem Gerät gespeichert. Die von der Anwendung generierten Marker können dann in einem Dokument eingefügt werden. Über die Kamerafunktion ist es im Anschluss möglich die Marker zu scannen, um sich die entsprechenden, dreidimensionale Modell anzeigen zu lassen.\\ 
 Allgemein lassen sich die Funktionen und Anwendungsfälle in dem in Abbildung \ref{fig:Use-Cases} gezeigtem Anwendungsfalldiagramm visualisieren.
 \begin{figure}[h!]
 \centering
@@ -63,42 +61,52 @@ Allgemein lassen sich die Funktionen und Anwendungsfälle in dem in Abbildung \r
 
 
 \subsection{Anforderungsliste}
-Im folgenden Abschnitt werden die Anforderungen an den Prototyp definiert. Dabei wird zwischen funktionalen und nichtfunktionalen Anforderungen unterschieden. \\
-\begin{description}
-\item[Funktionale Anforderungen] 
-beschreiben die Funktionen eines Systemes, die notwendig sind, damit dieses seine Aufgaben erfüllen kann \citep[S. 10]{robertson:requirements-process}.
-\item[Nichtfunktionale Anforderungen] 
-beschreiben Eigenschaften, die das System besitzen muss, um den Nutzer zufrieden zustellen \citep[S. 10]{robertson:requirements-process}. Diese Eigenschaften beziehen sich vor allem auf die Bereiche Service Level, Zugriffsbeschränkungen, Sicherheit, Monitoring, Kontrolle, Schnittstellen, Archivierung, Benutzerfreundlichkeit und Konversion \citep[S. 139]{boehm:systementwicklung}
-\end{description}
-Die folgende Anforderungsliste leitet sich aus den ANwendungsfällen des Prototyps ab.
+Im folgenden Abschnitt werden die Anforderungen an den Prototyp definiert. Dabei wird zwischen funktionalen und nicht-funktionalen Anforderungen unterschieden. 
+\begin{quote}
+\glqq Eine funktionale Anforderung ist eine Anforderung bezüglich des Ergebnisses eines Verhaltens, das von einer Funktion des Systems [...] bereitgestellt werden soll.\grqq \citep[S. 17]{rupp:requirements}
+\end{quote}
+Nicht-funktionale Anforderungen umfassen im Vergleich dazu die Anforderungen an die Technologie, die Qualität, die Benutzeroberfläche, die durchzuführende Tätigkeiten und rechtlich vertragliche Anforderungen \citep{rupp:requirements}.\\
+Sie können als Eigenschaften, die das System besitzen muss, um den Nutzer zufrieden zustellen, beschrieben werden. \citep[S. 10]{robertson:requirements-process}. Diese Eigenschaften beziehen sich meistens auf die Bereiche Service Level, Zugriffsbeschränkungen, Sicherheit, Monitoring, Kontrolle, Schnittstellen, Archivierung, Benutzerfreundlichkeit und Konversion \citep[S. 139]{boehm:systementwicklung}. \\
+Auf Grundlage dieser Definition wurden die folgenden funktionalen und nicht-funktionalen Anforderungen mit Hilfe der von \citeauthor[S. 219]{rupp:requirements} definierten Anforderungsschablonen aufgestellt:
 
- 
 \subsubsection{Funktionale Anforderungen}
 \begin{itemize}
-\item[FA1] Die Anwendung soll ein Set von mindestens 10 Markern generieren können.
-\item[FA2] Die Anwendung soll die generierten Marker in einem Kamerabild erkennen können.
-\item[FA3] Die Anwendung soll die generierten Marker unterscheiden können.
-\item[FA4] Der Benutzer soll eigene 3D-Modelle als OBJ-Dateien hochladen können.
-\item[FA5] Die Anwendung soll OBJ-Datei laden und verarbeiten können.
-\item[FA6] Die Anwendung soll Textur-Dateien im Bildformat(jpeg, png) laden und verarbeiten können.
-\item[FA5] Die Anwendung soll den hochgeladenen Modellen einen generierten Marker zuordnen.
-\item[FA6] Die Anwendung soll die 3D Modelle im Kamerabild anzeigen können.
-\item[FA7] Die Anwendung soll die 3D-Modelle basierend auf der Transformation und Position der Marker im Kamerabild rendern.
+\item[FA01] Die Anwendung muss fähig sein, ein Marker zu generieren.
+\item[FA02] Die Anwendung muss fähig sein, Marker in dem Kamerabild erkennen zu können.
+\item[FA03] Die Anwendung muss fähig sein, generierte Marker zu unterscheiden.
+\item[FA04] Die Anwendung muss dem Benutzer die Möglichkeit bieten, 3D-Modelle in Form von OBJ-Dateien hochzuladen können.
+\item[FA05] Die Anwendung muss dem Benutzer die Möglichkeit bieten, Textur-Dateien im Bildformat(jpeg, png) hochzuladen.
+\item[FA06] Die Anwendung muss fähig sein, hochgeladenen Dateien lokal zu speichern.
+\item[FA07] Die Anwendung muss fähig sein, jedem Modell einen individuellen Marker zuzuordnen.
+\item[FA08] Die Anwendung muss fähig sein, die dreidimensionalen Modelle im Kamerabild anzuzeigen.
+\item[FA09] Die Anwendung muss fähig sein, die Transformation der Marker zu berechnen.
+\item[FA10] Die Anwendung muss fähig sein, die Modelle basierend auf der berechneten Transformation zu rendern.
 \end{itemize}
 
 \subsubsection{Nichtfunktionale Anforderungen}
 \begin{itemize}
-\item[NF1] Die Anwendung soll auf einem Android Smartphone(Huawei P30 Pro) laufen.
+\item[NF01] Das Endgerät der Anwendung sollte ein Android Smartphone(Huawei P30 Pro) sein.
 \begin{enumerate}
-\item[NF1.1] Die Anwendung soll in Java mit Hilfe von Android Studio entwickelt werden.
+\item[NF01.1] Die genutzte Entwicklungsumgebung der Anwendung sollte Android Studio sein.
+\item[NF01.2] Die genutzte Programmiersprache der Anwendung sollte Java sein.
 \end{enumerate}
+\item[NF02] Die Markergenerierung der Anwendung sollte so gestaltet sein, dass es mindestens 10 verschiedene Marker generieren kann.
+\item[NF03] Das Tracking der Anwendung sollte kamerabasiert sein.
+\item[NF04] Das Tracking der Anwendung sollte auf einem markerbasiertem Verfahren beruhen.
+\item[NF05] Das Tracking der Anwendung sollte mit mindestens 30FPS laufen.
+\item[NF06] Das Tracking der Anwendung sollte so gestaltet sein, dass es alle generierten Marker der Anwendung erkennen kann.
+\item[NF07] Bei vollständig erkanntem Marker sollte das Tracking robust gegenüber Rotation, Skalierung, Perspektive und Belichtung sein.
 
-\item[NF2] Das Tracking soll mittels eines markerbasierten Verfahrens realisiert werden.
-\item[NF3] Das Tracking soll mit 30FPS laufen.
-\item[NF4] Das Tracking soll bei vollständig erkanntem Marker robust gegenüber Rotation, Skalierung, Perspektive und Belichtung sein.
-\item[NF4] Die Anwednung soll ein simples User-Interface bereitstellen
-\item[NF4] Mit Hilfe der UI soll ein Wechsel zwischen Kamera und Einstellungen möglich sein.
-\item[NF4] Über die Einstellungsseite soll ein hochladen von 3D-Modellen möglich sein.
+\item[NF08] Die Benutzeroberfläche der Anwendung sollte eine einfache Navigation zu allen Komponenten der Anwendung bereitstellen.
+\item[NF09] Die Benutzeroberfläche der Anwendung sollte eine Ansicht zum Hochladen und Verwalten der Modelle bieten.
+\item[NF10] Die Benutzeroberfläche der Anwendung sollte einen Zugriff auf die Kamera ermöglichen.
+
+
+
+
+
+
+
 
 \end{itemize}
 

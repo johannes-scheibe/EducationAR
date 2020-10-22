@@ -11,49 +11,51 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: Bibliographie/Literatur.bib
 Warning--empty note in billinghurst:ar-in-education
+Warning--no proper publisher, using url in diegmann:benefits-ar
+Warning--empty pages in diegmann:benefits-ar
 Warning--empty note in tab:augmented-reality
 Warning--empty booktitle in owen:fiducial-marker
 Warning--empty booktitle in cukovic:marker-vs-natural
 Warning--empty pages in cukovic:marker-vs-natural
-You've used 29 entries,
+You've used 31 entries,
             3552 wiz_defined-function locations,
-            948 strings with 10493 characters,
-and the built_in function-call counts, 17378 in all, are:
-= -- 2038
-> -- 287
-< -- 242
-+ -- 367
-- -- 174
-* -- 1701
-:= -- 3044
-add.period$ -- 38
-call.type$ -- 29
-change.case$ -- 153
-chr.to.int$ -- 23
-cite$ -- 34
-duplicate$ -- 506
-empty$ -- 1406
-format.name$ -- 320
-if$ -- 3531
+            959 strings with 10893 characters,
+and the built_in function-call counts, 18846 in all, are:
+= -- 2204
+> -- 313
+< -- 264
++ -- 402
+- -- 192
+* -- 1863
+:= -- 3297
+add.period$ -- 41
+call.type$ -- 31
+change.case$ -- 165
+chr.to.int$ -- 25
+cite$ -- 38
+duplicate$ -- 547
+empty$ -- 1526
+format.name$ -- 354
+if$ -- 3823
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 35
-newline$ -- 202
-num.names$ -- 116
-pop$ -- 222
+missing$ -- 38
+newline$ -- 214
+num.names$ -- 124
+pop$ -- 239
 preamble$ -- 1
-purify$ -- 144
+purify$ -- 156
 quote$ -- 0
-skip$ -- 542
+skip$ -- 591
 stack$ -- 0
-substring$ -- 1212
-swap$ -- 111
-text.length$ -- 62
+substring$ -- 1313
+swap$ -- 123
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 276
-warning$ -- 5
-while$ -- 207
+type$ -- 293
+warning$ -- 7
+while$ -- 223
 width$ -- 0
-write$ -- 343
-(There were 5 warnings)
+write$ -- 364
+(There were 7 warnings)

@@ -1,7 +1,7 @@
 \babel@toc {ngerman}{}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{v}{chapter*.3}%
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{vi}{chapter*.4}%
-\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.5}%
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{vi}{chapter*.3}%
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{vii}{chapter*.4}%
+\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{viii}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Zielsetzung der Arbeit}{2}{section.1.2}%
@@ -10,20 +10,19 @@
 \contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Augmented Reality}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Einsatzbereiche}{4}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Interfaces}{5}{subsection.2.1.2}%
-\contentsline {subsubsection}{\nonumberline Head-Mounted-Displays}{5}{section*.8}%
-\contentsline {subsection}{\numberline {2.1.3}Technische Grundlagen}{5}{subsection.2.1.3}%
-\contentsline {subsubsection}{\nonumberline Trackingverfahren}{5}{section*.10}%
-\contentsline {paragraph}{\nonumberline Marker Based Feature Tracking}{6}{section*.11}%
-\contentsline {paragraph}{\nonumberline Natural Feature Tracking}{7}{section*.14}%
+\contentsline {subsection}{\numberline {2.1.2}Technische Grundlagen}{5}{subsection.2.1.2}%
+\contentsline {subsubsection}{\nonumberline Ausgabegeräte}{5}{section*.10}%
+\contentsline {subsubsection}{\nonumberline Trackingverfahren}{6}{section*.11}%
+\contentsline {paragraph}{\nonumberline Marker Based Feature Tracking}{6}{section*.12}%
+\contentsline {paragraph}{\nonumberline Natural Feature Tracking}{7}{section*.15}%
 \contentsline {section}{\numberline {2.2}Android Entwicklung}{8}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Architektur}{8}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Grundlegende Konzepte}{9}{subsection.2.2.2}%
-\contentsline {subsubsection}{\nonumberline Activities}{9}{section*.16}%
-\contentsline {subsubsection}{\nonumberline Services}{9}{section*.18}%
-\contentsline {subsubsection}{\nonumberline Content Providers}{10}{section*.19}%
-\contentsline {subsubsection}{\nonumberline Intents}{10}{section*.20}%
-\contentsline {subsection}{\numberline {2.2.3}Fragments}{10}{subsection.2.2.3}%
+\contentsline {subsubsection}{\nonumberline Activities}{10}{section*.17}%
+\contentsline {subsubsection}{\nonumberline Services}{10}{section*.19}%
+\contentsline {subsubsection}{\nonumberline Content Providers}{11}{section*.20}%
+\contentsline {subsubsection}{\nonumberline Intents}{11}{section*.21}%
+\contentsline {subsubsection}{\nonumberline Fragments}{11}{section*.22}%
 \contentsline {section}{\numberline {2.3}OpenGL}{11}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Grundlagen von OpenGL}{11}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Rendering-Pipeline}{11}{subsection.2.3.2}%
@@ -32,78 +31,134 @@
 \contentsline {section}{\numberline {3.1}Augmented Reality in Education}{14}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Aktueller Stand}{14}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Entwicklung von Augmented Reality Anwendugen}{15}{subsection.3.1.2}%
-\contentsline {subsubsection}{\nonumberline Technologie}{15}{section*.25}%
-\contentsline {subsubsection}{\nonumberline AR-Lernerfahrungen}{15}{section*.26}%
-\contentsline {subsubsection}{\nonumberline Erstellen von AR-Inhalten}{15}{section*.27}%
-\contentsline {subsubsection}{\nonumberline Zielgruppe und Themen}{16}{section*.28}%
+\contentsline {subsubsection}{\nonumberline Technologie}{15}{section*.26}%
+\contentsline {subsubsection}{\nonumberline AR-Lernerfahrungen}{15}{section*.27}%
+\contentsline {subsubsection}{\nonumberline Erstellen von AR-Inhalten}{15}{section*.28}%
+\contentsline {subsubsection}{\nonumberline Zielgruppe und Themen}{16}{section*.29}%
 \contentsline {subsection}{\numberline {3.1.3}Augmented Reality in der Lehre}{16}{subsection.3.1.3}%
-\contentsline {subsubsection}{\nonumberline Medizin, Naturwissenschaften}{16}{section*.29}%
-\contentsline {subsubsection}{\nonumberline Geisteswissenschaften}{16}{section*.30}%
-\contentsline {subsubsection}{\nonumberline Umweltpädagogik}{17}{section*.31}%
+\contentsline {subsubsection}{\nonumberline Medizin, Naturwissenschaften}{16}{section*.30}%
+\contentsline {subsubsection}{\nonumberline Geisteswissenschaften}{16}{section*.31}%
+\contentsline {subsubsection}{\nonumberline Umweltpädagogik}{17}{section*.32}%
 \contentsline {subsection}{\numberline {3.1.4}Weitere Anwendungsbeispiele}{17}{subsection.3.1.4}%
-\contentsline {subsubsection}{\nonumberline Webbasierte Augmented Reality Anwendung}{17}{section*.32}%
-\contentsline {subsubsection}{\nonumberline FeDiNAR}{17}{section*.33}%
-\contentsline {section}{\numberline {3.2}A Systematic Review of Learning through Mobile Augmented Reality}{17}{section.3.2}%
+\contentsline {subsubsection}{\nonumberline Webbasierte Augmented Reality Anwendung}{17}{section*.33}%
+\contentsline {subsubsection}{\nonumberline FeDiNAR}{17}{section*.34}%
+\contentsline {section}{\numberline {3.2}A Systematic Review of Learning through Mobile Augmented Reality}{18}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Ergebnisse}{18}{subsection.3.2.1}%
-\contentsline {subsubsection}{\nonumberline Bildungsniveau}{18}{section*.34}%
-\contentsline {subsubsection}{\nonumberline Mobiles Endgerät}{18}{section*.35}%
-\contentsline {subsubsection}{\nonumberline Unterrichtsfach}{18}{section*.36}%
-\contentsline {subsubsection}{\nonumberline Lernerfolge}{18}{section*.37}%
-\contentsline {subsubsection}{\nonumberline Pädagogische Methoden}{19}{section*.38}%
+\contentsline {subsubsection}{\nonumberline Bildungsniveau}{18}{section*.35}%
+\contentsline {subsubsection}{\nonumberline Mobiles Endgerät}{18}{section*.36}%
+\contentsline {subsubsection}{\nonumberline Unterrichtsfach}{18}{section*.37}%
+\contentsline {subsubsection}{\nonumberline Lernerfolge}{19}{section*.38}%
+\contentsline {subsubsection}{\nonumberline Pädagogische Methoden}{19}{section*.39}%
 \contentsline {section}{\numberline {3.3}Augmented Reality in Education}{19}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Nahtlose Interaktion}{19}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Greifbare Schnittstelle}{19}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Übergangsschnittstelle}{20}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}A Systematic Review of 10 Years of Augmented Reality Usability Studies: 2005 to 2014}{20}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Display}{20}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Bildungsbereich}{20}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Augmented Reality als Bildungsenhancement?}{21}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Augmented Reality als Erweiterung der Realität}{21}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Offener Geschichtsunterricht mit Augmented Reality}{22}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Lehren und Lernen mit Augmented Reality}{22}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Anwendung im Geschichtsunterricht}{22}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Fazit}{23}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}Atlas der Humananatomie}{23}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Anwendung}{23}{subsection.3.7.1}%
-\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Vision}{24}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Mögliche Anwendungsfälle}{24}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline Der Professor}{24}{section*.41}%
-\contentsline {subsubsection}{\nonumberline Die Studierenden}{25}{section*.43}%
-\contentsline {section}{\numberline {4.2}Der Prototyp}{25}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{25}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{26}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{26}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{27}{subsection.4.3.3}%
-\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{28}{section*.45}%
-\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{28}{section*.46}%
-\contentsline {chapter}{\numberline {5}Entwurf}{30}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Anwendungsart}{30}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Betriebssystem}{30}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Entwicklungsumgebung}{31}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Trackingverfahren}{31}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Tracking Bibliothek}{31}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Rendering}{32}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Modellformat}{32}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Userinterface}{32}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Datenspeicherung}{33}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Implementierung}{34}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Laden der Modelldateien}{34}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}ObjLoader}{34}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}TextureLoader}{35}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Model}{35}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Augmented Reality}{36}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}CameraFragment}{36}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{36}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Markergenerierung}{36}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}MarkerGenerator}{37}{subsection.6.3.1}%
-\contentsline {chapter}{\numberline {7}Evaluation}{38}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Tests}{38}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Testdurchführung}{38}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Testfälle}{39}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Zusammenfassung}{41}{subsection.7.1.3}%
-\contentsline {chapter}{\numberline {8}Fazit}{42}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Fazit}{42}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{42}{section.8.2}%
-\contentsline {chapter}{Literaturverzeichnis}{43}{section*.59}%
-\contentsline {chapter}{\numberline {A}Beispielanhang}{46}{appendix.A}%
+\contentsline {section}{\numberline {3.4}Benefits of Augmented Reality in Educational Environments}{20}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Vorteile}{20}{subsection.3.4.1}%
+\contentsline {subsubsection}{\nonumberline Geisteszustand}{20}{section*.40}%
+\contentsline {subsubsection}{\nonumberline Lehrkonzept}{21}{section*.41}%
+\contentsline {subsubsection}{\nonumberline Darstellung}{21}{section*.42}%
+\contentsline {subsubsection}{\nonumberline Lerntyp}{21}{section*.43}%
+\contentsline {subsubsection}{\nonumberline Verständnis}{21}{section*.44}%
+\contentsline {subsection}{\numberline {3.4.2}Zuordnung der Vorteile zu verschiedenen Anwendungsarten}{22}{subsection.3.4.2}%
+\contentsline {subsubsection}{\nonumberline Entdeckungsbasiertes Lernen}{22}{section*.45}%
+\contentsline {subsubsection}{\nonumberline Objektmodellierung}{22}{section*.46}%
+\contentsline {subsubsection}{\nonumberline AR-Bücher}{22}{section*.47}%
+\contentsline {subsubsection}{\nonumberline Fähigkeitentraining}{23}{section*.48}%
+\contentsline {subsubsection}{\nonumberline AR-Spiele}{23}{section*.49}%
+\contentsline {section}{\numberline {3.5}A Systematic Review of 10 Years of Augmented Reality Usability Studies}{23}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Display}{23}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Bildungsbereich}{23}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Augmented Reality als Bildungsenhancement?}{24}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Augmented Reality als Erweiterung der Realität}{24}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Offener Geschichtsunterricht mit Augmented Reality}{25}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Lehren und Lernen mit Augmented Reality}{25}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Anwendung im Geschichtsunterricht}{26}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Fazit}{26}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Atlas der Humananatomie}{26}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Anwendung}{26}{subsection.3.8.1}%
+\contentsline {chapter}{\numberline {4}Anforderungsanalyse}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vision}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Der Prototyp}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Anforderungsanalyse}{29}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Beschreibung der Systemumgebung}{30}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Anwendungsfälle des Prototyps}{31}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Anforderungsliste}{31}{subsection.4.3.3}%
+\contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{32}{section*.53}%
+\contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{33}{section*.54}%
+\contentsline {chapter}{\numberline {5}Entwurf}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Anwendungsart}{34}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Betriebssystem}{34}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Entwicklungsumgebung}{35}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Trackingverfahren}{35}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Tracking Bibliothek}{35}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Rendering}{36}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Modellformat}{36}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Userinterface}{36}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Datenspeicherung}{37}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Implementierung}{38}{chapter.6}%
+\contentsline {section}{\numberline {6.1}MainActivity}{38}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Augmented Reality}{38}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}ARCameraFragment}{39}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{39}{subsection.6.2.2}%
+\contentsline {subsubsection}{\nonumberline configureARScene()}{39}{section*.57}%
+\contentsline {subsubsection}{\nonumberline draw()}{39}{section*.58}%
+\contentsline {section}{\numberline {6.3}Modellverwaltung}{39}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}AdministrationFragment}{40}{subsection.6.3.1}%
+\contentsline {subsubsection}{\nonumberline createNewElem()}{40}{section*.59}%
+\contentsline {subsection}{\numberline {6.3.2}UploadFragment}{40}{subsection.6.3.2}%
+\contentsline {subsubsection}{\nonumberline onActivityResult()}{41}{section*.60}%
+\contentsline {subsection}{\numberline {6.3.3}UploadViewModel}{41}{subsection.6.3.3}%
+\contentsline {subsubsection}{\nonumberline addModel()}{41}{section*.61}%
+\contentsline {subsubsection}{\nonumberline requierdDataAvailable()}{41}{section*.62}%
+\contentsline {subsubsection}{\nonumberline correctFileType()}{42}{section*.63}%
+\contentsline {subsection}{\numberline {6.3.4}ConfirmationFragment}{42}{subsection.6.3.4}%
+\contentsline {subsubsection}{\nonumberline onActivityResult()}{42}{section*.64}%
+\contentsline {section}{\numberline {6.4}Markergenerierung}{42}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}MarkerFragment}{42}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Shader Implementierung}{43}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}MyShaderProgram}{43}{subsection.6.5.1}%
+\contentsline {subsubsection}{\nonumberline render()}{43}{section*.65}%
+\contentsline {subsection}{\numberline {6.5.2}MyVertexShader}{43}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Vertex Shader}{43}{subsection.6.5.3}%
+\contentsline {subsubsection}{\nonumberline configureShader()}{43}{section*.66}%
+\contentsline {subsection}{\numberline {6.5.4}MyFragmentShader}{44}{subsection.6.5.4}%
+\contentsline {subsubsection}{\nonumberline Fragment Shader}{44}{section*.67}%
+\contentsline {subsubsection}{\nonumberline configureShader()}{44}{section*.68}%
+\contentsline {section}{\numberline {6.6}Hilfsklassen}{44}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}FileManager}{44}{subsection.6.6.1}%
+\contentsline {subsubsection}{\nonumberline saveBitmap()}{44}{section*.69}%
+\contentsline {subsubsection}{\nonumberline transferToInternalStorage()}{44}{section*.70}%
+\contentsline {subsubsection}{\nonumberline printInternalStorage()}{45}{section*.71}%
+\contentsline {subsection}{\numberline {6.6.2}MarkerGenerator}{45}{subsection.6.6.2}%
+\contentsline {subsubsection}{\nonumberline generateMarker()}{45}{section*.73}%
+\contentsline {subsubsection}{\nonumberline getCodedID()}{46}{section*.74}%
+\contentsline {subsection}{\numberline {6.6.3}Model}{46}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}draw()}{46}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.5}ObjLoader}{47}{subsection.6.6.5}%
+\contentsline {subsubsection}{\nonumberline ObjLoader()}{47}{section*.75}%
+\contentsline {subsection}{\numberline {6.6.6}TextureLoader}{48}{subsection.6.6.6}%
+\contentsline {section}{\numberline {6.7}ARToolKit-Klassen}{48}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}ARController}{48}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}ARX\_jni}{48}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}ARFragment}{49}{subsection.6.7.3}%
+\contentsline {subsubsection}{\nonumberline supplyRenderer()}{49}{section*.77}%
+\contentsline {subsubsection}{\nonumberline supplyFrameLayout()}{49}{section*.78}%
+\contentsline {subsection}{\numberline {6.7.4}ARRenderer}{49}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.5}ShaderProgram}{49}{subsection.6.7.5}%
+\contentsline {subsubsection}{\nonumberline createProgram()}{50}{section*.79}%
+\contentsline {subsubsection}{\nonumberline setProjectionMatrix()}{50}{section*.80}%
+\contentsline {subsubsection}{\nonumberline setModelViewMatrix()}{50}{section*.81}%
+\contentsline {chapter}{\numberline {7}Evaluation}{51}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Evaluation des Prototyps}{51}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Tests}{51}{subsection.7.1.1}%
+\contentsline {subsubsection}{\nonumberline Augmented Reality}{51}{section*.82}%
+\contentsline {subsubsection}{\nonumberline Markergenerierung}{54}{section*.90}%
+\contentsline {subsubsection}{\nonumberline Laden eigener Modelle}{54}{section*.91}%
+\contentsline {subsection}{\numberline {7.1.2}Bewertung des finalen Prototyps}{55}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Zusammenfassung}{55}{subsection.7.1.3}%
+\contentsline {chapter}{\numberline {8}Fazit}{56}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Fazit}{56}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{56}{section.8.2}%
+\contentsline {chapter}{Literaturverzeichnis}{57}{section*.93}%
+\contentsline {chapter}{\numberline {A}Beispielanhang}{60}{appendix.A}%

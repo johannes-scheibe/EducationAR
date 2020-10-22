@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{31}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -68,7 +68,7 @@
 \dinatlabel{Buchner 2017} \textsc{Buchner}, J.:
 \newblock Offener Geschichtsunterricht mit Augmented Reality.
 \newblock In: \emph{Medienimpulse}
-\newblock 55(1) (2017). --
+\newblock 55 (2017), Nr.~1. --
 \newblock URL
   \url{https://journals.univie.ac.at/index.php/mp/article/view/mi1061}
 
@@ -97,6 +97,16 @@
 \newblock 5 (2018), S.~30. --
 \newblock URL
   \url{https://www.frontiersin.org/article/10.3389/frobt.2018.00037}
+
+\bibitem[Diegmann u.\,a.(2015)Diegmann, Schmidt-Kraepelin, an~den Eynden und
+  Basten]{diegmann:benefits-ar}
+\dinatlabel{Diegmann u.\,a. 2015} \textsc{Diegmann}, P.~;
+  \textsc{Schmidt-Kraepelin}, M.~; \textsc{Eynden}, S. an~den~;
+  \textsc{Basten}, D.:
+\newblock Benefits of Augmented Reality in Educational Environments - {A}
+  Systematic Literature Review.
+\newblock In: \emph{Wirtschaftsinformatik Proceedings 2015}, URL
+  \url{https://aisel.aisnet.org/wi2015/103}, 2015
 
 \bibitem[Gargenta(2011)]{gargenta:learning-android}
 \dinatlabel{Gargenta 2011} \textsc{Gargenta}, M.:
@@ -218,6 +228,15 @@
 \newblock 3.
 \newblock Pearson Education, 2012. --
 \newblock ISBN 978-0-321-81574-3
+
+\bibitem[Rupp und die SOPHISTen(2014)]{rupp:requirements}
+\dinatlabel{Rupp und die SOPHISTen 2014} \textsc{Rupp}, C.~; \textsc{SOPHISTen}
+  die:
+\newblock \emph{Requirements-Engineering und -Management : aus der Praxis von
+  klassisch bis agil}.
+\newblock 6.
+\newblock Hanser, 2014. --
+\newblock ISBN 9783446438934
 
 \bibitem[Shreiner u.\,a.(2006)Shreiner, Woo, Neider und Davis]{shreiner:opengl}
 \dinatlabel{Shreiner u.\,a. 2006} \textsc{Shreiner}, D.~; \textsc{Woo}, M.~;
