@@ -17,45 +17,45 @@ Warning--empty note in tab:augmented-reality
 Warning--empty booktitle in owen:fiducial-marker
 Warning--empty booktitle in cukovic:marker-vs-natural
 Warning--empty pages in cukovic:marker-vs-natural
-You've used 31 entries,
+You've used 35 entries,
             3552 wiz_defined-function locations,
-            959 strings with 10893 characters,
-and the built_in function-call counts, 18846 in all, are:
-= -- 2204
-> -- 313
-< -- 264
-+ -- 402
-- -- 192
-* -- 1863
-:= -- 3297
-add.period$ -- 41
-call.type$ -- 31
-change.case$ -- 165
-chr.to.int$ -- 25
-cite$ -- 38
-duplicate$ -- 547
-empty$ -- 1526
-format.name$ -- 354
-if$ -- 3823
-int.to.chr$ -- 6
+            974 strings with 11329 characters,
+and the built_in function-call counts, 21070 in all, are:
+= -- 2470
+> -- 359
+< -- 300
++ -- 463
+- -- 222
+* -- 2097
+:= -- 3725
+add.period$ -- 45
+call.type$ -- 35
+change.case$ -- 191
+chr.to.int$ -- 26
+cite$ -- 42
+duplicate$ -- 617
+empty$ -- 1676
+format.name$ -- 408
+if$ -- 4245
+int.to.chr$ -- 9
 int.to.str$ -- 1
 missing$ -- 38
-newline$ -- 214
-num.names$ -- 124
-pop$ -- 239
+newline$ -- 242
+num.names$ -- 140
+pop$ -- 277
 preamble$ -- 1
-purify$ -- 156
+purify$ -- 178
 quote$ -- 0
-skip$ -- 591
+skip$ -- 650
 stack$ -- 0
-substring$ -- 1313
-swap$ -- 123
-text.length$ -- 68
+substring$ -- 1385
+swap$ -- 141
+text.length$ -- 78
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 293
+type$ -- 337
 warning$ -- 7
-while$ -- 223
+while$ -- 253
 width$ -- 0
-write$ -- 364
+write$ -- 412
 (There were 7 warnings)

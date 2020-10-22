@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{35}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -16,8 +16,16 @@
   --
 \newblock letzer Abruf: 16.08.2020
 
-\bibitem[{Android}({\natexlab{b}})]{android:activities}
+\bibitem[{Android}({\natexlab{b}})]{android:fragments}
 \dinatlabel{{Android} {\natexlab{b}}} \textsc{{Android}}:
+\newblock \emph{Fragments}.
+\newblock Webquelle. --
+\newblock URL \url{https://developer.android.com/guide/components/fragments}.
+  --
+\newblock letzer Abruf: 21.10.2020
+
+\bibitem[{Android}({\natexlab{c}})]{android:activities}
+\dinatlabel{{Android} {\natexlab{c}}} \textsc{{Android}}:
 \newblock \emph{Introduction to Activities}.
 \newblock Webquelle. --
 \newblock URL
@@ -25,15 +33,23 @@
   --
 \newblock letzer Abruf: 16.08.2020
 
-\bibitem[{Android}({\natexlab{c}})]{android:architecture}
-\dinatlabel{{Android} {\natexlab{c}}} \textsc{{Android}}:
+\bibitem[{Android}({\natexlab{d}})]{android:opengl}
+\dinatlabel{{Android} {\natexlab{d}}} \textsc{{Android}}:
+\newblock \emph{OpenGL ED}.
+\newblock Webquelle. --
+\newblock URL \url{https://developer.android.com/guide/topics/graphics/opengl}.
+  --
+\newblock letzer Abruf: 21.10.2020
+
+\bibitem[{Android}({\natexlab{e}})]{android:architecture}
+\dinatlabel{{Android} {\natexlab{e}}} \textsc{{Android}}:
 \newblock \emph{Platform Architecture}.
 \newblock Webquelle. --
 \newblock URL \url{https://developer.android.com/guide/platform}. --
 \newblock letzer Abruf: 16.08.2020
 
-\bibitem[{Android}({\natexlab{d}})]{android:activity-lifecycle}
-\dinatlabel{{Android} {\natexlab{d}}} \textsc{{Android}}:
+\bibitem[{Android}({\natexlab{f}})]{android:activity-lifecycle}
+\dinatlabel{{Android} {\natexlab{f}}} \textsc{{Android}}:
 \newblock \emph{Understand the Activity Lifecycle}.
 \newblock Webquelle. --
 \newblock URL
@@ -178,6 +194,25 @@
 \dinatlabel{Klein 2006} \textsc{Klein}, G.:
 \newblock \emph{Visual Tracking for Augmented Reality}, University of
   Cambridge, Dissertation, 2006
+
+\bibitem[Lamb u.\,a.({\natexlab{a}})Lamb, Vaughan, Bell und
+  Bux]{artoolkitx:architecture}
+\dinatlabel{Lamb u.\,a. {\natexlab{a}}} \textsc{Lamb}, L.~; \textsc{Vaughan},
+  B.~; \textsc{Bell}, D.~; \textsc{Bux}, T.:
+\newblock \emph{Architecture overview}.
+\newblock Webquelle. --
+\newblock URL
+  \url{https://github.com/artoolkitx/artoolkitx/wiki/Architecture-overview}. --
+\newblock letzer Abruf: 22.10.2020
+
+\bibitem[Lamb u.\,a.({\natexlab{b}})Lamb, Vaughan, Bell und
+  Bux]{artoolkitx:startseite}
+\dinatlabel{Lamb u.\,a. {\natexlab{b}}} \textsc{Lamb}, L.~; \textsc{Vaughan},
+  B.~; \textsc{Bell}, D.~; \textsc{Bux}, T.:
+\newblock \emph{What is artoolkitX?}
+\newblock Webquelle. --
+\newblock URL \url{http://www.artoolkitx.org}. --
+\newblock letzer Abruf: 22.10.2020
 
 \bibitem[Mehler-Bicher und Steiger(2014)]{mehler-bicher:augmented-reality}
 \dinatlabel{Mehler-Bicher und Steiger 2014} \textsc{Mehler-Bicher}, A.~;
