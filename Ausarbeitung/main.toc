@@ -75,78 +75,87 @@
 \contentsline {subsubsection}{\nonumberline Funktionale Anforderungen}{33}{section*.56}%
 \contentsline {subsubsection}{\nonumberline Nichtfunktionale Anforderungen}{34}{section*.57}%
 \contentsline {chapter}{\numberline {5}Entwurf}{35}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Anwendungsart}{35}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Betriebssystem}{35}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Entwicklungsumgebung}{36}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Trackingverfahren}{36}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Tracking Bibliothek}{36}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Rendering}{37}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Modellformat}{37}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Userinterface}{37}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Datenspeicherung}{38}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Implementierung}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}MainActivity}{39}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Augmented Reality}{39}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}ARCameraFragment}{40}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{40}{subsection.6.2.2}%
-\contentsline {subsubsection}{\nonumberline configureARScene()}{40}{section*.60}%
-\contentsline {subsubsection}{\nonumberline draw()}{40}{section*.61}%
-\contentsline {section}{\numberline {6.3}Modellverwaltung}{40}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}AdministrationFragment}{41}{subsection.6.3.1}%
-\contentsline {subsubsection}{\nonumberline createNewElem()}{41}{section*.62}%
-\contentsline {subsection}{\numberline {6.3.2}UploadFragment}{41}{subsection.6.3.2}%
-\contentsline {subsubsection}{\nonumberline onActivityResult()}{42}{section*.63}%
-\contentsline {subsection}{\numberline {6.3.3}UploadViewModel}{42}{subsection.6.3.3}%
-\contentsline {subsubsection}{\nonumberline addModel()}{42}{section*.64}%
-\contentsline {subsubsection}{\nonumberline requierdDataAvailable()}{42}{section*.65}%
-\contentsline {subsubsection}{\nonumberline correctFileType()}{43}{section*.66}%
-\contentsline {subsection}{\numberline {6.3.4}ConfirmationFragment}{43}{subsection.6.3.4}%
-\contentsline {subsubsection}{\nonumberline onActivityResult()}{43}{section*.67}%
-\contentsline {section}{\numberline {6.4}Markergenerierung}{43}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}MarkerFragment}{43}{subsection.6.4.1}%
-\contentsline {section}{\numberline {6.5}Shader Implementierung}{44}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}MyShaderProgram}{44}{subsection.6.5.1}%
-\contentsline {subsubsection}{\nonumberline render()}{44}{section*.68}%
-\contentsline {subsection}{\numberline {6.5.2}MyVertexShader}{44}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Vertex Shader}{44}{subsection.6.5.3}%
-\contentsline {subsubsection}{\nonumberline configureShader()}{44}{section*.69}%
-\contentsline {subsection}{\numberline {6.5.4}MyFragmentShader}{45}{subsection.6.5.4}%
-\contentsline {subsubsection}{\nonumberline Fragment Shader}{45}{section*.70}%
-\contentsline {subsubsection}{\nonumberline configureShader()}{45}{section*.71}%
-\contentsline {section}{\numberline {6.6}Hilfsklassen}{45}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}FileManager}{45}{subsection.6.6.1}%
-\contentsline {subsubsection}{\nonumberline saveBitmap()}{45}{section*.72}%
-\contentsline {subsubsection}{\nonumberline transferToInternalStorage()}{45}{section*.73}%
-\contentsline {subsubsection}{\nonumberline printInternalStorage()}{46}{section*.74}%
-\contentsline {subsection}{\numberline {6.6.2}MarkerGenerator}{46}{subsection.6.6.2}%
-\contentsline {subsubsection}{\nonumberline generateMarker()}{46}{section*.76}%
-\contentsline {subsubsection}{\nonumberline getCodedID()}{47}{section*.77}%
-\contentsline {subsection}{\numberline {6.6.3}Model}{47}{subsection.6.6.3}%
-\contentsline {subsection}{\numberline {6.6.4}draw()}{47}{subsection.6.6.4}%
-\contentsline {subsection}{\numberline {6.6.5}ObjLoader}{48}{subsection.6.6.5}%
-\contentsline {subsubsection}{\nonumberline ObjLoader()}{48}{section*.78}%
-\contentsline {subsection}{\numberline {6.6.6}TextureLoader}{49}{subsection.6.6.6}%
-\contentsline {section}{\numberline {6.7}ARToolKit-Klassen}{49}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}ARController}{49}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}ARX\_jni}{49}{subsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.7.3}ARFragment}{50}{subsection.6.7.3}%
-\contentsline {subsubsection}{\nonumberline supplyRenderer()}{50}{section*.80}%
-\contentsline {subsubsection}{\nonumberline supplyFrameLayout()}{50}{section*.81}%
-\contentsline {subsection}{\numberline {6.7.4}ARRenderer}{50}{subsection.6.7.4}%
-\contentsline {subsection}{\numberline {6.7.5}ShaderProgram}{50}{subsection.6.7.5}%
-\contentsline {subsubsection}{\nonumberline createProgram()}{51}{section*.82}%
-\contentsline {subsubsection}{\nonumberline setProjectionMatrix()}{51}{section*.83}%
-\contentsline {subsubsection}{\nonumberline setModelViewMatrix()}{51}{section*.84}%
-\contentsline {chapter}{\numberline {7}Evaluation}{52}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Evaluation des Prototyps}{52}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Tests}{52}{subsection.7.1.1}%
-\contentsline {subsubsection}{\nonumberline Augmented Reality}{52}{section*.85}%
-\contentsline {subsubsection}{\nonumberline Markergenerierung}{55}{section*.93}%
-\contentsline {subsubsection}{\nonumberline Laden eigener Modelle}{55}{section*.94}%
-\contentsline {subsection}{\numberline {7.1.2}Bewertung des finalen Prototyps}{56}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Zusammenfassung}{56}{subsection.7.1.3}%
-\contentsline {chapter}{\numberline {8}Fazit}{57}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Fazit}{57}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{57}{section.8.2}%
-\contentsline {chapter}{Literaturverzeichnis}{58}{section*.96}%
-\contentsline {chapter}{\numberline {A}Beispielanhang}{62}{appendix.A}%
+\contentsline {section}{\numberline {5.1}Allgemeine Technologieentscheidungen}{35}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Anwendungsart}{35}{subsection.5.1.1}%
+\contentsline {subsubsection}{\nonumberline Betriebssystem}{36}{section*.58}%
+\contentsline {subsubsection}{\nonumberline Entwicklungsumgebung}{36}{section*.59}%
+\contentsline {subsection}{\numberline {5.1.2}Trackingverfahren}{36}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Tracking Bibliothek}{36}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Designentscheidungen}{37}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Grundlage der Entwicklung}{37}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Marker}{38}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Modelle}{38}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Texturen}{39}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Datenspeicherung}{39}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}User Interface}{40}{subsection.5.2.6}%
+\contentsline {chapter}{\numberline {6}Implementierung}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}MainActivity}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Augmented Reality}{41}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}ARCameraFragment}{42}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}EducationARRenderer}{42}{subsection.6.2.2}%
+\contentsline {subsubsection}{\nonumberline configureARScene()}{42}{section*.61}%
+\contentsline {subsubsection}{\nonumberline draw()}{42}{section*.62}%
+\contentsline {section}{\numberline {6.3}Modellverwaltung}{42}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}AdministrationFragment}{43}{subsection.6.3.1}%
+\contentsline {subsubsection}{\nonumberline createNewElem()}{43}{section*.63}%
+\contentsline {subsection}{\numberline {6.3.2}UploadFragment}{43}{subsection.6.3.2}%
+\contentsline {subsubsection}{\nonumberline onActivityResult()}{44}{section*.64}%
+\contentsline {subsection}{\numberline {6.3.3}UploadViewModel}{44}{subsection.6.3.3}%
+\contentsline {subsubsection}{\nonumberline addModel()}{44}{section*.65}%
+\contentsline {subsubsection}{\nonumberline requierdDataAvailable()}{44}{section*.66}%
+\contentsline {subsubsection}{\nonumberline correctFileType()}{45}{section*.67}%
+\contentsline {subsection}{\numberline {6.3.4}ConfirmationFragment}{45}{subsection.6.3.4}%
+\contentsline {subsubsection}{\nonumberline onActivityResult()}{45}{section*.68}%
+\contentsline {section}{\numberline {6.4}Markergenerierung}{45}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}MarkerFragment}{45}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Shader Implementierung}{46}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}MyShaderProgram}{46}{subsection.6.5.1}%
+\contentsline {subsubsection}{\nonumberline render()}{46}{section*.69}%
+\contentsline {subsection}{\numberline {6.5.2}MyVertexShader}{46}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Vertex Shader}{46}{subsection.6.5.3}%
+\contentsline {subsubsection}{\nonumberline configureShader()}{46}{section*.70}%
+\contentsline {subsection}{\numberline {6.5.4}MyFragmentShader}{47}{subsection.6.5.4}%
+\contentsline {subsubsection}{\nonumberline Fragment Shader}{47}{section*.71}%
+\contentsline {subsubsection}{\nonumberline configureShader()}{47}{section*.72}%
+\contentsline {section}{\numberline {6.6}Hilfsklassen}{47}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}FileManager}{47}{subsection.6.6.1}%
+\contentsline {subsubsection}{\nonumberline saveBitmap()}{47}{section*.73}%
+\contentsline {subsubsection}{\nonumberline transferToInternalStorage()}{47}{section*.74}%
+\contentsline {subsubsection}{\nonumberline printInternalStorage()}{48}{section*.75}%
+\contentsline {subsection}{\numberline {6.6.2}MarkerGenerator}{48}{subsection.6.6.2}%
+\contentsline {subsubsection}{\nonumberline generateMarker()}{48}{section*.77}%
+\contentsline {subsubsection}{\nonumberline getCodedID()}{49}{section*.78}%
+\contentsline {subsection}{\numberline {6.6.3}Model}{49}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}draw()}{49}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.5}ObjLoader}{50}{subsection.6.6.5}%
+\contentsline {subsubsection}{\nonumberline ObjLoader()}{50}{section*.79}%
+\contentsline {subsection}{\numberline {6.6.6}TextureLoader}{51}{subsection.6.6.6}%
+\contentsline {section}{\numberline {6.7}ARToolKit-Klassen}{51}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}ARController}{51}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}ARX\_jni}{51}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}ARFragment}{52}{subsection.6.7.3}%
+\contentsline {subsubsection}{\nonumberline supplyRenderer()}{52}{section*.81}%
+\contentsline {subsubsection}{\nonumberline supplyFrameLayout()}{52}{section*.82}%
+\contentsline {subsection}{\numberline {6.7.4}ARRenderer}{52}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.5}ShaderProgram}{52}{subsection.6.7.5}%
+\contentsline {subsubsection}{\nonumberline createProgram()}{53}{section*.83}%
+\contentsline {subsubsection}{\nonumberline setProjectionMatrix()}{53}{section*.84}%
+\contentsline {subsubsection}{\nonumberline setModelViewMatrix()}{53}{section*.85}%
+\contentsline {section}{\numberline {6.8}Tests}{53}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Augmented Reality}{53}{subsection.6.8.1}%
+\contentsline {subsubsection}{\nonumberline Perspektivische Invarianz}{54}{section*.88}%
+\contentsline {subsubsection}{\nonumberline Skalierungsinvarianz}{55}{section*.90}%
+\contentsline {subsubsection}{\nonumberline Rotationsinvarianz}{55}{section*.92}%
+\contentsline {subsubsection}{\nonumberline Belichtungsinvarianz}{55}{section*.94}%
+\contentsline {subsubsection}{\nonumberline Trackinggeschwindigkeit}{56}{section*.96}%
+\contentsline {subsection}{\numberline {6.8.2}Markergenerierung}{56}{subsection.6.8.2}%
+\contentsline {subsection}{\numberline {6.8.3}Laden eigener Modelle}{56}{subsection.6.8.3}%
+\contentsline {chapter}{\numberline {7}Evaluation}{57}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Evaluation des Prototyps}{57}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Bewertung des finalen Prototyps}{57}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Zusammenfassung}{57}{subsection.7.1.2}%
+\contentsline {chapter}{\numberline {8}Fazit}{58}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Fazit}{58}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{58}{section.8.2}%
+\contentsline {chapter}{Literaturverzeichnis}{59}{section*.99}%
+\contentsline {chapter}{\numberline {A}Beispielanhang}{63}{appendix.A}%
