@@ -108,7 +108,7 @@ public class AdministrationFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 logger.log(Level.INFO, "Delete Model " + name);
-                ModelManager.getInstance().deleteModel(mContext, id, name);
+                ModelManager.getInstance().deleteModel(mContext, id);
                 Navigation.findNavController(v).navigate(R.id.action_reload_administration, null);
             }
         });

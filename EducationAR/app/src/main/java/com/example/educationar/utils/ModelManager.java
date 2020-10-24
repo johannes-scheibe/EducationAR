@@ -44,18 +44,25 @@ public class ModelManager {
         loadModels();
     }
 
+    public static String getFileName(int id){
+        return getFileName(Integer.toString(id));
+    }
+    public static String getFileName(String id){
+        return "model" + id;
+    }
+
     private void loadModels(){
         models = new HashMap<>();
         File dir = mContext.getFilesDir();
 
         Map<String,?> modelRefs = sharedPrefs.getAll();
 
-        for(Map.Entry<String,?> entry : modelRefs.entrySet()){
-            File modelFile = new File(dir, entry.getValue().toString());
-            File textureFile = new File(dir, entry.getValue().toString()+"-texture");
+        for(String key : modelRefs.keySet()){
+            File modelFile = new File(dir, getFileName(key));
+            File textureFile = new File(dir, getFileName(key)+"-texture");
             Model model = new Model(mContext, modelFile, textureFile);
 
-            this.models.put(Integer.parseInt(entry.getKey().trim()), model);
+            this.models.put(Integer.parseInt(key.trim()), model);
         }
 
     }
@@ -63,25 +70,25 @@ public class ModelManager {
     public void addModel(int id, String name){
         File dir = mContext.getFilesDir();
 
-        File modelFile = new File(dir, name);
-        File textureFile = new File(dir, name + "-texture");
+        File modelFile = new File(dir, getFileName(id));
+        File textureFile = new File(dir, getFileName(id) + "-texture");
         Model model = new Model(mContext, modelFile, textureFile);
 
         // added to map
         models.put(id, model);
 
-        // remove from shared preferences
+        // add to shared preferences
         SharedPreferences.Editor modelEditor = sharedPrefs.edit();
         modelEditor.putString(Integer.toString(id), name);
         modelEditor.commit();
     }
 
-    public void deleteModel(Context context, int id, String name){
+    public void deleteModel(Context context, int id){
         // Delete model and texture
         File dir = context.getFilesDir();
-        File file = new File(dir, name);
+        File file = new File(dir, getFileName(id));
         file.delete();
-        file = new File(dir, name+"-texture");
+        file = new File(dir, getFileName(id)+"-texture");
         file.delete();
 
         // remove from map
@@ -98,12 +105,10 @@ public class ModelManager {
         toast.show();
     }
 
-
     public Map<Integer, Model> getModels(){
         ShaderProgram shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
         for (Model model: models.values())
             model.initialise(shaderProgram);
-
         return models;
     }
     public Map getModelReferences(){
@@ -112,8 +117,6 @@ public class ModelManager {
 
     public static int getNextID(Context context){
         SharedPreferences prefs = context.getSharedPreferences("Models", Context.MODE_PRIVATE);
-        logger.log(Level.INFO, "Starting");
-
         int i = 0;
         while(prefs.getString(Integer.toString(i), null)!=null){
             i++;
