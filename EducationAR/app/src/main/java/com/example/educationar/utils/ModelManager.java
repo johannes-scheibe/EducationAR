@@ -8,8 +8,13 @@ import androidx.navigation.Navigation;
 
 import com.example.educationar.MainActivity;
 import com.example.educationar.R;
+import com.example.educationar.artoolkitx.rendering.ShaderProgram;
+import com.example.educationar.shader_impl.MyFragmentShader;
+import com.example.educationar.shader_impl.MyShaderProgram;
+import com.example.educationar.shader_impl.MyVertexShader;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -21,21 +26,68 @@ public class ModelManager {
 
     private static SharedPreferences sharedPrefs = MainActivity.getContext().getSharedPreferences("Models", Context.MODE_PRIVATE);
 
-    public static void addModel(int id, String name){
+    private static ModelManager instance;
+
+    public static  ModelManager getInstance(){
+        if(instance == null){
+            instance = new ModelManager();
+        }
+        return instance;
+    }
+
+    private static Context mContext;
+
+    private Map<Integer, Model> models;
+
+    private ModelManager(){
+        mContext =  MainActivity.getContext();
+        loadModels();
+    }
+
+    private void loadModels(){
+        models = new HashMap<>();
+        File dir = mContext.getFilesDir();
+
+        Map<String,?> modelRefs = sharedPrefs.getAll();
+
+        for(Map.Entry<String,?> entry : modelRefs.entrySet()){
+            File modelFile = new File(dir, entry.getValue().toString());
+            File textureFile = new File(dir, entry.getValue().toString()+"-texture");
+            Model model = new Model(mContext, modelFile, textureFile);
+
+            this.models.put(Integer.parseInt(entry.getKey().trim()), model);
+        }
+
+    }
+
+    public void addModel(int id, String name){
+        File dir = mContext.getFilesDir();
+
+        File modelFile = new File(dir, name);
+        File textureFile = new File(dir, name + "-texture");
+        Model model = new Model(mContext, modelFile, textureFile);
+
+        // added to map
+        models.put(id, model);
+
+        // remove from shared preferences
         SharedPreferences.Editor modelEditor = sharedPrefs.edit();
         modelEditor.putString(Integer.toString(id), name);
         modelEditor.commit();
     }
 
-    public static void deleteModel(Context context, int id, String name){
+    public void deleteModel(Context context, int id, String name){
         // Delete model and texture
         File dir = context.getFilesDir();
         File file = new File(dir, name);
         file.delete();
         file = new File(dir, name+"-texture");
         file.delete();
-        // remove from shared preferences
 
+        // remove from map
+        models.remove(id);
+
+        // remove from shared preferences
         SharedPreferences.Editor modelEditor = sharedPrefs.edit();
         modelEditor.remove(Integer.toString(id));
         modelEditor.commit();
@@ -46,7 +98,15 @@ public class ModelManager {
         toast.show();
     }
 
-    public static Map getAllModels(){
+
+    public Map<Integer, Model> getModels(){
+        ShaderProgram shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
+        for (Model model: models.values())
+            model.initialise(shaderProgram);
+
+        return models;
+    }
+    public Map getModelReferences(){
         return sharedPrefs.getAll();
     }
 

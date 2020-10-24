@@ -16,6 +16,10 @@ public class Model {
 
     private static Logger logger = Logger.getLogger("EduAR-Model");
 
+    private Context mContext;
+
+    private File mTextureFile;
+
     private FloatBuffer mVertexBuffer;
     private FloatBuffer mColorBuffer;
     private FloatBuffer mNormalBuffer;
@@ -28,15 +32,16 @@ public class Model {
 
     public Model(Context context, File modelFile, File textureFile) {
 
-        ObjLoader objLoader = new ObjLoader(context, modelFile);
+        mContext = context;
 
+        mTextureFile = textureFile;
+
+        ObjLoader objLoader = new ObjLoader(context, modelFile);
 
         mVertexBuffer = RenderUtils.buildFloatBuffer(objLoader.vertices);
         mColorBuffer = RenderUtils.buildFloatBuffer(objLoader.colors);
         mNormalBuffer = RenderUtils.buildFloatBuffer(objLoader.normals);
         mTextureBuffer = RenderUtils.buildFloatBuffer(objLoader.textures);
-
-        mTextureDataHandle = TextureLoader.loadTexture(context, textureFile);
 
     }
 
@@ -68,6 +73,11 @@ public class Model {
         shaderProgram.setProjectionMatrix(projectionMatrix);
         shaderProgram.setModelViewMatrix(modelViewMatrix);
         shaderProgram.render(this.getmVertexBuffer(), this.getmTextureBuffer(), this.getmNormalBuffer(), this.getmColorBuffer(), mTextureDataHandle);
+    }
+
+    public void initialise(ShaderProgram shaderProgram) {
+        this.shaderProgram = shaderProgram;
+        mTextureDataHandle = TextureLoader.loadTexture(mContext, mTextureFile);
     }
 
     /*

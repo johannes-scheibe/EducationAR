@@ -14,19 +14,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static Context mContext;
+    private static Activity activity;
 
     public static Context getContext() {
-        return mContext;
-    }
-    public static Activity getActivity() {
-        return getActivity();
+        return activity;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.mContext = getApplicationContext();
+
+        this.activity = this;
+
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

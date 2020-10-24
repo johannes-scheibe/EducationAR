@@ -68,6 +68,7 @@ public class UploadViewModel extends ViewModel {
                     try {
                         FileManager.transferToInternalStorage(mContext, modelUri.getValue(), modelFileName);
                         FileManager.transferToInternalStorage(mContext, textureUri.getValue(), textureFileName);
+                        ModelManager.getInstance().addModel(markerID.getValue(), modelFileName);
                         logger.log(Level.INFO, "Successfully added the model to internal storage.");
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -76,7 +77,7 @@ public class UploadViewModel extends ViewModel {
 
             }).start();
 
-            ModelManager.addModel(markerID.getValue(), modelFileName);
+
 
             Bundle bundle = new Bundle();
             bundle.putString("name", modelName.getValue());

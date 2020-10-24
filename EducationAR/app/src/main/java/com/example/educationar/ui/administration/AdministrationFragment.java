@@ -61,7 +61,7 @@ public class AdministrationFragment extends Fragment {
         addBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_administration_to_upload, null));
 
         //Load all items from prefs
-        Map<String,?> keys = ModelManager.getAllModels();
+        Map<String,?> keys = ModelManager.getInstance().getModelReferences();
         for(Map.Entry<String,?> entry : keys.entrySet()){
             LinearLayout l = createNewElem(Integer.parseInt(entry.getKey().trim()),  entry.getValue().toString());
             verticalLayout.addView(l);
@@ -108,7 +108,7 @@ public class AdministrationFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 logger.log(Level.INFO, "Delete Model " + name);
-                ModelManager.deleteModel(mContext, id, name);
+                ModelManager.getInstance().deleteModel(mContext, id, name);
                 Navigation.findNavController(v).navigate(R.id.action_reload_administration, null);
             }
         });

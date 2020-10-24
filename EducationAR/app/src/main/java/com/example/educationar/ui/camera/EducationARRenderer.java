@@ -66,20 +66,16 @@ public class EducationARRenderer extends ARRenderer {
 
         mContext = MainActivity.getContext();
 
-        File dir = mContext.getFilesDir();
-
-        Map<String,?> models = ModelManager.getAllModels();
-        for(Map.Entry<String,?> entry : models.entrySet()){
-            File modelFile = new File(dir, entry.getValue().toString());
-            File textureFile = new File(dir, entry.getValue().toString()+"-texture");
-            Model model = new Model(mContext, modelFile, textureFile);
-            model.setShaderProgram(shaderProgram);
-            this.models.put(Integer.parseInt(entry.getKey().trim()), model);
-        }
-
+        models = ModelManager.getInstance().getModels();
 
 
         super.onSurfaceCreated(unused, config);
+
+    }
+
+    @Override
+    public void onSurfaceChanged(GL10 unused, int w, int h) {
+        super.onSurfaceChanged(unused, w, h);
 
     }
 
@@ -100,7 +96,7 @@ public class EducationARRenderer extends ARRenderer {
         //Add the Markers
 
         for(Integer key : models.keySet()){
-            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + key + ";40"), key);
+            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + key + ";60"), key);
         }
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5);
