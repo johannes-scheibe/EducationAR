@@ -54,7 +54,7 @@ public class TextureLoader {
             logger.log(Level.WARNING, "Texture loading failed due a IO Exception:" + e.getMessage());
         }
 
-        logger.log(Level.INFO, "Texture loading finished:" + textureHandle[0]);
+        logger.log(Level.INFO, "Texture loading finished: " + textureHandle[0]);
         return textureHandle[0];
 
     }

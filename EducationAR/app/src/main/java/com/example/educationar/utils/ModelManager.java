@@ -15,6 +15,7 @@ import com.example.educationar.shader_impl.MyVertexShader;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -68,6 +69,13 @@ public class ModelManager {
     }
 
     public void addModel(int id, String name){
+        // add to shared preferences
+        SharedPreferences.Editor modelEditor = sharedPrefs.edit();
+        modelEditor.putString(Integer.toString(id), name);
+        modelEditor.commit();
+    }
+
+    public void loadModel(int id){
         File dir = mContext.getFilesDir();
 
         File modelFile = new File(dir, getFileName(id));
@@ -76,11 +84,6 @@ public class ModelManager {
 
         // added to map
         models.put(id, model);
-
-        // add to shared preferences
-        SharedPreferences.Editor modelEditor = sharedPrefs.edit();
-        modelEditor.putString(Integer.toString(id), name);
-        modelEditor.commit();
     }
 
     public void deleteModel(Context context, int id){
@@ -107,8 +110,10 @@ public class ModelManager {
 
     public Map<Integer, Model> getModels(){
         ShaderProgram shaderProgram = new MyShaderProgram(new MyVertexShader(), new MyFragmentShader());
-        for (Model model: models.values())
+        for (Iterator<Model> iterator = models.values().iterator(); iterator.hasNext();) {
+            Model model = iterator.next();
             model.initialise(shaderProgram);
+        }
         return models;
     }
     public Map getModelReferences(){

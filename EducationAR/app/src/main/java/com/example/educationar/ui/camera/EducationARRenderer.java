@@ -68,6 +68,10 @@ public class EducationARRenderer extends ARRenderer {
 
         models = ModelManager.getInstance().getModels();
 
+        // Add the markers for the models
+        for(Integer key : models.keySet()){
+            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + key + ";20"), key);
+        }
 
         super.onSurfaceCreated(unused, config);
 
@@ -93,11 +97,7 @@ public class EducationARRenderer extends ARRenderer {
         trackables.put(ARController.getInstance().addTrackable("single_barcode;1547643;40"), 1547643);
         */
 
-        //Add the Markers
-
-        for(Integer key : models.keySet()){
-            trackables.put(ARController.getInstance().addTrackable("single_barcode;" + key + ";60"), key);
-        }
+        // Configure the tracking
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_PATTERN_DETECTION_MODE, AR_MATRIX_CODE_DETECTION);
         ARX_jni.arwSetTrackerOptionInt(ARW_TRACKER_OPTION_SQUARE_MATRIX_CODE_TYPE, AR_MATRIX_CODE_5x5);
         return true;

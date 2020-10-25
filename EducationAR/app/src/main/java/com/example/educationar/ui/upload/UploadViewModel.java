@@ -67,9 +67,10 @@ public class UploadViewModel extends ViewModel {
                 @Override
                 public void run() {
                     try {
+                        ModelManager.getInstance().addModel(markerID.getValue(), displayName);
                         FileManager.transferToInternalStorage(mContext, modelUri.getValue(), modelFileName);
                         FileManager.transferToInternalStorage(mContext, textureUri.getValue(), textureFileName);
-                        ModelManager.getInstance().addModel(markerID.getValue(), displayName);
+                        ModelManager.getInstance().loadModel(markerID.getValue());
                         logger.log(Level.INFO, "Successfully added the model to internal storage.");
                     } catch (IOException e) {
                         e.printStackTrace();
