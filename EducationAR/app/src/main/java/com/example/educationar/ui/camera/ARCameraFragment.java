@@ -40,16 +40,7 @@ public class ARCameraFragment extends ARFragment {
                 ViewModelProviders.of(this).get(CameraViewModel.class);
         View root = inflater.inflate(R.layout.fragment_camera, container, false);
 
-        renderer = new EducationARRenderer();
 
-        renderer.getFps().observe(getViewLifecycleOwner(), new Observer<Float>() {
-            @Override
-            public void onChanged(@Nullable Float s) {
-                fpsLabel = getFpsView();
-                if(fpsLabel!=null)
-                    fpsLabel.setText(cutFloat(s).toString());
-            }
-        });
         return root;
     }
 
@@ -61,7 +52,16 @@ public class ARCameraFragment extends ARFragment {
      */
     @Override
     protected ARRenderer supplyRenderer() {
-        return renderer;
+        renderer = new EducationARRenderer();
+        renderer.getFps().observe(getViewLifecycleOwner(), new Observer<Float>() {
+            @Override
+            public void onChanged(@Nullable Float s) {
+                fpsLabel = getFpsView();
+                if(fpsLabel!=null)
+                    fpsLabel.setText(cutFloat(s).toString());
+            }
+        });
+        return  renderer;
     }
 
     /**

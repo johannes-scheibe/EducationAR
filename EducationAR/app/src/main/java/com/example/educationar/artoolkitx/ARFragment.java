@@ -98,7 +98,7 @@ public abstract class ARFragment extends Fragment implements View.OnClickListene
     /**
      * Android logging tag for this class.
      */
-    private final static String TAG = "ARXJ::ARActivity";
+    private final static String TAG = "ARXJ::ARFragment";
 
     /**
      * Renderer to use. This is provided by the subclass using {@link #supplyRenderer() Renderer()}.

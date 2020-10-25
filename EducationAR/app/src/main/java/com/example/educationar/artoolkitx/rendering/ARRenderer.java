@@ -128,7 +128,6 @@ public abstract class ARRenderer implements GLSurfaceView.Renderer {
             }
             draw();
 
-
         }
     }
 
