@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     public static Context getContext() {
         return activity;
     }
+    public static Activity getActivity() {
+        return activity;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -72,6 +72,16 @@ public class UploadViewModel extends ViewModel {
                         FileManager.transferToInternalStorage(mContext, textureUri.getValue(), textureFileName);
                         ModelManager.getInstance().loadModel(markerID.getValue());
                         logger.log(Level.INFO, "Successfully added the model to internal storage.");
+                        MainActivity.getActivity().runOnUiThread(new Runnable() {
+                            public void run() {
+                                CharSequence text = "Dein Modell '" + displayName + "' wurde erfolgreich hinzugefügt!";
+                                int duration = Toast.LENGTH_SHORT;
+                                Toast toast = Toast.makeText(mContext, text, duration);
+                                toast.show();
+                            }
+                        });
+
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
