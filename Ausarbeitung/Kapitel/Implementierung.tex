@@ -1,4 +1,6 @@
 \chapter{Implementierung}\label{chapter:implementierung}
+Das folgende Kapitel beschreibt die implementierten Klassen des Prototyps.\\
+Dabei besteht die Anwendung in ihren Grundzügen auf der Beispielanwendung von ARToolKitX, welche im Verflauf dieser Arbeit so erweitert wurde, dass die Anforderungen erfüllt werden können.\\
 Die Anwendung besteht grundlegend aus einer \textit{\nameref{class:mainactivity}} in welche die verschiedenen Fragments geladen werden.\\
 Jedes Fragment wurde dabei nach dem in Android üblichen Pattern für Fragments entwickelt, welches aus einem \textit{Fragment}, das für die optische Darstellung der Informationen zuständig ist, und einen \textit{ViewModel}, welches die Daten verarbeitet und an das Fragment übergibt, implementiert.\\
 Im folgenden werden die implementierten Klassen und Konzepte der entwickelten Anwendung einmal genauer betrachtet.
@@ -13,7 +15,7 @@ Um der Navigationsleiste ein Funktion zuzuweisen, muss in der \textit{onCreate}-
 Die wichtigste Ansicht der Anwendung stellt die AR-Funktion dar. \\ 
 Sie zeigt dem Nutzer das Kamerabild und fügt die 3D-Modelle in dieses ein.\\
 Diese Ansicht wird durch das \textit{ARCameraFragment} bereitgestellt.
-Die Struktur, die zur Umsetzung der Augmented Reality genutzt wurde, beruht zum Großteil auf dem Konzepten und Klassen von ARToolKit und wurde dann an die Anforderungen dieser Arbeit angepasst.
+Die Struktur, die zur Umsetzung der Augmented Reality genutzt wurde, beruht zum Großteil auf dem Konzepten und Klassen von ARToolKitX und wurde dann an die Anforderungen dieser Arbeit angepasst.
 
 \subsection{ARCameraFragment}
 Das \textit{ARCameraFragment} bildet den Grundbaustein des Augmented Reality Fragments und erweitert das \textit{ARFragment}.
@@ -193,7 +195,7 @@ Zu Beginn der Datei werden alle Einzelteile des Modells definiert:
 \label{fig:obj-datei}
 \end{figure}
 Damit OpenGL mit diesen Einzelteilen arbeiten kann, müssen diese noch zusammengesetzt werden. \\
-Die dafür nötigen Informationen speichern die sogenannten Faces (deutsch: \glqq Gesichter\grqq ), welche die Kennung f besitzen. Sie beschreiben die einzelnen Flächen des Modells. Da zuvor im \nameref{chapter:Entwurf}) die Anforderung an die Obj-Dateien gestellt wurde, dass diese tranguliert werden, handelt es sich bei den Flächen immer um Dreiecke. \\ 
+Die dafür nötigen Informationen speichern die sogenannten Faces (deutsch: \glqq Gesichter\grqq ), welche die Kennung f besitzen. Sie beschreiben die einzelnen Flächen des Modells. Da zuvor im \nameref{chapter:entwurf}) die Anforderung an die Obj-Dateien gestellt wurde, dass diese tranguliert werden, handelt es sich bei den Flächen immer um Dreiecke. \\ 
 Die Zeile eines dieser Dreiecke speichert dafür für jeden Eckpunkt der Fläche drei Indices die auf jeweils einen der  zuvor definierten Vertices, Texturkordinaten und Normalenvektoren verweisen. Dadurch wird neben der Koordinaten der Fläche, auch der zugehörige Ausschnitt der Textur und der Normalenvektor der Datei definiert. \\
 Das Programm erstellt aus diesen Daten drei Listen (jeweils eine für Vertices, Texturkoordinaten und Normalenvektoren), indem es für jede Fläche die Daten jedes Punktes an die entsprechende Liste anhängt.\\
 Auf diese Listen kann dann über die Klassenvariablen des \textit{ObjLoader}-Objektes zugegriffen werden.
@@ -243,7 +245,7 @@ Diese Methode erlaubt es die \textit{ProjectionMatrix} des Shader Programms zuse
 Diese Methode erlaubt es die \textit{ModelViewMatrix} des Shader Programms zusetzen.
 
 
-\section{Tests}\label{sec:Tests}
+\section{Tests}\label{sec:tests}
 Während der Implementierung wurde mit Hilfe von ausführlichen Tests die Funktionalität neuer Features sichergestellt und eine ausführliche Testdokumentation angefertigt. Dadurch sollten Fehler, Probleme und mögliche Verbesserungen entdeckt und festgehalten werden. \\
 Das Ziel war es für jedes neue Feature einen Test durchzuführen.\\
 Dafür wurde die Anwendung mit Hilfe von Android Studio auf ein Androidgerät geladen und dort getestet.
@@ -263,7 +265,7 @@ Zu diesem Zweck wurde für jeden Durchlauf der in Abbildung \ref{fig:Testaufbau}
 \label{fig:Testaufbau}
 \end{figure}
 Zum Testen des Trackings wurde ein Testdokument \todo{Verweis auf Testdokument(Anhang)} angefertigt. Dieses Dokument wurde im Laufe der Entwicklung an die neuen Features angepasst und optimiert. Grundlegend bildet das Dokument einen oder mehrere Marker ab. Gegebenenfalls sind die Marker in Textpassagen eingebunden, um den Schwierigkeitsgrad für die Markererkennung zu erhöhen.\\
-Während des Testlaufs wurden jedes mal vier Testfälle durchlaufen, die in Abschnitt \ref{sec:Testfälle} beschrieben werden. Dabei wurden sowohl die Neuerungen getestet, als auch Veränderungen in den bereits bestehenden Features festgehalten.\\
+Während des Testlaufs wurden jedes mal vier Testfälle durchlaufen. Dabei wurden sowohl die Neuerungen getestet, als auch Veränderungen in den bereits bestehenden Features festgehalten.\\
 Jeder Testfall wurde dabei mit Hilfe der in Android enthaltenen Funktion \glqq Bildschirmrekorder\grqq aufgezeichnet und in dem entsprechenden Testbericht dokumentiert.\\
 Die Testfälle an sich beruhen auf den Eigenschaften des SIFT-Algorithmus, welcher Bildmerkmale extrahiert, die invariant gegenüber Rotation, Translation, Skalierung und partiell invariant gegenüber Helligkeitsveränderungen sind \citep[S. 345]{nischwitz:bildverarbeitung}. Mithilfe des Algorithmus können dieselben Objekte in zwei verschiedenen Aufnahmen wiedererkannt werden.\\
 Da auch beim Marker Tracking ein ähnliches Verfahren angewandt werden muss, sind auch hierbei die genannten Eigenschaften relevant. Deshalb wurden die folgenden Testfälle gewählt, die primär das Marker Tracking testen sollten, aber zusätzlich auch eine Evaluation des Renderns der Modelle ermöglichten:
@@ -304,7 +306,6 @@ Dieser Testfall diente dazu das Tracking aus verschiedenen Perspektiven zu teste
 \end{figure}
 
 \subsubsection{Trackinggeschwindigkeit}\todo{Besserer Name} Dieser Testfall sollte die Geschwindigkeit des Trackings, sowie die Robustheit testen. Dazu wurden ein oder mehrere Marker kurzzeitig mit der Hand verdeckt, um zu testen,ob anschließend alle Marker wieder erfolgreich getrackt wurden und wie schnell dieses erfolgte.
-
 
 
 \subsection{Markergenerierung}

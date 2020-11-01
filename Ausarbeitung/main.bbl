@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -149,6 +149,13 @@
 \newblock 12 (2018), Nr.~3, S.~75--85. --
 \newblock URL
   \url{https://www.online-journals.org/index.php/i-jim/article/view/8404}
+
+\bibitem[Hegner(2003)]{hegner:evaluation}
+\dinatlabel{Hegner 2003} \textsc{Hegner}, M.:
+\newblock \emph{IZ-Arbeitsbericht}. Bd.~29: \emph{Methoden zur Evaluation von
+  Software}.
+\newblock Informationszentrum Sozialwissenschaften, 2003
+\newblock ISSN 1431-6943
 
 \bibitem[{Khronos Group}({\natexlab{a}})]{khronos:geometry-shader}
 \dinatlabel{{Khronos Group} {\natexlab{a}}} \textsc{{Khronos Group}}:
