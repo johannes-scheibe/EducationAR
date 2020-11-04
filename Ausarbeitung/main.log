@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.6)  1 NOV 2020 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.6)  4 NOV 2020 17:18
 entering extended mode
 **./main.tex
 (main.tex
@@ -1059,27 +1059,13 @@ Class scrbook Warning: \float@addtolists detected!
 
 ] (Kapitel/Einleitung.tex
 chapter 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
-
- []
-
 [1
 
 
 
-]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 30.
-
-Overfull \hbox (32.62056pt too wide) in paragraph at lines 25--35
-\OT1/cmr/m/n/12 Dazu wur-de in ei-nem ers-ten Schritt ei-ne qua-li-ta-ti-ve Un-
-ter-su-chung der Ein-satzm[]oglichkeiten
- []
-
-[2]) (Kapitel/Grundlagen.tex [3] [4]
+] [2] [3]) (Kapitel/Grundlagen.tex [4]
 chapter 2.
-<Abbildungen/milgram-rv-continuum.jpeg, id=359, 1793.9522pt x 572.89032pt>
+<Abbildungen/milgram-rv-continuum.jpeg, id=378, 1793.9522pt x 572.89032pt>
 File: Abbildungen/milgram-rv-continuum.jpeg Graphic file (type jpg)
 <use Abbildungen/milgram-rv-continuum.jpeg>
 Package pdftex.def Info: Abbildungen/milgram-rv-continuum.jpeg  used on input l
@@ -1094,369 +1080,342 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--17
 
 
  <./Abbildungen/milgram-rv-continuum.jpeg>]
-<Abbildungen/snapchat-ar.jpg, id=381, 490.08093pt x 275.52937pt>
+<Abbildungen/snapchat-ar.jpg, id=400, 490.08093pt x 275.52937pt>
 File: Abbildungen/snapchat-ar.jpg Graphic file (type jpg)
 <use Abbildungen/snapchat-ar.jpg>
 Package pdftex.def Info: Abbildungen/snapchat-ar.jpg  used on input line 28.
 (pdftex.def)             Requested size: 213.39568pt x 119.97202pt.
-
-Overfull \hbox (9.40709pt too wide) in paragraph at lines 35--35
-[][][]\OT1/cmr/m/n/6 Umformulieren, 
- []
-
-
-Overfull \hbox (9.40709pt too wide) in paragraph at lines 35--35
-[][][]\OT1/cmr/m/n/6 Umformulieren, 
- []
-
-[6] [7 <./Abbildungen/snapchat-ar.jpg>] [8]
-<Abbildungen/BarcodeMarker3x3-10.png, id=429, 170.13562pt x 170.13562pt>
+ [6 <./Abbildungen/snapchat-ar.jpg>] [7] [8]
+<Abbildungen/BarcodeMarker3x3-10.png, id=447, 170.13562pt x 170.13562pt>
 File: Abbildungen/BarcodeMarker3x3-10.png Graphic file (type png)
 <use Abbildungen/BarcodeMarker3x3-10.png>
 Package pdftex.def Info: Abbildungen/BarcodeMarker3x3-10.png  used on input lin
 e 77.
 (pdftex.def)             Requested size: 85.35696pt x 85.35576pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[][][]|\OT1/cmr/m/n/12 Ein Bar-co-de Mar-ker f[]ur AR-Tool-Kit mit der ID 10.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-\OT1/cmr/m/n/12 (Quel-le: Ge-ne-riert mit dem Ma-ker Ge-ne-ra-tor htt-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--89
+Underfull \hbox (badness 10000) in paragraph at lines 83--91
 
  []
 
 [9 <./Abbildungen/BarcodeMarker3x3-10.png (PNG copy)>]
-<Abbildungen/android-stack.png, id=449, 1389.19pt x 2045.6425pt>
+<Abbildungen/android-stack.png, id=478, 1389.19pt x 2045.6425pt>
 File: Abbildungen/android-stack.png Graphic file (type png)
 <use Abbildungen/android-stack.png>
-Package pdftex.def Info: Abbildungen/android-stack.png  used on input line 98.
+Package pdftex.def Info: Abbildungen/android-stack.png  used on input line 100.
+
 (pdftex.def)             Requested size: 298.75264pt x 439.92943pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10] [11 <./Abbildungen/android-stack.png (PNG copy)>]
-<Abbildungen/activity-lifecycle.png, id=482, 514.92375pt x 665.48625pt>
+<Abbildungen/activity-lifecycle.png, id=514, 514.92375pt x 665.48625pt>
 File: Abbildungen/activity-lifecycle.png Graphic file (type png)
 <use Abbildungen/activity-lifecycle.png>
 Package pdftex.def Info: Abbildungen/activity-lifecycle.png  used on input line
- 115.
+ 119.
 (pdftex.def)             Requested size: 298.75264pt x 386.1143pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (8.56332pt too wide) in paragraph at lines 124--125
+Overfull \hbox (8.56332pt too wide) in paragraph at lines 128--129
 []\OT1/cmr/m/n/12 2009[]). Mit ih-rer Hil-fe ist es m[]oglich ei-ge-ne Da-ten a
 n-de-ren An-wen-dun-gen zur Verf[]ugung
  []
 
 [12] [13 <./Abbildungen/activity-lifecycle.png>]
-<Abbildungen/rendering-pipeline-opengl.png, id=528, 272.01625pt x 604.2575pt>
+<Abbildungen/rendering-pipeline-opengl.png, id=562, 272.01625pt x 604.2575pt>
 File: Abbildungen/rendering-pipeline-opengl.png Graphic file (type png)
 <use Abbildungen/rendering-pipeline-opengl.png>
 Package pdftex.def Info: Abbildungen/rendering-pipeline-opengl.png  used on inp
-ut line 144.
+ut line 148.
 (pdftex.def)             Requested size: 128.0387pt x 284.43442pt.
-<Abbildungen/triangle.png, id=537, 361.35pt x 373.395pt>
+<Abbildungen/triangle.png, id=571, 361.35pt x 373.395pt>
 File: Abbildungen/triangle.png Graphic file (type png)
 <use Abbildungen/triangle.png>
-Package pdftex.def Info: Abbildungen/triangle.png  used on input line 153.
+Package pdftex.def Info: Abbildungen/triangle.png  used on input line 157.
 (pdftex.def)             Requested size: 213.39568pt x 220.51195pt.
-<Abbildungen/simple-rendering-pipeline.png, id=552, 151.2852pt x 86.4831pt>
+<Abbildungen/simple-rendering-pipeline.png, id=586, 151.2852pt x 86.4831pt>
 File: Abbildungen/simple-rendering-pipeline.png Graphic file (type png)
 <use Abbildungen/simple-rendering-pipeline.png>
 Package pdftex.def Info: Abbildungen/simple-rendering-pipeline.png  used on inp
-ut line 169.
+ut line 172.
 (pdftex.def)             Requested size: 341.43437pt x 195.18686pt.
  [14 <./Abbildungen/rendering-pipeline-opengl.png>] [15 <./Abbildungen/triangle
 .png>]) (Kapitel/Arbeiten.tex
 [16 <./Abbildungen/simple-rendering-pipeline.png>]
 chapter 3.
-<Abbildungen/ar-object-continuum.png, id=579, 889.82437pt x 237.88875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+<Abbildungen/ar-object-continuum.png, id=613, 889.82437pt x 237.88875pt>
 File: Abbildungen/ar-object-continuum.png Graphic file (type png)
 <use Abbildungen/ar-object-continuum.png>
 Package pdftex.def Info: Abbildungen/ar-object-continuum.png  used on input lin
-e 18.
+e 16.
 (pdftex.def)             Requested size: 426.79135pt x 114.09818pt.
 [17
 
 
 ]
-Overfull \hbox (28.54544pt too wide) in paragraph at lines 32--33
+Overfull \hbox (28.54544pt too wide) in paragraph at lines 30--31
 \OT1/cmr/m/n/12 ra-ti-ven, in-struk-ti-ven Ler-nein-hei-ten, wel-che ver-schie-
 de-nen In-ter-ak-ti-onsm[]oglichkeiten,
  []
 
-
-Overfull \hbox (9.63602pt too wide) in paragraph at lines 33--34
+[18 <./Abbildungen/ar-object-continuum.png>]
+Overfull \hbox (9.63602pt too wide) in paragraph at lines 31--32
 []\OT1/cmr/m/n/12 Des Wei-te-ren muss be-dacht wer-den, dass f[]ur die Er-stel-
 lung von AR-Lernobjekten
  []
 
-[18 <./Abbildungen/ar-object-continuum.png>] [19]
-Overfull \hbox (0.89096pt too wide) in paragraph at lines 56--59
+[19]
+Overfull \hbox (0.89096pt too wide) in paragraph at lines 54--57
 [] []\OT1/cmss/bx/n/12 Konkrete An-wen-dungs-bei-spie-le[][] \OT1/cmr/m/n/12 Da
 s FeDiNAR-Projekt stellt ein kon-kre-tes An-
  []
 
 
-Overfull \hbox (37.86913pt too wide) in paragraph at lines 65--67
+Overfull \hbox (37.86913pt too wide) in paragraph at lines 63--65
 \OT1/cmr/m/n/12 Dabei wur-de die Re-le-vanz ein-zel-ner Ein-satz-ge-bie-te an-h
 and der An-zahl an Ver[]offentlichungen
  []
 
 [20]
-Overfull \hbox (5.76982pt too wide) in paragraph at lines 72--73
+Overfull \hbox (5.76982pt too wide) in paragraph at lines 70--71
 [] []\OT1/cmss/bx/n/12 Bildungsniveau[][] \OT1/cmr/m/n/12 Die-se Ka-te-go-rie z
 iel-te dar-auf ab die Ziel-grup-pen der AR-Systeme
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 113--115
-
- []
-
-[23]
-Overfull \hbox (7.18602pt too wide) in paragraph at lines 135--138
+[21] [22] [23]
+Overfull \hbox (7.18602pt too wide) in paragraph at lines 132--135
 \OT1/cmr/m/n/12 Auch ei-ne Ver-bes-se-rung der Krea-ti-vit[]at, der Wis-sens-au
 f-nah-me und der Pro-bleml[]osung
  []
 
 [24]
-Overfull \hbox (16.02623pt too wide) in paragraph at lines 155--157
+Overfull \hbox (16.02623pt too wide) in paragraph at lines 152--154
 \OT1/cmr/m/n/12 lem im Be-reich Be-reich des Geis-tes-zu-stands, der Lern-kur-v
 e und der Zug[]anglichkeit
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-
+[25] [26] [27] [28] [29]
+Overfull \hbox (25.95111pt too wide) in paragraph at lines 227--228
+[]\OT1/cmr/m/n/12 Auerdem sch[]atzt AR-Co-re die Licht-verh[]altnisse der Um-g
+e-bung, um das Verst[]andnis
  []
 
-[26] [27] [28]
-Overfull \hbox (4.30205pt too wide) in paragraph at lines 217--219
-[] []\OT1/cmss/bx/n/12 Fazit[][] []\OT1/cmr/m/n/12 Buch-ner[] konn-te in bei-de
-n Klas-sen po-si-ti-ve Ein-fl[]usse der AR-Lernumgebung
- []
-
-<Abbildungen/artoolkitx-architecture.png, id=790, 1927.2pt x 1084.05pt>
+<Abbildungen/artoolkitx-architecture.png, id=841, 1927.2pt x 1084.05pt>
 File: Abbildungen/artoolkitx-architecture.png Graphic file (type png)
 <use Abbildungen/artoolkitx-architecture.png>
 Package pdftex.def Info: Abbildungen/artoolkitx-architecture.png  used on input
- line 230.
+ line 239.
 (pdftex.def)             Requested size: 341.43437pt x 192.0439pt.
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+[30]
 
- []
+LaTeX Warning: Reference `fig:atlas-skelett)' on page 31 undefined on input lin
+e 257.
 
-
-LaTeX Warning: Reference `fig:atlas-skelett)' on page 30 undefined on input lin
-e 246.
-
-<Abbildungen/app-atlas-skelett.png, id=805, 2396.955pt x 1674.255pt>
+<Abbildungen/app-atlas-skelett.png, id=861, 2396.955pt x 1674.255pt>
 File: Abbildungen/app-atlas-skelett.png Graphic file (type png)
 <use Abbildungen/app-atlas-skelett.png>
 Package pdftex.def Info: Abbildungen/app-atlas-skelett.png  used on input line 
-250.
+261.
 (pdftex.def)             Requested size: 341.43437pt x 238.48163pt.
-) (Kapitel/Anforderungsanalyse.tex [30 <./Abbildungen/artoolkitx-architecture.p
-ng>] [31 <./Abbildungen/app-atlas-skelett.png>]
-chapter 4.
+) (Kapitel/Anforderungsanalyse.tex
 
-Overfull \hbox (6.93326pt too wide) in paragraph at lines 19--31
-\OT1/cmr/m/n/12 Der zwei-te Punkt ist, dass an-stel-le des meis-tens ver-wen-de
--ten Na-tu-ral Fea-ture Tracking
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31 <./Abbildungen/artoolkitx-architecture.png>] [32 <./Abbildungen/app-atlas-s
+kelett.png>]
+chapter 4.
+[33
+
+
+] [34]
+Overfull \hbox (5.9106pt too wide) in paragraph at lines 32--39
+\OT1/cmr/m/n/12 typ eher an die fun-da-men-ta-len AR-Lerneinheiten. Ge-ne-ra-ti
+-ve Ler-nein-hei-ten ben[]otigen
  []
 
-[32
-
-
-] [33] [34]
-<Abbildungen/use-case-diagram.png, id=856, 723.70375pt x 653.44125pt>
+[35]
+<Abbildungen/use-case-diagram.png, id=913, 723.70375pt x 653.44125pt>
 File: Abbildungen/use-case-diagram.png Graphic file (type png)
 <use Abbildungen/use-case-diagram.png>
-Package pdftex.def Info: Abbildungen/use-case-diagram.png  used on input line 5
-9.
+Package pdftex.def Info: Abbildungen/use-case-diagram.png  used on input line 6
+0.
 (pdftex.def)             Requested size: 426.79135pt x 385.3575pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (8.77196pt too wide) in paragraph at lines 70--73
+Overfull \hbox (8.77196pt too wide) in paragraph at lines 71--74
 \OT1/cmr/m/n/12 die Tech-no-lo-gie, die Qua-lit[]at, die Be-nut-ze-ro-ber-fl[]a
 che, die durch-zuf[]uhrende T[]atigkeiten
  []
 
 
-Overfull \hbox (27.84006pt too wide) in paragraph at lines 70--73
+Overfull \hbox (27.84006pt too wide) in paragraph at lines 71--74
 \OT1/cmr/m/n/12 Auf Grund-la-ge die-ser De-fi-ni-ti-on wur-den die fol-gen-den 
 funk-tio-na-len und nicht-funktionalen
  []
 
-[35] [36 <./Abbildungen/use-case-diagram.png>]
-Overfull \hbox (19.79568pt too wide) in paragraph at lines 101--103
+[36] [37 <./Abbildungen/use-case-diagram.png>] [38]
+Overfull \hbox (19.79568pt too wide) in paragraph at lines 102--104
 []\OT1/cmr/m/n/12 Bei vollst[]andig er-kann-tem Mar-ker soll-te das Tracking ro
 -bust ge-gen[]uber []auerlichen
  []
 
-[37]) (Kapitel/Entwurf.tex [38]
+) (Kapitel/Entwurf.tex [39]
 chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--12
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
  []
 
-[39
+[40
 
 
-] [40] [41] [42]
-<Abbildungen/ui-mockup.png, id=922, 683.55376pt x 393.47pt>
+] [41]
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+  [][][]\OT1/cmr/m/n/10 Github: []$\OT1/cmtt/m/n/10 https : / / github . com / 
+artoolkitx / artoolkitx / tree / master / Examples / Square %
+ []
+
+[42] [43] [44]
+<Abbildungen/ui-mockup.png, id=995, 683.55376pt x 393.47pt>
 File: Abbildungen/ui-mockup.png Graphic file (type png)
 <use Abbildungen/ui-mockup.png>
-Package pdftex.def Info: Abbildungen/ui-mockup.png  used on input line 79.
+Package pdftex.def Info: Abbildungen/ui-mockup.png  used on input line 80.
 (pdftex.def)             Requested size: 341.43437pt x 196.54237pt.
-) (Kapitel/Implementierung.tex
-Overfull \hbox (14.1401pt too wide) in paragraph at lines 76--1
-\OT1/cmr/m/n/12 les User In-ter-face be-sit-zen, wel-ches dem Nut-zer grund-le-
-gen-de In-ter-ak-ti-onsm[]oglichkeiten
- []
-
-[43] [44 <./Abbildungen/ui-mockup.png>]
+) (Kapitel/Implementierung.tex [45 <./Abbildungen/ui-mockup.png>]
 chapter 6.
-[45
+[46
 
 
-] [46] [47] [48] [49] [50]
+] [47] [48] [49] [50] [51]
 Overfull \hbox (9.52348pt too wide) in paragraph at lines 135--137
 \OT1/cmr/m/n/12 Die \OT1/cmr/m/it/12 sa-ve-Bit-map() \OT1/cmr/m/n/12 Me-tho-de 
 spei-chert ein Bild, wel-ches in Form ei-ner Bit-map []ubergeben
  []
 
-[51]
-<Abbildungen/barcode-creation.png, id=978, 944.7797pt x 770.12718pt>
+[52]
+<Abbildungen/barcode-creation.png, id=1046, 944.7797pt x 770.12718pt>
 File: Abbildungen/barcode-creation.png Graphic file (type png)
 <use Abbildungen/barcode-creation.png>
 Package pdftex.def Info: Abbildungen/barcode-creation.png  used on input line 1
 50.
 (pdftex.def)             Requested size: 341.43437pt x 278.31493pt.
- [52 <./Abbildungen/barcode-creation.png>]
+ [53 <./Abbildungen/barcode-creation.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 167--171
 
  []
 
-[53]
-<Abbildungen/obj-datei.png, id=1000, 362.10281pt x 159.59625pt>
+[54]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 176.
+<Abbildungen/obj-datei.png, id=1064, 362.10281pt x 159.59625pt>
 File: Abbildungen/obj-datei.png Graphic file (type png)
 <use Abbildungen/obj-datei.png>
-Package pdftex.def Info: Abbildungen/obj-datei.png  used on input line 193.
+Package pdftex.def Info: Abbildungen/obj-datei.png  used on input line 195.
 (pdftex.def)             Requested size: 256.07741pt x 112.86603pt.
- [54]
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+ [55]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-[55 <./Abbildungen/obj-datei.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+[56 <./Abbildungen/obj-datei.png>] [57]
+Underfull \hbox (badness 10000) in paragraph at lines 234--237
 
  []
 
-[56] [57]
-<Abbildungen/Testaufbau.jpeg, id=1025, 3661.68pt x 2746.26pt>
+[58]
+<Abbildungen/Testaufbau.jpeg, id=1091, 3661.68pt x 2746.26pt>
 File: Abbildungen/Testaufbau.jpeg Graphic file (type jpg)
 <use Abbildungen/Testaufbau.jpeg>
-Package pdftex.def Info: Abbildungen/Testaufbau.jpeg  used on input line 263.
+Package pdftex.def Info: Abbildungen/Testaufbau.jpeg  used on input line 265.
 (pdftex.def)             Requested size: 298.75264pt x 224.06335pt.
 
-Overfull \hbox (6.15714pt too wide) in paragraph at lines 267--267
+Overfull \hbox (6.15714pt too wide) in paragraph at lines 269--269
 \OT1/cmr/m/n/6 ment(Anhang)[]  
  []
 
 
-Overfull \hbox (6.15714pt too wide) in paragraph at lines 267--267
+Overfull \hbox (6.15714pt too wide) in paragraph at lines 269--269
 \OT1/cmr/m/n/6 ment(Anhang)[]  
  []
 
-[58 <./Abbildungen/Testaufbau.jpeg>]
-<Abbildungen/Invarianz/Perspektive1.jpg, id=1034, 2321.67375pt x 2321.67375pt>
+[59 <./Abbildungen/Testaufbau.jpeg>]
+<Abbildungen/Invarianz/Perspektive1.jpg, id=1100, 2321.67375pt x 2321.67375pt>
 File: Abbildungen/Invarianz/Perspektive1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Perspektive1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Perspektive1.jpg  used on input 
-line 278.
+line 280.
 (pdftex.def)             Requested size: 85.35696pt x 85.34085pt.
-<Abbildungen/Invarianz/Perspektive2.jpg, id=1035, 2956.04375pt x 2956.04375pt>
+<Abbildungen/Invarianz/Perspektive2.jpg, id=1101, 2956.04375pt x 2956.04375pt>
 File: Abbildungen/Invarianz/Perspektive2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Perspektive2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Perspektive2.jpg  used on input 
-line 279.
+line 281.
 (pdftex.def)             Requested size: 85.35696pt x 85.33968pt.
-<Abbildungen/Invarianz/Skalierung1.jpg, id=1036, 2255.42625pt x 2269.47874pt>
+<Abbildungen/Invarianz/Skalierung1.jpg, id=1102, 2255.42625pt x 2269.47874pt>
 File: Abbildungen/Invarianz/Skalierung1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Skalierung1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Skalierung1.jpg  used on input l
-ine 287.
+ine 289.
 (pdftex.def)             Requested size: 85.35696pt x 85.88094pt.
-<Abbildungen/Invarianz/Skalierung2.jpg, id=1037, 1896.08376pt x 1896.08376pt>
+<Abbildungen/Invarianz/Skalierung2.jpg, id=1103, 1896.08376pt x 1896.08376pt>
 File: Abbildungen/Invarianz/Skalierung2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Skalierung2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Skalierung2.jpg  used on input l
-ine 288.
+ine 290.
 (pdftex.def)             Requested size: 85.35696pt x 85.34901pt.
-<Abbildungen/Invarianz/Rotation1.jpg, id=1038, 3336.465pt x 3336.465pt>
+<Abbildungen/Invarianz/Rotation1.jpg, id=1104, 3336.465pt x 3336.465pt>
 File: Abbildungen/Invarianz/Rotation1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Rotation1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Rotation1.jpg  used on input lin
-e 295.
+e 297.
 (pdftex.def)             Requested size: 85.35696pt x 85.32564pt.
-<Abbildungen/Invarianz/Rotation2.jpg, id=1039, 1711.1428pt x 1710.39pt>
+<Abbildungen/Invarianz/Rotation2.jpg, id=1105, 1711.1428pt x 1710.39pt>
 File: Abbildungen/Invarianz/Rotation2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Rotation2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Rotation2.jpg  used on input lin
-e 296.
+e 298.
 (pdftex.def)             Requested size: 85.35696pt x 85.31572pt.
- [59 <./Abbildungen/Invarianz/Perspektive1.jpg> <./Abbildungen/Invarianz/Perspe
+ [60 <./Abbildungen/Invarianz/Perspektive1.jpg> <./Abbildungen/Invarianz/Perspe
 ktive2.jpg> <./Abbildungen/Invarianz/Skalierung1.jpg> <./Abbildungen/Invarianz/
 Skalierung2.jpg>]
-<Abbildungen/Invarianz/Belichtung1.jpg, id=1048, 2569.34906pt x 2568.59625pt>
+<Abbildungen/Invarianz/Belichtung1.jpg, id=1114, 2569.34906pt x 2568.59625pt>
 File: Abbildungen/Invarianz/Belichtung1.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Belichtung1.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Belichtung1.jpg  used on input l
-ine 303.
+ine 305.
 (pdftex.def)             Requested size: 85.35696pt x 85.3244pt.
-<Abbildungen/Invarianz/Belichtung2.jpg, id=1049, 1327.96124pt x 1327.96124pt>
+<Abbildungen/Invarianz/Belichtung2.jpg, id=1115, 1327.96124pt x 1327.96124pt>
 File: Abbildungen/Invarianz/Belichtung2.jpg Graphic file (type jpg)
 <use Abbildungen/Invarianz/Belichtung2.jpg>
 Package pdftex.def Info: Abbildungen/Invarianz/Belichtung2.jpg  used on input l
-ine 304.
+ine 306.
 (pdftex.def)             Requested size: 85.35696pt x 85.34789pt.
- [60 <./Abbildungen/Invarianz/Rotation1.jpg> <./Abbildungen/Invarianz/Rotation2
+ [61 <./Abbildungen/Invarianz/Rotation1.jpg> <./Abbildungen/Invarianz/Rotation2
 .jpg> <./Abbildungen/Invarianz/Belichtung1.jpg> <./Abbildungen/Invarianz/Belich
 tung2.jpg>])
-(Kapitel/Evaluation.tex [61]
+(Kapitel/Evaluation.tex [62]
 chapter 7.
-[62
+[63
 
 
 ]
 
-LaTeX Warning: Reference `sec:test-marker' on page 63 undefined on input line 2
+LaTeX Warning: Reference `sec:test-marker' on page 64 undefined on input line 2
 7.
 
-[63]
+[64]
 Overfull \hbox (2.03497pt too wide) in paragraph at lines 47--47
 [][][]\OT1/cmr/m/n/6 Beschreibung 
  []
@@ -1466,15 +1425,15 @@ Overfull \hbox (2.03497pt too wide) in paragraph at lines 47--47
 [][][]\OT1/cmr/m/n/6 Beschreibung 
  []
 
-[64] [65]
+[65] [66]
 Overfull \hbox (7.66527pt too wide) in paragraph at lines 78--82
 \OT1/cmr/m/n/12 Auf Grund der Corona-Pandemie konn-te der Utility-Test nur mit 
 ei-ner re-pr[]asentativen
  []
 
-[66]) (Kapitel/Fazit.tex [67]
+[67]) (Kapitel/Fazit.tex [68]
 chapter 8.
-[68
+[69
 
 
 ]
@@ -1482,33 +1441,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-) [69] [70] (main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 28--35
+) [70] [71] (main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 35--42
 \OT1/cmtt/m/n/12 developer . android . com / guide / components / activities / 
 intro-[]activities$[]\OT1/cmr/m/n/12 .
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 52--59
-[]\OT1/cmr/m/n/12 [Android f]  \OT1/cmr/m/sc/12 An-dro-id\OT1/cmr/m/n/12 :  \OT
+Underfull \hbox (badness 2165) in paragraph at lines 59--66
+[]\OT1/cmr/m/n/12 [Android g]  \OT1/cmr/m/sc/12 An-dro-id\OT1/cmr/m/n/12 :  \OT
 1/cmr/m/it/12 Un-der-stand the Ac-ti-vi-ty Li-fe-cy-cle\OT1/cmr/m/n/12 .  We-b-
 quel-le.
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 52--59
+Underfull \hbox (badness 1052) in paragraph at lines 59--66
 \OT1/cmr/m/n/12 --  URL []$\OT1/cmtt/m/n/12 https : / / developer . android . c
 om / guide / components / activities /
  []
 
-[71
+[72
 
 
 
 
-] [72] [73]) (Kapitel/Anhang.tex [74]
+] [73] [74]) (Kapitel/Anhang.tex [75]
 chapter A.
-) [75
+
+Overfull \hbox (33.42429pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/n/12 Github: []$\OT1/cmtt/m/n/12 https : / / github . com / artoolki
+tx / artoolkitx$[]\OT1/cmr/m/n/12 , zu-letzt auf-ge-ru-fen am 04.11.2020 
+ []
+
+) [76
 
 
 ] (Sonstiges/Erklaerung.tex) [1
@@ -1531,28 +1496,33 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 25706 strings out of 480756
- 519657 string characters out of 2903752
- 918573 words of memory out of 3000000
- 40834 multiletter control sequences out of 15000+200000
- 541186 words of font info for 56 fonts, out of 3000000 for 9000
+ 25723 strings out of 480756
+ 519601 string characters out of 2903752
+ 915573 words of memory out of 3000000
+ 40833 multiletter control sequences out of 15000+200000
+ 543053 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,19n,90p,10101b,964s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Johannes\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
-00\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.
-pfb>
-Output written on main.pdf (84 pages, 16262079 bytes).
+ 73i,20n,90p,10101b,963s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+ <C:\Users\Johannes\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
+\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (85 pages, 16318776 bytes).
 PDF statistics:
- 1628 PDF objects out of 1728 (max. 8388607)
- 376 named destinations out of 1000 (max. 500000)
- 1063 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1742 PDF objects out of 2073 (max. 8388607)
+ 391 named destinations out of 1000 (max. 500000)
+ 1135 words of extra memory for PDF output out of 10000 (max. 10000000)
 

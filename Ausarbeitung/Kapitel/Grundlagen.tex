@@ -8,44 +8,44 @@ Die Definition von \citeauthor{milgram:augmented-reality} fasst nun die Virtual 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{Abbildungen/milgram-rv-continuum.jpeg}
-\caption[RV Kontinuum]{Das Reality-Virtuality (RV) Kontinuum. (Quelle: \citet[S. 283]{milgram:augmented-reality})}
+\caption[Augmented Reality: RV Kontinuum]{Das Reality-Virtuality (RV) Kontinuum. (Quelle: \citet[S. 283]{milgram:augmented-reality})}
 \label{fig:RV-Kontinnum}
-\end{figure}
+\end{figure}\\
 Eine weitere Definition, die sich auch mit der von Milgram vereinbaren lässt, beschreibt die Augmented Reality als eine computergestützte Erweiterung der wahrnehmbaren Realität um virtuelle Objekte \citep[S. 9]{tab:augmented-reality}. 
 Auf dieser Grundlage kann man Augmented Reality als das Einbinden und Visualisieren digitaler, computergenerierte Objekte in der realen Welt auffassen.\\
 Oftmals wird dabei das Ziel verfolgt eine möglichst realistische Illusion für den Nutzer zu erschaffen.\\
 
 \subsection{Einsatzbereiche}
-Die erste Assoziation, die die Meisten mit dem Begriff Augmented Reality verbinden, ist vermutlich der Unterhaltungsbereich. Große Firmen wie zum Beispiel Snapchat nutzen die Technologie um kleine Gimmicks für ihre Nutzer bereitzustellen (siehe Abbildung \ref{fig:snapchat-ar}).\\
-Doch auch neben dem Bereich der Unterhaltung wird AR an vielen weiteren Stellen eingesetzt.\\
-Beispielhaft zu nennen wären hier der Bereich der Produktion, in welchem AR unter anderem als Hilfsmittel zum Prototyping \citep[S. 44]{tab:augmented-reality} genutzt werden kann. Im Bereich der Medizin können des weiteren mit Hilfe der Augmented Reality Therapiemaßnahmen zur Behandlung psychische Erkrankungen oder Assistenzsysteme zur Diagnose und Operation entwickelt werden \citep[S. 52, 54]{tab:augmented-reality}.\\
-Der Einsatzbereich in dessen Rahmen sich diese Arbeit bewegt ist jedoch der Bereich der Bildung.\\
-Hier bietet Augmented Reality die Möglichkeit eines neuen Informationsmediums, welches vor allem zur Betrachtung dreidimensionaler Lerninhalte genutzt werden kann, wodurch den Lernenden ein verbessertes, räumliches Verständnis ermöglicht werden kann. 
-Laut einer systematischen Analyse der Universität Stockholm, die in Kapitel \ref{sec:hedberg-review} genauer betrachtet wird, sind vor allem die Naturwissenschaften relevant für den Einsatz von AR  \citep[S. 81]{hedberg:review-ar-learning}. 
+Die erste Assoziation, die die Meisten mit dem Begriff Augmented Reality verbinden, ist vermutlich der Unterhaltungsbereich. Große Firmen nutzen die Technologie um zum Beispiel kleine Gimmicks für ihre Nutzer bereitzustellen (siehe Abbildung \ref{fig:snapchat-ar}).\\
+Doch auch neben dem Bereich der Unterhaltung wird AR an vielen Stellen eingesetzt.\\
+Beispielhaft zu nennen wären hier der Bereich der Produktion, in welchem AR unter anderem als Hilfsmittel zum Prototyping genutzt werden kann \citep[S. 44]{tab:augmented-reality}. Im Bereich der Medizin können des Weiteren mit Hilfe der Augmented Reality Therapiemaßnahmen zur Behandlung von psychische Erkrankungen oder Assistenzsysteme zur Diagnose und Operation entwickelt werden \citep[S. 52, 54]{tab:augmented-reality}.\\
+Der Bereich, der in dieser Arbeit einmal genauer beleuchtet werden soll, ist jedoch der Bildungsbereich.
+Hier bietet Augmented Reality die Möglichkeit eines neuen Informationsmediums, welches vor allem zur Betrachtung dreidimensionaler Lerninhalte genutzt werden kann, um den Lernenden ein verbessertes, räumliches Verständnis ermöglichen. 
+Laut einer systematischen Analyse der Universität Stockholm, die in Kapitel \ref{sec:hedberg-review} genauer betrachtet wird, sind vor allem die Naturwissenschaften relevant für den Einsatz der Augmented Reality  \citep[S. 81]{hedberg:review-ar-learning}. 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{Abbildungen/snapchat-ar.jpg}
-\caption[Snapchat AR]{AR Gimmick aus der Anwendung Snapchat. (Quelle: Screenshot aus der Anwendung Snapchat, 01.08.2020)}
+\caption[Augmented Reality: Beispiel Snapchat]{AR Gimmick aus der Anwendung Snapchat. (Quelle: Screenshot aus der Anwendung Snapchat, 01.08.2020)}
 \label{fig:snapchat-ar}
 \end{figure}
 
 \subsection{Technische Grundlagen}
-Zur Umsetzung der Augmented Reality ist eine Umgebungserfassung und -analyse des Systems mit Hilfe einer Tracking Software (auch Tracker genannt) notwendig. Auf Grundlage dieser können dann im Anschluss computergenerierte virtuelle Objekte in die Umgebung eingefügt werden. \\
-Zur Analyse der Systemumgebung können verschiedene Eingabesysteme genutzt werden, mit deren Hilfe die Eigenschaften der Umgebung und der in ihr vorhandenen Objekte wahrgenommen werden können \citep[S. 22]{tab:augmented-reality}. Zu diesen Eigenschaften zählen neben statischen, wie der Größe und Position, auch dynamische Eigenschaften, welche die Veränderung der statischen Attribute einzelner Objekte umfassen \todo{Umformulieren, wegen Zitat}. Beispielhafte Technologien, die zur Erfassung genutzt werden können, sind Kamerasysteme, Infrarotsensoren, Laser oder sonstige Messgeräte, die Eigenschaften der Umgebung liefern können \citep[S. 22]{tab:augmented-reality}. \\
-Neben der Umgebungserfassung ist auch die Verfolgung einzelner, in der Umgebung enthaltender Objekte notwendiger Bestandteil der Tracking Software, um die dynamischen Eigenschaften der realen Umgebung auf die virtuellen Objekte zu übertragen.\\
-Eine wichtige Rolle beim Tracking spielt die Genauigkeit, mit der die Eigenschaften der Umgebung wahrgenommen werden, sie bestimmt wie akkurat virtuelle Objekte in die reale Umgebung eingefügt werden können und wie realistisch die Illusion erscheint \citep[S. 2]{klein:visual-tracking}.
+Zur Umsetzung der Augmented Reality ist eine Umgebungserfassung und -analyse des Systems mit Hilfe einer Tracking Software (auch Tracker genannt) notwendig. Auf dieser Grundlage können dann im Anschluss computergenerierte, virtuelle Objekte in die Umgebung eingefügt werden. \citep[S. 25]{mehler-bicher:augmented-reality}\\
+Zur Analyse der Systemumgebung können verschiedene Eingabesysteme genutzt werden, mit deren Hilfe die Eigenschaften der Umgebung und der, in ihr vorhandenen, Objekte wahrgenommen werden können. Zu diesen Eigenschaften zählen neben statischen, wie der Größe und Position, auch dynamische Eigenschaften, welche die Veränderung der statischen Attribute einzelner Objekte mit Blick auf eine zeitliche Komponente umfassen. Beispielhafte Technologien, die zur Erfassung genutzt werden können, sind Kamerasysteme, Infrarotsensoren, Laser oder sonstige Messgeräte, die Eigenschaften der Umgebung liefern können. \citep[S. 22]{tab:augmented-reality} \\
+Neben der Umgebungserfassung ist auch die Verfolgung einzelner, in der Umgebung enthaltender Objekte notwendiger Bestandteil der Tracking Software \citep[S. 26]{mehler-bicher:augmented-reality}. Dieser Schritt ist notwendig um die dynamischen Eigenschaften der realen Umgebung auf die virtuellen Objekte zu übertragen. Dazu müssen aufeinanderfolgender Eingaben der Sensoren analysiert und daraus die Veränderung einzelner Objekte in der realen Welt abgeleitet werden.\\
+Bei diesem gesamten Prozess spielt die Genauigkeit, mit der die Eigenschaften der Umgebung wahrgenommen werden, eine wichtige Rolle, da sie bestimmt wie akkurat virtuelle Objekte in die reale Umgebung eingefügt werden können und wie realistisch somit die Illusion erscheint \citep[S. 2]{klein:visual-tracking}.
 
 \subsubsection{Ausgabegeräte}\label{sec:ausgabegeräte}
 Grundsätzlich kann bei der Umsetzung von Augmented Reality eine Kategorisierung der Technologie durch die Art der Endgeräte vorgenommen werden. Dabei stehen vor allem die folgenden zwei Varianten zur Verfügung:
 \begin{itemize}
 \item HMDs: Ein Head-Mounted-Display (HMD, deutsch: \glqq am Kopf befestigter Bildschirm\grqq) beschreibt eine Technologie, bei der die Sensorik, sowie das Ausgabegerät am Kopf des Nutzers befestigt wird \citep[S. 44]{mehler-bicher:augmented-reality}. Populare Umsetzungen dieser Technologie stellen unter anderem spezielle Brillen dar, wie die Google Glasses.
-\item HHDs: Zu der Kategorie Hand-Hold-Display (HHD, deutsch: \glqq Handhalteanzeige\grqq) gehören Technologien, die durch den Nutzer in der Hand gehalten werden. DAzu gehören beispielsweise auch Smartphones auf denen AR-Anwendungen laufen.
+\item HHDs: Zu der Kategorie Hand-Hold-Display (HHD, deutsch: \glqq Handhalteanzeige\grqq) gehören Technologien, die durch den Nutzer in der Hand gehalten werden. Dieses umfasst unter anderem auch Smartphones auf denen AR-Anwendungen laufen.
 \end{itemize}
 Alternativ können die Sensoren und das Ausgabegerät auch fest in einem stationären Gerät montiert sein \citep[S. 27]{mehler-bicher:augmented-reality} oder Mischtechniken eingesetzt werden.
 
 \subsubsection{Trackingverfahren}\label{sec:Trackingverfahren}
-Grundsätzlich kann bei der Tracking Software zwischen zwei Verfahren unterschieden werden, dem nicht visuellen und dem visuellen Tracking \citep[S. 26]{mehler-bicher:augmented-reality}. Während bei Letzterem auf Daten, von zum Beispiel einer Kamera, zurückgegriffen wird, beruht das nichtvisuelle Tracking auf Sensoren, die direkten Zugriff auf die Eigenschaften der Umgebung, wie die Position, liefern. \\
+Grundsätzlich kann bei der Tracking Software zwischen zwei Verfahren unterschieden werden, dem nicht visuellen und dem visuellen Tracking \citep[S. 26]{mehler-bicher:augmented-reality}. Während bei Letzterem auf Daten, von zum Beispiel einer Kamera, zurückgegriffen wird, beruht das nichtvisuelle Tracking auf Sensoren, die direkten Zugriff auf die Eigenschaften der Umgebung, wie der Position, liefern. \\
 Bei dem für diese Arbeit relevantem visuellen Tracking, müssen die Eigenschaften der Umgebung aus dem Kamerabild abgeleitet und verarbeitet werden. Dazu werden in der Regel nach \citet[S. 26]{mehler-bicher:augmented-reality} zwei Schritte benötigt:
 \begin{enumerate}
 \item Die Initialisierung, bei welcher nach einem bestimmten Muster im Kamerabild gesucht wird. Dieses kann dabei im Vorfeld definiert sein oder aus dem Kamerabild abgeleitet werden.
@@ -53,9 +53,10 @@ Bei dem für diese Arbeit relevantem visuellen Tracking, müssen die Eigenschaft
 \end{enumerate}
 Wie bereits bei der Initialisierung deutlich wurde kann das Muster, das getrackt wird, im Vorfeld definiert werden oder aus dem Kamerabild extrahiert werden. Dabei spricht man von Marker Based Feature Tracking beziehungsweise Natural Feature Tracking. 
 
-\paragraph{Marker Based Feature Tracking} verwendet feste, im Vorfeld definierte Muster, die in der Umgebung platziert werden. Diese Muster werden als Marker bezeichnet. Meistens handelt es sich dabei um schwarze Quadrate, in deren Mitte eine ID als ein Muster aus schwarzen und weißen Vierecken codiert ist. Ein beispielhafter Marker ist in Abbildung \ref{fig:barcode-marker} zusehen.
+\paragraph{Marker Based Feature Tracking} verwendet feste, im Vorfeld definierte Muster, die in der Umgebung platziert werden. Diese Muster werden als Marker bezeichnet. Meistens handelt es sich dabei um schwarze Quadrate, in deren Mitte eine ID als ein Muster aus schwarzen und weißen Vierecken codiert werden kann. Ein beispielhafter Marker ist in Abbildung \ref{fig:barcode-marker} zusehen.
 Die Marker sind dabei optisch so angepasst, dass sie sehr einfach von einem Tracker erfasst werden können, um die Erkennungsgeschwindigkeit und somit die Performanz des gesamten Systems zu optimieren \citep[S. 28]{mehler-bicher:augmented-reality}.\\
 \citeauthor{owen:fiducial-marker} stellen dazu folgende Anforderungen an einen optimalen Marker:
+Nach \citet[S. 2]{owen:fiducial-marker} sollte ein optimaler Marker dazu die folgenden Anforderungen erfüllen:
 \begin{itemize}
 \item Ein idealer Marker sollte die eindeutige Bestimmung seiner Position und Orientierung im Verhältnis zur Kamera unterstützen.
 \item Der Marker sollte alle Ausrichtungen unterstützen.
@@ -63,29 +64,30 @@ Die Marker sind dabei optisch so angepasst, dass sie sehr einfach von einem Trac
 \item Ein Marker muss einfach lokalisierbar und identifizierbar sein.
 \item Die Marker müssen über einen weiten Aufnahmebereich funktionieren
 \end{itemize}
-(Nach \citet[S. 2]{owen:fiducial-marker})\\
 Durch diese Eigenschaften ist die Erkennung von einem Marker relativ simpel und funktioniert im Allgemeinen in drei Schritten:
 \begin{enumerate}
 \item Zunächst müssen die Kanten aus dem Bild extrahiert werden, um mit deren Hilfe alle Vierecke aus dem Bild zu filtern.
 \item Anschließend kann mittels Template Matching oder ähnlichen Verfahren der Marker erkannt werden und die ID, falls vorhanden, dekodiert werden.
 \item Im letzten Schritt muss dann noch die Position, Größe und Orientierung des Markers berechnet werden, um daraus Schlüsse auf die Umgebung ziehen zu können.
 \end{enumerate}
-(In Anlehnung an \citet{cukovic:marker-vs-natural})
+(In Anlehnung an \citet[Kapitel 3.1]{cukovic:marker-vs-natural})
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.2\textwidth]{Abbildungen/BarcodeMarker3x3-10.png}
-\caption[Barcode Marker]{Ein Barcode Marker für ARToolKit mit der ID 10. (Quelle: Generiert mit dem  Maker Generator https://au.gmented.com/app/marker/marker.php)}
+\caption[Augmented Reality: Barcode Marker]{Ein Barcode Marker für ARToolKit mit der ID 10. (Quelle: Online Marker Generator\footnote{Quelle: \url{https://au.gmented.com/app/marker/marker.php},  zuletzt aufgerufen am 04.11.2020})}
 \label{fig:barcode-marker}
-\end{figure}\todo{link ins Literaturverzeichnis?}
+\end{figure}
 
 
-\paragraph{Natural Feature Tracking} hingegen greift auf sogenannte Keypoints zurück, die natürlich im Bild enthalten sind. Keypoints beschreiben dabei markante Bildpunkte, die sich durch zum Beispiel starke Helligkeitsveränderungen in der direkten Nachbarschaft auszeichnen, wie es unter anderem bei Kanten oder Ecken der Fall ist. Um ein virtuelles Objekt an einer bestimmten Stelle in der realen Umgebung zu platzieren, werden für den entsprechenden Bildausschnitt, diese Keypoints extrahiert. Im Anschluss wird dann mit Hilfe von Matchingverfahren versucht die gespeicherten Keypoints in den folgenden Frames wiederzuerkennen. \\
-Ein sehr bekanntes Verfahren zur Extrahierung der Keypoints und Detektion passender Bildausschnitteist der SIFT(Scale-Invariant-Feature-Tracking)-Algorithmus . Dieser bildet die Grundlage für viele weitere aktuelle Verfahren und zeichnet sich vor allem durch die extrahierten Merkmale, die invariant gegenüber der Rotation, Translation, Skalierung und partiell invariant gegenüber Helligkeitsveränderungen sind, aus \citep[S. 345]{nischwitz:bildverarbeitung}. Diese Invarianzen sind dabei auch für den Bereich der Augmented Reality sehr wichtig, da die virtuellen Objekte auch bei einer sich verändernden Umgebung durch äußere Umwelteinflüsse oder Aktionen des Nutzers korrekt eingebunden werden sollen.\\
+\paragraph{Natural Feature Tracking} hingegen greift auf bestimmte Eigenschaften des Bildes, die natürlich im Bild enthalten sind, zurück. Diese Merkmale beschreiben dabei markante Bildpunkte, wie unter anderem bei Kanten oder Ecken. \citep[Kapitel 3.2]{cukovic:marker-vs-natural}\\
+Mit Hilfe von Matchingverfahren können diese Bildpunkte genutzt werden, um einen bestimmten Bildausschnitt in einem anderen Bild wiederzuerkennen und die Transformation zu berechnen \citep[S. 341]{nischwitz:bildverarbeitung}.
+Dadurch können diese Bildausschnitte beim Natural Feature Tracking, als eine Art Marker fungieren, dessen Merkmale initial extrahiert werden und anschließend in den folgenden Frames wiedererkannt werden.\\
+Ein mögliches Verfahren zur Extrahierung der Bildmerkmale und Detektion passender Bildausschnitte ist der SIFT (Scale-Invariant-Feature-Tracking) Algorithmus \citet[Kapitel 3.2]{cukovic:marker-vs-natural}. Dieser bildet die Grundlage für viele weitere aktuelle Verfahren und zeichnet sich vor allem durch die extrahierten Merkmale, die invariant gegenüber der Rotation, Translation, Skalierung und partiell invariant gegenüber Helligkeitsveränderungen sind, aus \citep[S. 345]{nischwitz:bildverarbeitung}. Diese Invarianzen sind dabei auch für den Bereich der Augmented Reality sehr wichtig, da die virtuellen Objekte auch bei einer sich verändernden Umgebung durch äußere Umwelteinflüsse oder Aktionen des Nutzers korrekt eingebunden werden sollen.\\
 \\
 Betrachtet man hingegen den gesamten Trackingprozess, kann dieser wie folgt beschrieben werden:\\
 Nachdem das System einen Frame von der Kamera bekommt wird dieser meist vorverarbeitet, um die wichtigsten Informationen zu extrahieren und den Tracking Prozess zu beschleunigen \citep[S. 5]{cukovic:marker-vs-natural}. Eine Möglichkeit ist dabei das Bild in ein Graustufenbild umzuwandeln. Dadurch lassen sich Helligkeitsveränderungen leichter detektieren und die Anzahl der Farbkanäle wird von drei oder mehr auf einen reduziert, wodurch die Geschwindigkeit der Tracking Algorithmen deutlich erhöht werden kann.\\
-Nach der Vorverarbeitung kann dann mittels Natural Feature Tracking oder Marker Based Feature Tracking die Position, Größe und Orientierung der gesuchten Fläche, beziehungsweise des Markers ermittelt werden und das virtuelle Objekt entsprechend transformiert werden.
+Nach der Vorverarbeitung kann dann mittels Natural Feature Tracking oder Marker Based Feature Tracking die Position, Größe und Orientierung der gesuchten Fläche, beziehungsweise des Markers ermittelt und das virtuelle Objekt entsprechend transformiert werden.
 
 \section{Android Entwicklung}
 Android ist ein Open Source Softwareplattform, die vor allem bei Smartphones und anderen mobilen Geräten zum Einsatz kommt und ein Produkt der von Google gegründeten Open Handset Alliance ist \citep[S. 4]{gargenta:learning-android}. \\
@@ -96,24 +98,26 @@ Abbildung \ref{fig:android-stack} zeigt eine Übersicht der Software Architektur
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{Abbildungen/android-stack.png}
-\caption[Android Architektur]{Die Android Architektur. (Quelle: \citet{android:architecture})}
+\caption[Android: Architektur]{Die Android Architektur. (Quelle: \citet{android:architecture})}
 \label{fig:android-stack}
 \end{figure}\\
 Die Grundlage eines Android Systems bildet dabei der Linux-Kernel, der es Android unter anderem erlaubt auf die Sicherheitsfunktionen des Kernels zuzugreifen \citep{android:architecture}. \\
 Die Hardware Abstraktionschicht (HAL) stellt dem Java-API-Framework Standardschnittstellen zur Verfügung, über die eine Anwendung auf die Hardwarefunktionen des Gerätes zugreifen kann \citep{android:architecture}.
 Übergeordnet finden sich die Laufzeitumgebung Android Runtime (ART) und nativen Bibliotheken auf. Bei letzteren handelt es sich um Biblioptheken, welche in C und C++ geschrieben sind \citep{android:architecture} und dem Entwickler unterschiedliche Funktionen zur Verfügung stellen. Die in C oder C++ geschriebenen Bibliotheken sind vor allem aus Geschwindigkeitsaspekten relevant. \\
-Die Entwicklung von Android Anwendungen erfolgt über das Java-API-Framework, welches dem Entwickler ein Grundgerüst sowie alle wichtigen Funktionen und Anwendungsbausteine die für die Entwicklung relevant sind, zur Verfügung stellt \citep{android:architecture}.\\
-Die oberste Schicht stellen die System Anwendungen dar, bei welchen es sich um Standard-Anwendungen handelt, die Android dem Nutzer zur Verfügung stellt.
+Die Entwicklung von Android Anwendungen erfolgt über das Java-API-Framework, welches dem Entwickler ein Grundgerüst, sowie alle wichtigen Funktionen und Anwendungsbausteine die für die Entwicklung relevant sind, zur Verfügung stellt \citep{android:architecture}.\\
+Die oberste Schicht stellen die Systemanwendungen dar, bei welchen es sich um Standard-Anwendungen handelt, die Android dem Nutzer zur Verfügung stellt.
 
 \subsection{Grundlegende Konzepte}
 Alle Android Anwendungen basieren auf den selben Komponenten und Konzepten, die im Folgenden einmal grundlegend betrachtet werden. Diese Komponenten sind als Klassen in Android verankert und können mittels Vererbung in Projekte eingebunden und angepasst werden.
 
 \subsubsection{Activities}
-Activities (deutsch: \glqq Aktivitäten\grqq ) stellen die Grundlage jeder Android Anwendung dar und werden durch die Klasse Activity implementiert. Dabei erzeugt jede Activity ein Fenster der Anwendung und ersetzt gleichzeitig die aus der Programmierung mit unter anderem Java bekannte main() Methode \citep{android:activities}. Anstelle einer main() Methode werden verschiedene callback Methoden aufgerufen, die einen bestimmten Zustand im Lebenszyklus einer Activity repräsentieren \citep{android:activities}. Der gesamte Lebenszyklus einer solchen Activity wird in in Abbildung \ref{fig:activity-lifecycle} dargestellt. 
+Jede Android Anwendung besteht aus einer oder mehreren Activities (deutsch: \glqq Aktivitäten\grqq ), die als einzelne, von einander unabhängige Aktionen oder Ansichten verstanden werden können \citep{android:activities}.
+Sie werden durch die Klasse Activity implementiert und erzeugen jeweils das Fenster für die entsprechende Ansicht \citep{android:activities}. Anstelle einer main()-Methode verfügen Elemente in Android über bestimmte callback-Methoden, die je nachdem in welchem Zustand sich das Element befindet aufgerufen werden \citep{android:activities}.\\
+Der gesamte Lebenszyklus einer Activity wird in in Abbildung \ref{fig:activity-lifecycle} dargestellt. 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{Abbildungen/activity-lifecycle.png}
-\caption[Lebenszyklus einer Aktivität]{Der Lebenszyklus einer Aktivität. (Quelle: \citet{android:activity-lifecycle})}
+\caption[Android: Lebenszyklus einer Aktivität]{Der Lebenszyklus einer Aktivität. (Quelle: \citet{android:activity-lifecycle})}
 \label{fig:activity-lifecycle}
 \end{figure}
 
@@ -131,43 +135,42 @@ Fragments (deutsch: \glqq Fragmente\grqq) stellen einzelne Teile des User Interf
 
 
 \section{OpenGL}\label{OpenGL}
-OpenGl stellt die industriell meistgenutzte Programmierschnittselle (API) zur Entwicklung von 2D und 3D Anwendungen dar \citep{khronos:opengl-overview}. Mit Hilfe des Interfaces lassen sich komplexe dreidimensionale Objekte darstellen. \\
+OpenGL stellt die industriell meistgenutzte Programmierschnittselle (API) zur Entwicklung von 2D und 3D Anwendungen dar \citep{khronos:opengl-overview}. Mit Hilfe des Interfaces lassen sich komplexe dreidimensionale Objekte visualisieren. \\
 Zudem wird mit OpenGL ES eine OpenGL Version speziell für eingebettete Systeme bereitgestellt \citep{android:opengl}. Sie erlaubt es bei der Android Programmierung auf die OpenGL Funktionalitäten zuzugreifen.
 
-\subsection{Grundlagen von OpenGL}
+\subsection{Zusammensetzung von Modellen}
 Alle Objekte werden in OpenGL aus einem oder mehreren Polygonen zusammengesetzt \citep[S. 5]{shreiner:opengl}.\\
-Dabei wird jedes Poligon durch eine Menge an Eckpunkten (Vertices) definiert, wobei jeder Eckpunkt(Vertex) eine Menge an Daten, die sich nicht nur auf die Position des Punktes in einem dreidimensionalen Koordinatensystem beziehen, speichert \citep{vries:learn-opengl-triangle}. 
+Diese einzelnen Polygone werden dabei durch ihre Eckpunkte (Verticies), die neben der Position im dreidimensionalen Koordinatensystem auch weitere Daten zur visuellen Darstellung speichern können, definiert \citep{vries:learn-opengl-triangle}. 
 
 \subsection{Rendering-Pipeline} Die folgende Abbildung \ref{fig:rendering-pipeline} zeigt die Rendering-Pipeline von OpenGL. Alle Objekte und Modelle, die mit Hilfe von OpenGL dargestellt werden, durchlaufen diese Pipeline. 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.3\textwidth]{Abbildungen/rendering-pipeline-opengl.png}
-\caption[OpenGL Rendering Pipline]{Die Rendering-Pipeline von OpenGL. (Quelle: \citet{khronos:rendering-pipeline})}
+\caption[OpenGL: Rendering Pipline]{Die Rendering-Pipeline von OpenGL. (Quelle: \citet{khronos:rendering-pipeline})}
 \label{fig:rendering-pipeline}
 \end{figure}\\
 Die Objekte werden dabei durch eine Menge an Vertices definiert. Die zwei wichtigsten Eingriffspunkte in der Rendering-Pipeline sind der \textbf{Vertex Shader} und der \textbf{Fragment Shader}. Beide können von Programmierer implementiert werden und dienen dem Zweck verschiedene Operationen auf den einzelnen Vertices beziehungsweise den Pixeln durchzuführen. Um Beide nutzen zu können müssen sie mit einem Shader Programm verknüpft werden, welches den Output von jedem Shader mit dem Input des nächsten Shaders verbindet \citep{vries:learn-opengl-triangle}.\\
 Im Folgenden werden einmal die einzelnen Schritte der Pipeline genauer betrachtet.\\
-Bevor das Objekt dargestellt werden kann muss es zunächst definiert werden. Dieser Schritt wird als \textbf{Vertex Specification} bezeichnet. Dazu muss das Modell in viele einzelne Dreiecke unterteilt werden, welche zusammen das gesamte Objekt bilden. Diese einzelnen Flächen werden als Grundelemente (Primitives) bezeichnet \citep{khronos:rendering-pipeline} und können durch jeweils drei Eckpunkte (Vertices) beschrieben werden (siehe Abbildung \ref{fig:opengl-triangle}).
+Bevor das Objekt dargestellt werden kann muss es zunächst definiert werden. Dieser Schritt wird als \textbf{Vertex Specification} bezeichnet. Dazu muss das Modell in viele einzelne Polygone unterteilt werden, welche zusammen das gesamte Objekt bilden. Diese einzelnen Flächen werden als Grundelemente (Primitives) bezeichnet \citep{khronos:rendering-pipeline} und können durch jeweils eine bestimmte Anzahl an Eckpunkte (Vertices) beschrieben werden (siehe Abbildung \ref{fig:opengl-triangle}).
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.5\textwidth]{Abbildungen/triangle.png}
-\caption[OpenGL Triangle]{Zusammensetzung eines einzelnen Dreiecks. (Quelle: Eigene Darstellung}
+\caption[OpenGL: Darstellung eines Dreiecks]{Beschreibung eines Dreiecks durch Verticies. (Quelle: Eigene Darstellung})
 \label{fig:opengl-triangle}
 \end{figure}\\
 Zusätzlich zur Position speichert jeder Vertex noch weitere Eigenschaften, welche für die Berechnungen in den nächsten Schritten der Rendering-Pipeline notwendig sind. Dazu können beispielsweise Texturkoordinaten oder Normalenvektoren zählen. \\
-Alle diese Informationen werden in einer Listenstruktur gespeichert und werden im Anschluss an den \textbf{Vertex Shader} übergeben. Dieser verarbeitet jeden einzelnen Eckpunkt, in dem er bestimmte Operationen auf diesem durchführt, bevor er an den nächsten Schritt der Rendering Pipeline weitergegeben wird. \citep{vries:learn-opengl-triangle}. Dabei können einzelne Attribute des Punktes transformiert werden, während andere einfach nur weitergeleitet werden.\\
-Die \textbf{Tessellation} stellt einen weiteren, optionalen Schritt in der Pipeline dar. Er arbeitet mit einer Menge an Vertices, die als Patch bezeichnet wird und erzeugt aus diesen kleinere Grundelemente \citep{khronos:tessellation}. Mit Hilfe dieser Zerkleinerung können Geometrien, wie zum Beispiel Rundungen, verstärkt werden.\\
-Der nächste Schritt in der Rendering Pipeline ist der \textbf{Geometry Shader}, welcher ebenfalls eine optionale Station darstellt und vor allem für das Layered Rendering, bei welchem ein Grundelement in mehreren Bildern gerendert wird, genutzt werden kann \citep{khronos:geometry-shader}. 
-Im Anschluss folgt das \textbf{Vertex Post-Progressing}, welches aus einer Reihe fester Funktionen besteht \citep{khronos:rendering-pipeline}.
-Der nächste Schritt ist das \textbf{Primitive Assembly} bei welchem aus der Reihe an Vertices eine geordnete Sequenz an Grundelementen geformt wird \citep{khronos:rendering-pipeline}. 
-Während der \textbf{Rasterization} werden dann die Grundelemente in eine Pixeldarstellung für den entsprechenden Bildschirm umgewandelt \citep{vries:learn-opengl-triangle}.\\
-Der \textbf{Fragment Shader} wird anschließend auf jedem Grundelement ausgeführt und ist dabei oftmals dafür zuständig jedem Pixel eine Farbe, in deren Berechnung meist Werte wie Schatten, Licht und dessen Farbe einfließen, zuzuordnen \citep{vries:learn-opengl-triangle}.
-Zuletzt werden dann noch eine Reihe an \textbf{Per-Sample Operations} durchgeführt, welche Tests beschreiben die testen, ob ein Pixelwert aktualisiert werden muss oder nicht \citep{khronos:rendering-pipeline}.\\
+Alle diese Informationen werden in einer Listenstruktur gespeichert und werden im Anschluss an den \textbf{Vertex Shader} übergeben. Dieser verarbeitet jeden einzelnen Eckpunkt, indem er bestimmte, anwendungsspezifische Operationen auf diesem durchführt, bevor der Punkt an den nächsten Schritt der Rendering Pipeline weitergegeben wird. \citep{vries:learn-opengl-triangle}. Dabei können einzelne Attribute des Punktes transformiert werden, während andere einfach nur weitergeleitet werden.\\
+Die \textbf{Tessellation} stellt den nächsten, optionalen Schritt in der Pipeline dar. Sie arbeitet mit einer Menge an Vertices, die als Patch bezeichnet wird und erzeugt aus diesen kleinere Grundelemente \citep{khronos:tessellation}. Mit Hilfe dieser Zerkleinerung können Geometrien, wie zum Beispiel Rundungen, verstärkt werden.\\
+Anschließend folgt eine weitere optionale Station in der Pipline, der \textbf{Geometry Shader}.  Dieser Schritt ist vor allem für das Layered Rendering, bei welchem ein Grundelement in mehreren Bildern gerendert wird, relevant \citep{khronos:geometry-shader}. 
+Als nächste folgt das \textbf{Vertex Post-Progressing}, welches aus einer Reihe fester Funktionen besteht \citep{khronos:rendering-pipeline} und das \textbf{Primitive Assembly}, bei welchem aus der Reihe an Vertices eine geordnete Sequenz an Grundelementen geformt wird \citep{khronos:rendering-pipeline}. 
+Während der \textbf{Rasterization} werden diese Grundelemente dann in eine Pixeldarstellung für den entsprechenden Bildschirm umgewandelt \citep{vries:learn-opengl-triangle}.\\
+Der \textbf{Fragment Shader} wird anschließend auf jedem der berechneten Pixel ausgeführt und ist dabei oftmals dafür zuständig diesem eine Farbe, in deren Berechnung meist Werte wie Schatten, Licht und dessen Farbe einfließen, zuzuordnen \citep{vries:learn-opengl-triangle}.
+Zuletzt werden dann noch eine Reihe an \textbf{Per-Sample Operations} durchgeführt, welche testen, ob ein Pixelwert aktualisiert werden muss oder nicht \citep{khronos:rendering-pipeline}.\\
 Eine vereinfachte visuelle Darstellung dieses Verfahrens ist in Abbildung \ref{fig:visual-pipeline} zusehen.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{Abbildungen/simple-rendering-pipeline.png}
-\caption[Visuelle Darstellung der Rendering Pipline]{Eine vereinfachte, visuelle Darstellung der Rendering Pipeline. (Quelle: \citet{vries:learn-opengl-triangle})}
+\caption[OpenGL: Vereinfachte, visuelle Darstellung der Rendering Pipline]{Eine vereinfachte, visuelle Darstellung der Rendering Pipeline. (Quelle: \citet{vries:learn-opengl-triangle})}
 \label{fig:visual-pipeline}
 \end{figure}
 

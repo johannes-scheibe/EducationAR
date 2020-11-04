@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{38}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -16,16 +16,23 @@
   --
 \newblock letzer Abruf: 16.08.2020
 
-\bibitem[{Android}({\natexlab{b}})]{android:fragments}
+\bibitem[{Android}({\natexlab{b}})]{android:arcore}
 \dinatlabel{{Android} {\natexlab{b}}} \textsc{{Android}}:
+\newblock \emph{ARCore Overview}.
+\newblock Webquelle. --
+\newblock URL \url{https://developers.google.com/ar/discover}. --
+\newblock letzer Abruf: 02.11.2020
+
+\bibitem[{Android}({\natexlab{c}})]{android:fragments}
+\dinatlabel{{Android} {\natexlab{c}}} \textsc{{Android}}:
 \newblock \emph{Fragments}.
 \newblock Webquelle. --
 \newblock URL \url{https://developer.android.com/guide/components/fragments}.
   --
 \newblock letzer Abruf: 21.10.2020
 
-\bibitem[{Android}({\natexlab{c}})]{android:activities}
-\dinatlabel{{Android} {\natexlab{c}}} \textsc{{Android}}:
+\bibitem[{Android}({\natexlab{d}})]{android:activities}
+\dinatlabel{{Android} {\natexlab{d}}} \textsc{{Android}}:
 \newblock \emph{Introduction to Activities}.
 \newblock Webquelle. --
 \newblock URL
@@ -33,23 +40,23 @@
   --
 \newblock letzer Abruf: 16.08.2020
 
-\bibitem[{Android}({\natexlab{d}})]{android:opengl}
-\dinatlabel{{Android} {\natexlab{d}}} \textsc{{Android}}:
+\bibitem[{Android}({\natexlab{e}})]{android:opengl}
+\dinatlabel{{Android} {\natexlab{e}}} \textsc{{Android}}:
 \newblock \emph{OpenGL ED}.
 \newblock Webquelle. --
 \newblock URL \url{https://developer.android.com/guide/topics/graphics/opengl}.
   --
 \newblock letzer Abruf: 21.10.2020
 
-\bibitem[{Android}({\natexlab{e}})]{android:architecture}
-\dinatlabel{{Android} {\natexlab{e}}} \textsc{{Android}}:
+\bibitem[{Android}({\natexlab{f}})]{android:architecture}
+\dinatlabel{{Android} {\natexlab{f}}} \textsc{{Android}}:
 \newblock \emph{Platform Architecture}.
 \newblock Webquelle. --
 \newblock URL \url{https://developer.android.com/guide/platform}. --
 \newblock letzer Abruf: 16.08.2020
 
-\bibitem[{Android}({\natexlab{f}})]{android:activity-lifecycle}
-\dinatlabel{{Android} {\natexlab{f}}} \textsc{{Android}}:
+\bibitem[{Android}({\natexlab{g}})]{android:activity-lifecycle}
+\dinatlabel{{Android} {\natexlab{g}}} \textsc{{Android}}:
 \newblock \emph{Understand the Activity Lifecycle}.
 \newblock Webquelle. --
 \newblock URL
@@ -75,7 +82,7 @@
 
 \bibitem[Billinghurst(2002)]{billinghurst:ar-in-education}
 \dinatlabel{Billinghurst 2002} \textsc{Billinghurst}, M.:
-\newblock AugmentedReality in Education
+\newblock Augmented Reality in Education
 \newblock / New Horizons for Learning.
 \newblock 2002.
 \newblock  -- Forschungsbericht
@@ -105,7 +112,7 @@
 
 \bibitem[Dey u.\,a.(2018)Dey, Billinghurst, Lindeman und
   Swan]{dey:review-of-ar-studies}
-\dinatlabel{Dey u.\,a. 2018} \textsc{Dey}, A.m~; \textsc{Billinghurst}, M.~;
+\dinatlabel{Dey u.\,a. 2018} \textsc{Dey}, A.~; \textsc{Billinghurst}, M.~;
   \textsc{Lindeman}, R.~W.~; \textsc{Swan}, J.~E.:
 \newblock A Systematic Review of 10 Years of Augmented Reality Usability
   Studies: 2005 to 2014.
@@ -139,6 +146,16 @@
 \newblock 1.
 \newblock Springer, 2020. --
 \newblock ISBN 9783030421564
+
+\bibitem[{H. Tankovska}(2020)]{statista:ar-users}
+\dinatlabel{{H. Tankovska} 2020} \textsc{{H. Tankovska}}:
+\newblock \emph{Global mobile augmented reality (AR) users 2015-2023}.
+\newblock Webquelle.
+\newblock 2020. --
+\newblock URL
+  \url{https://www.statista.com/statistics/1098630/global-mobile-augmented-reality-ar-users/}.
+  --
+\newblock letzer Abruf: 03.11.2020
 
 \bibitem[Hedberg u.\,a.(2018)Hedberg, Nouri und
   Hansen]{hedberg:review-ar-learning}
