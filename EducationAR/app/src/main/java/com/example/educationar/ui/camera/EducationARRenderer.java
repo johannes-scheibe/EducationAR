@@ -8,6 +8,8 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.content.Context;
 import android.opengl.GLES20;
+import android.opengl.Matrix;
+import android.os.SystemClock;
 import android.widget.TextView;
 
 
@@ -52,6 +54,13 @@ public class EducationARRenderer extends ARRenderer {
 
     private Map<Integer, Model> models;
     private Map<Integer, Integer> trackables;
+
+    float[] mViewMatrix = new float[16];
+    float[] mModelMatrix = new float[16];
+
+    float[] mTempMatrix = new float[16];
+    float[] mRotationMatrix = new float[16];
+
 
     //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
     //As the cube instantiates the shader during setShaderProgram call we need to create the cube here.
@@ -118,7 +127,14 @@ public class EducationARRenderer extends ARRenderer {
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
         GLES20.glFrontFace(GLES20.GL_CCW);
 
+        float[] mvpMatrix = new float[16];
         float[] modelViewMatrix = new float[16];
+
+
+        Matrix.setLookAtM(mViewMatrix, 0, 0, 0, -3, 0f, 0f, 0f, 1.0f, 0.0f, 0.0f);
+
+        // Combine the model matrix with the projection and camera view
+        Matrix.multiplyMM(modelViewMatrix, 0, mModelMatrix, 0, mViewMatrix,0);
 
         // Look for trackables, and draw on each found one.
         for (int trackableUID : trackables.keySet()) {
@@ -126,7 +142,10 @@ public class EducationARRenderer extends ARRenderer {
             if (ARController.getInstance().queryTrackableVisibilityAndTransformation(trackableUID, modelViewMatrix)) {
                 float[] projectionMatrix = ARController.getInstance().getProjectionMatrix(10.0f, 10000.0f);
                 int id = trackables.get(trackableUID);
-                models.get(id).draw(projectionMatrix, modelViewMatrix);
+
+                Matrix.multiplyMM(mvpMatrix, 0, projectionMatrix,0, modelViewMatrix,0);
+
+                models.get(id).draw(mvpMatrix);
                 logger.log(Level.INFO, "Marker with ID: " + id + " tracked.");
             }
         }

@@ -57,7 +57,7 @@ public class MyFragmentShader implements OpenGLShader {
      */
     private String fragmentShader =
             "precision mediump float; \n"    // Set the default precision to medium. We don't need as high of a precision in the fragment shader.
-                    + "uniform sampler2D u_Texture; \n"     // The input texture.
+                    + "uniform sampler2D " + OpenGLShader.textureString +"; \n"     // The input texture.
 
                     + "varying vec4 v_Color; \n"     // This is the color from the vertex shader interpolated across the triangle per fragment.
                     + "varying vec2 v_TexCoordinate; \n"     // This is the texture coordinate from the vertex shader interpolated across the triangle per fragment.

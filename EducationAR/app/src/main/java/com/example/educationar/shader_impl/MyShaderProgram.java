@@ -65,16 +65,12 @@ public class MyShaderProgram extends ShaderProgram {
     }
 
     @Override
-    public int getProjectionMatrixHandle() {
-        return GLES20.glGetUniformLocation(shaderProgramHandle, OpenGLShader.projectionMatrixString);
+    public int getMVPMatrixHandle() {
+        return GLES20.glGetUniformLocation(shaderProgramHandle, OpenGLShader.mvpMatrixString);
     }
 
-    @Override
-    public int getModelViewMatrixHandle() {
-        return GLES20.glGetUniformLocation(shaderProgramHandle, OpenGLShader.modelViewMatrixString);
-    }
     public int getTextureUniformHandle() {
-        return GLES20.glGetUniformLocation(shaderProgramHandle, "u_Texture");
+        return GLES20.glGetUniformLocation(shaderProgramHandle, OpenGLShader.textureString);
     }
 
     @SuppressWarnings("WeakerAccess")

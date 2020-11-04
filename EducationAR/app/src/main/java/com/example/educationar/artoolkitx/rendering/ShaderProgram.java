@@ -75,14 +75,10 @@ public abstract class ShaderProgram {
 
     protected final int shaderProgramHandle;
 
-    private float[] projectionMatrix;
-    private float[] modelViewMatrix;
+    private float[] mvpMatrix;
 
     @SuppressWarnings("WeakerAccess")
-    public abstract int getProjectionMatrixHandle();
-
-    @SuppressWarnings("WeakerAccess")
-    public abstract int getModelViewMatrixHandle();
+    public abstract int getMVPMatrixHandle();
 
     protected abstract void bindAttributes();
 
@@ -154,13 +150,10 @@ public abstract class ShaderProgram {
         render(RenderUtils.buildFloatBuffer(position));
     }
 
-    public void setProjectionMatrix(float[] projectionMatrix) {
-        this.projectionMatrix = projectionMatrix;
+    public void setMvpMatrix(float[] mvp) {
+        this.mvpMatrix = mvp;
     }
 
-    public void setModelViewMatrix(float[] modelViewMatrix) {
-        this.modelViewMatrix = modelViewMatrix;
-    }
 
     /**
      * Sets some basic settings for shader usage.
@@ -180,13 +173,11 @@ public abstract class ShaderProgram {
            from the Renderer implementation class in the render method
            */
 
-        if (projectionMatrix != null)
-            GLES20.glUniformMatrix4fv(this.getProjectionMatrixHandle(), 1, false, projectionMatrix, 0);
+        if (mvpMatrix != null)
+            GLES20.glUniformMatrix4fv(this.getMVPMatrixHandle(), 1, false, mvpMatrix, 0);
         else
             throw new RuntimeException("You need to set the projection matrix.");
 
-        if (modelViewMatrix != null)
-            GLES20.glUniformMatrix4fv(this.getModelViewMatrixHandle(), 1, false, modelViewMatrix, 0);
     }
 
 

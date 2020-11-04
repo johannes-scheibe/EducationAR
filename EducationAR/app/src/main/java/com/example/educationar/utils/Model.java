@@ -68,10 +68,8 @@ public class Model {
      * @param projectionMatrix The projection matrix obtained from the ARToolkit
      * @param modelViewMatrix  The marker transformation matrix obtained from ARToolkit
      */
-    public void draw(float[] projectionMatrix, float[] modelViewMatrix) {
-
-        shaderProgram.setProjectionMatrix(projectionMatrix);
-        shaderProgram.setModelViewMatrix(modelViewMatrix);
+    public void draw(float[] mvpMartix) {
+        shaderProgram.setMvpMatrix(mvpMartix);
         shaderProgram.render(this.getmVertexBuffer(), this.getmTextureBuffer(), this.getmNormalBuffer(), this.getmColorBuffer(), mTextureDataHandle);
     }
 

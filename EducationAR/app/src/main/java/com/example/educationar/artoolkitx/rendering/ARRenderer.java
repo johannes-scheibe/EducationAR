@@ -137,10 +137,6 @@ public abstract class ARRenderer implements GLSurfaceView.Renderer {
     public void draw() {
         GLES20.glViewport(viewport[0], viewport[1], viewport[2], viewport[3]);
 
-        //TODO: Check how to refactor near and far plane
-        shaderProgram.setProjectionMatrix(ARController.getInstance().getProjectionMatrix(10.0f, 10000.0f));
-        float[] camPosition = {1f, 1f, 1f};
-        shaderProgram.render(camPosition);
     }
 
     @SuppressWarnings("unused")

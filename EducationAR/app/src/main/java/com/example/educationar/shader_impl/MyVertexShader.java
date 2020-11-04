@@ -60,8 +60,7 @@ public class MyVertexShader implements OpenGLShader {
     private String vertexShader =
             "uniform mat4 u_MVPMatrix; \n"     // A constant representing the combined model/view/projection matrix.
 
-                    + "uniform mat4 " + OpenGLShader.projectionMatrixString + "; \n"        // projection matrix
-                    + "uniform mat4 " + OpenGLShader.modelViewMatrixString + "; \n"         // modelView matrix
+                    + "uniform mat4 " + OpenGLShader.mvpMatrixString + "; \n"        // mvp matrix
 
                     + "attribute vec4 " + OpenGLShader.positionVectorString + "; \n"    // Per-vertex position information we will pass in.
                     + "attribute vec4 " + colorVectorString + "; \n"                    // Per-vertex color information we will pass in.
@@ -77,11 +76,9 @@ public class MyVertexShader implements OpenGLShader {
                     + "   v_Color = " + colorVectorString + "; \n"              // Pass the color through to the fragment shader.
                     + "   v_TexCoordinate = " + textureVectorString + "; \n"    // Pass the color through to the fragment shader.
 
-                    + "   v_Normal = vec3(" + OpenGLShader.modelViewMatrixString + " * vec4("  + normalVectorString + ", 0.0)); \n" // Transform the normal's orientation into eye space.
 
-                    + "   vec4 mvp = " + OpenGLShader.modelViewMatrixString + " * " + OpenGLShader.positionVectorString + "; \n "     // transform vertex position with modelview matrix
                     // gl_Position is a special variable used to store the final position.
-                    + "   gl_Position = " + OpenGLShader.projectionMatrixString + " * mvp; \n"     // Multiply the vertex by the matrix to get the final point in normalized screen coordinates.
+                    + "   gl_Position = " + OpenGLShader.mvpMatrixString + " * " + OpenGLShader.positionVectorString + "; \n"     // Multiply the vertex by the matrix to get the final point in normalized screen coordinates.
                     + "} \n";
 
     // Load in the vertex shader.
