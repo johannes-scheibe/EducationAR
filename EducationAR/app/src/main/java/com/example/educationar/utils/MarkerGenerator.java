@@ -14,6 +14,8 @@ public class MarkerGenerator {
     private static Logger logger = Logger.getLogger("EduAR-MarkerGenerator");
 
     public static Bitmap generateMarker(int id, int size){
+        int maxID= (int) Math.pow(2, size*size-3);
+        id = id % maxID;
         Bitmap bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
         char[] binary = getCodedID(id, (int) Math.pow(size,2)).toCharArray();
 

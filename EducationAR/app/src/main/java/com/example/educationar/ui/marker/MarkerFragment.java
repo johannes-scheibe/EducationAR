@@ -65,7 +65,7 @@ public class MarkerFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String temp = idInput.getText().toString();
-                if(!temp.equals("")){
+                if(!temp.equals("") && temp.length()<10){
                     id = Integer.parseInt(temp);
                     bm = MarkerGenerator.generateMarker(id,5);
                     markerView.setImageBitmap(bm);

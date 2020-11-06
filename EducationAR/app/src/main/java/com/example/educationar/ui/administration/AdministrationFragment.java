@@ -1,9 +1,7 @@
 package com.example.educationar.ui.administration;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -18,17 +16,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
 import com.example.educationar.MainActivity;
 import com.example.educationar.R;
-import com.example.educationar.artoolkitx.AndroidUtils;
-import com.example.educationar.ui.upload.UploadFragment;
 import com.example.educationar.utils.ModelManager;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;

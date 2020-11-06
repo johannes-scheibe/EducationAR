@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/navigation_upload"
-        android:name="com.example.educationar.ui.upload.UploadFragment"
+        android:name="com.example.educationar.ui.administration.upload.UploadFragment"
         android:label="@string/title_upload"
         tools:layout="@layout/fragment_upload" >
         <action
@@ -44,7 +44,7 @@
 
     <fragment
         android:id="@+id/navigation_confirmation"
-        android:name="com.example.educationar.ui.confirmation.ConfirmationFragment"
+        android:name="com.example.educationar.ui.administration.confirmation.ConfirmationFragment"
         android:label="@string/title_confirmation"
         tools:layout="@layout/fragment_marker" >
         <action

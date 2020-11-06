@@ -58,8 +58,6 @@ public class EducationARRenderer extends ARRenderer {
     float[] mViewMatrix = new float[16];
     float[] mModelMatrix = new float[16];
 
-    float[] mTempMatrix = new float[16];
-    float[] mRotationMatrix = new float[16];
 
 
     //Shader calls should be within a GL thread. GL threads are onSurfaceChanged(), onSurfaceCreated() or onDrawFrame()
